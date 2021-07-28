@@ -15,6 +15,9 @@
 		1CF6484326B1A28700299951 /* UpHear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6484126B1A28700299951 /* UpHear.xcdatamodeld */; };
 		1CF6484E26B1A28700299951 /* UpHearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6484D26B1A28700299951 /* UpHearTests.swift */; };
 		1CF6485926B1A28700299951 /* UpHearUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6485826B1A28700299951 /* UpHearUITests.swift */; };
+		1CF6486D26B1A39600299951 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6486C26B1A39600299951 /* ContentViewModel.swift */; };
+		1CF6486F26B1A3C600299951 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6486E26B1A3C600299951 /* Constant.swift */; };
+		1CF6487126B1A3F600299951 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6487026B1A3F600299951 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		1CF6485426B1A28700299951 /* UpHearUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UpHearUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CF6485826B1A28700299951 /* UpHearUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpHearUITests.swift; sourceTree = "<group>"; };
 		1CF6485A26B1A28700299951 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CF6486C26B1A39600299951 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		1CF6486E26B1A3C600299951 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		1CF6487026B1A3F600299951 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +105,12 @@
 		1CF6483526B1A28600299951 /* UpHear */ = {
 			isa = PBXGroup;
 			children = (
-				1CF6483626B1A28600299951 /* UpHearApp.swift */,
-				1CF6483826B1A28600299951 /* ContentView.swift */,
-				1CF6483A26B1A28700299951 /* Assets.xcassets */,
-				1CF6483F26B1A28700299951 /* Persistence.swift */,
-				1CF6484426B1A28700299951 /* Info.plist */,
-				1CF6484126B1A28700299951 /* UpHear.xcdatamodeld */,
+				1CF6486926B1A2E500299951 /* Application */,
+				1CF6486A26B1A30500299951 /* Resources */,
+				1CF6486B26B1A36E00299951 /* Services */,
+				1CF6486626B1A29100299951 /* Models */,
+				1CF6486726B1A2A200299951 /* ViewModels */,
+				1CF6486826B1A2BA00299951 /* Views */,
 				1CF6483C26B1A28700299951 /* Preview Content */,
 			);
 			path = UpHear;
@@ -134,6 +140,57 @@
 				1CF6485A26B1A28700299951 /* Info.plist */,
 			);
 			path = UpHearUITests;
+			sourceTree = "<group>";
+		};
+		1CF6486626B1A29100299951 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1CF6484126B1A28700299951 /* UpHear.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1CF6486726B1A2A200299951 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1CF6486C26B1A39600299951 /* ContentViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1CF6486826B1A2BA00299951 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1CF6483826B1A28600299951 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1CF6486926B1A2E500299951 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				1CF6483626B1A28600299951 /* UpHearApp.swift */,
+				1CF6484426B1A28700299951 /* Info.plist */,
+				1CF6483F26B1A28700299951 /* Persistence.swift */,
+				1CF6486E26B1A3C600299951 /* Constant.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		1CF6486A26B1A30500299951 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1CF6483A26B1A28700299951 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1CF6486B26B1A36E00299951 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1CF6487026B1A3F600299951 /* APIService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,9 +323,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CF6484326B1A28700299951 /* UpHear.xcdatamodeld in Sources */,
+				1CF6487126B1A3F600299951 /* APIService.swift in Sources */,
 				1CF6484026B1A28700299951 /* Persistence.swift in Sources */,
 				1CF6483926B1A28600299951 /* ContentView.swift in Sources */,
 				1CF6483726B1A28600299951 /* UpHearApp.swift in Sources */,
+				1CF6486D26B1A39600299951 /* ContentViewModel.swift in Sources */,
+				1CF6486F26B1A3C600299951 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
