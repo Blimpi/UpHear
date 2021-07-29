@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C95623F26B286B600D3A18E /* HomeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95623E26B286B600D3A18E /* HomeListView.swift */; };
 		1CF6483726B1A28600299951 /* UpHearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6483626B1A28600299951 /* UpHearApp.swift */; };
 		1CF6483926B1A28600299951 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6483826B1A28600299951 /* ContentView.swift */; };
 		1CF6483B26B1A28700299951 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CF6483A26B1A28700299951 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C95623E26B286B600D3A18E /* HomeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListView.swift; sourceTree = "<group>"; };
 		1CF6483326B1A28600299951 /* UpHear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpHear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CF6483626B1A28600299951 /* UpHearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpHearApp.swift; sourceTree = "<group>"; };
 		1CF6483826B1A28600299951 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C95623D26B2869200D3A18E /* Reusable Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C95623E26B286B600D3A18E /* HomeListView.swift */,
+			);
+			path = "Reusable Views";
+			sourceTree = "<group>";
+		};
 		1CF6482A26B1A28600299951 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +171,7 @@
 		1CF6486826B1A2BA00299951 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1C95623D26B2869200D3A18E /* Reusable Views */,
 				1CF6483826B1A28600299951 /* ContentView.swift */,
 			);
 			path = Views;
@@ -327,6 +338,7 @@
 				1CF6484026B1A28700299951 /* Persistence.swift in Sources */,
 				1CF6483926B1A28600299951 /* ContentView.swift in Sources */,
 				1CF6483726B1A28600299951 /* UpHearApp.swift in Sources */,
+				1C95623F26B286B600D3A18E /* HomeListView.swift in Sources */,
 				1CF6486D26B1A39600299951 /* ContentViewModel.swift in Sources */,
 				1CF6486F26B1A3C600299951 /* Constant.swift in Sources */,
 			);
