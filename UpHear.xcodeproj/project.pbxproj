@@ -13,6 +13,7 @@
 		1C95624526B2890D00D3A18E /* TermsConditionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624426B2890D00D3A18E /* TermsConditionView.swift */; };
 		1C95624726B289ED00D3A18E /* CreateReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624626B289ED00D3A18E /* CreateReportView.swift */; };
 		1C95624926B28E1700D3A18E /* ReportSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624826B28E1700D3A18E /* ReportSummaryView.swift */; };
+		1C95624E26B29D3000D3A18E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624D26B29D3000D3A18E /* Color.swift */; };
 		1CF6483726B1A28600299951 /* UpHearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6483626B1A28600299951 /* UpHearApp.swift */; };
 		1CF6483926B1A28600299951 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6483826B1A28600299951 /* ContentView.swift */; };
 		1CF6483B26B1A28700299951 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CF6483A26B1A28700299951 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		1C95624426B2890D00D3A18E /* TermsConditionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionView.swift; sourceTree = "<group>"; };
 		1C95624626B289ED00D3A18E /* CreateReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportView.swift; sourceTree = "<group>"; };
 		1C95624826B28E1700D3A18E /* ReportSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportSummaryView.swift; sourceTree = "<group>"; };
+		1C95624D26B29D3000D3A18E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		1CF6483326B1A28600299951 /* UpHear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpHear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CF6483626B1A28600299951 /* UpHearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpHearApp.swift; sourceTree = "<group>"; };
 		1CF6483826B1A28600299951 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,23 @@
 			path = "Reusable Views";
 			sourceTree = "<group>";
 		};
+		1C95624B26B2990A00D3A18E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				1CF6486E26B1A3C600299951 /* Constant.swift */,
+				1C95624C26B2992500D3A18E /* Themes */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		1C95624C26B2992500D3A18E /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				1C95624D26B29D3000D3A18E /* Color.swift */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
 		1CF6482A26B1A28600299951 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +144,7 @@
 		1CF6483526B1A28600299951 /* UpHear */ = {
 			isa = PBXGroup;
 			children = (
+				1C95624B26B2990A00D3A18E /* Constants */,
 				1CF6486926B1A2E500299951 /* Application */,
 				1CF6486A26B1A30500299951 /* Resources */,
 				1CF6486B26B1A36E00299951 /* Services */,
@@ -198,7 +218,6 @@
 				1CF6483626B1A28600299951 /* UpHearApp.swift */,
 				1CF6484426B1A28700299951 /* Info.plist */,
 				1CF6483F26B1A28700299951 /* Persistence.swift */,
-				1CF6486E26B1A3C600299951 /* Constant.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -357,6 +376,7 @@
 				1CF6483926B1A28600299951 /* ContentView.swift in Sources */,
 				1C95624526B2890D00D3A18E /* TermsConditionView.swift in Sources */,
 				1CF6483726B1A28600299951 /* UpHearApp.swift in Sources */,
+				1C95624E26B29D3000D3A18E /* Color.swift in Sources */,
 				1C95623F26B286B600D3A18E /* HomeListView.swift in Sources */,
 				1C95624926B28E1700D3A18E /* ReportSummaryView.swift in Sources */,
 				1CF6486D26B1A39600299951 /* ContentViewModel.swift in Sources */,
@@ -521,7 +541,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"UpHear/Preview Content\"";
 				DEVELOPMENT_TEAM = V8U6HJ6HPQ;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = UpHear/Info.plist;
+				INFOPLIST_FILE = UpHear/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -543,7 +563,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"UpHear/Preview Content\"";
 				DEVELOPMENT_TEAM = V8U6HJ6HPQ;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = UpHear/Info.plist;
+				INFOPLIST_FILE = UpHear/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
