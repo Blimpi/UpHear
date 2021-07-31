@@ -1,15 +1,18 @@
 //
-//  CreateReportView.swift
+//  CreateReportThirdView.swift
 //  UpHear
 //
-//  Created by Timothy Ananda on 29/07/21.
+//  Created by Meichel Rendio on 30/07/21.
 //
 
 import SwiftUI
 
-struct CreateReportView: View {
-    
-    @State var isIdentityNil = true;
+struct CreateReportThirdView: View {
+    @State var isIdentityNil = true
+    @State var dateOfIncident:Date = Date()
+    @State var victimName =  ""
+    @State var placeOfIncident = ""
+    @State var perpetratorName = ""
     
     init(){
         UINavigationBar.appearance().backgroundColor = .clear
@@ -26,18 +29,56 @@ struct CreateReportView: View {
                 VStack{
                     Spacer().frame(height: 97)
                     Rectangle().fill(Color.white).cornerRadius(46).overlay(
-                        VStack{
-                            Spacer().frame(height:43)
-                            Text("Select Identity Type").font(.title2.weight(.bold))
-                            Text("Do you consider yourself as a victim or witness in this discrimination case?").font(.headline.weight(.medium)).multilineTextAlignment(.center).padding(.init(top: 15, leading: 36, bottom: 0, trailing: 36))
-                            Spacer().frame(height: 49)
-                            Button(action: { }) {
-                                Image("Victim_Card").renderingMode(.original)
-                            }
-                            Button(action: { }) {
-                                Image("Witness_Card").renderingMode(.original)
-                            }
-                            Spacer()
+                        VStack(alignment: .leading){
+                            Spacer().frame(height:41)
+                            VStack(alignment: .leading){
+                                Text("Date and time of incident").font(.system(size: 16))
+                                TextField(
+                                        "  Enter date and time of incident",
+                                         text: $placeOfIncident
+                                ).frame(height:45)
+                                .border(Color.gray, width: 2)
+                                .cornerRadius(4)
+                                .padding(.trailing,23)
+                                
+                                Text("Place of incident").font(.system(size: 16))
+                                
+                                TextField(
+                                        "  Enter place of incident",
+                                         text: $placeOfIncident
+                                ).frame(height:45)
+                                .border(Color.gray, width: 2)
+                                .cornerRadius(4)
+                                .padding(.trailing,23)
+                                
+                                Text("Victim Name").font(.system(size: 16))
+                                
+                                TextField(
+                                        "  Enter victim name",
+                                         text: $placeOfIncident
+                                ).frame(height:45)
+                                .border(Color.gray, width: 2)
+                                .cornerRadius(4)
+                                .padding(.trailing,23)
+                                
+                                Text("Perpetrator Name").font(.system(size: 16))
+                                TextField(
+                                        "  Enter perpretator Name",
+                                         text: $placeOfIncident
+                                ).frame(height:45)
+                                .border(Color.gray, width: 2)
+                                .cornerRadius(4)
+                                .padding(.trailing,23)
+                            }.padding(.leading,42)
+                            
+//                            HStack{
+//                                DatePicker(selection: $dateOfIncident, in: ...Date(), displayedComponents: .date) {
+//                                }
+//                                Spacer()
+//                                Spacer()
+//                            }
+                            
+                            Text("").frame(maxWidth: .infinity)
                             Spacer()
                             Button(action: { }) {
                                 Rectangle().fill(Colors.primaryColor)
@@ -46,8 +87,8 @@ struct CreateReportView: View {
                                     .padding(.horizontal, 23).overlay(
                                         Text("Next").accentColor(.white)
                                     )
-                            }.opacity(isIdentityNil ? 0 : 1)
-                            
+                            }
+                            //Spacer().frame(height:69)
                         }
                     )
                 }
@@ -91,8 +132,8 @@ struct CreateReportView: View {
     }
 }
 
-struct CreateReportView_Previews: PreviewProvider {
+struct CreateReportThirdView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateReportView()
+        CreateReportThirdView()
     }
 }

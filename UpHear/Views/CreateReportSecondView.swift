@@ -1,14 +1,13 @@
 //
-//  CreateReportView.swift
+//  CreateReportSecondView.swift
 //  UpHear
 //
-//  Created by Timothy Ananda on 29/07/21.
+//  Created by Meichel Rendio on 30/07/21.
 //
 
 import SwiftUI
 
-struct CreateReportView: View {
-    
+struct CreateReportSecondView: View {
     @State var isIdentityNil = true;
     
     init(){
@@ -28,14 +27,14 @@ struct CreateReportView: View {
                     Rectangle().fill(Color.white).cornerRadius(46).overlay(
                         VStack{
                             Spacer().frame(height:43)
-                            Text("Select Identity Type").font(.title2.weight(.bold))
+                            Text("Select Publication Type").font(.title2.weight(.bold))
                             Text("Do you consider yourself as a victim or witness in this discrimination case?").font(.headline.weight(.medium)).multilineTextAlignment(.center).padding(.init(top: 15, leading: 36, bottom: 0, trailing: 36))
                             Spacer().frame(height: 49)
                             Button(action: { }) {
-                                Image("Victim_Card").renderingMode(.original)
+                                Image("Identified_Card").renderingMode(.original)
                             }
                             Button(action: { }) {
-                                Image("Witness_Card").renderingMode(.original)
+                                Image("Anonymous_Card").renderingMode(.original)
                             }
                             Spacer()
                             Spacer()
@@ -91,8 +90,8 @@ struct CreateReportView: View {
     }
 }
 
-struct CreateReportView_Previews: PreviewProvider {
+struct CreateReportSecondView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateReportView()
+        CreateReportSecondView()
     }
 }
