@@ -1,0 +1,33 @@
+[
+    {
+        "id": 01,
+        "isAnonymous": true,
+        "victimId": 04,
+        "perpetratorName": "Wimpi",
+        "incidentTime": "20:00",
+        "incidentDate": "20-July-2021",
+        "incidentDetails": "Saya terdiskriminasi oleh Rendio"
+    },
+    {
+        "id": 02,
+        "isAnonymous": true,
+        "victimId": 05,
+        "perpetratorName": "Wimbu",
+        "incidentTime": "22:00",
+        "incidentDate": "18-July-2020",
+        "incidentDetails": "Saya terdiskriminasi oleh Mario"
+    },
+    {
+        "id": 03,
+        "isAnonymous": true,
+        "victimId": 06,
+        "perpetratorName": "Mung",
+        "incidentTime": "21:00",
+        "incidentDate": "10-June-2019",
+        "incidentDetails": "Saya terdiskriminasi oleh Timothy"
+    }
+]
+
+
+
+

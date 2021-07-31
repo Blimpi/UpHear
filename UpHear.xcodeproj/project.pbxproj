@@ -32,6 +32,10 @@
 		1CF6486D26B1A39600299951 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6486C26B1A39600299951 /* ContentViewModel.swift */; };
 		1CF6486F26B1A3C600299951 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6486E26B1A3C600299951 /* Constant.swift */; };
 		1CF6487126B1A3F600299951 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6487026B1A3F600299951 /* APIService.swift */; };
+		CDC9D03E26B2B0AB00215F5D /* CaseDraftRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */; };
+		CDC9D04026B2BA5700215F5D /* CaseDrafts.json in Resources */ = {isa = PBXBuildFile; fileRef = CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */; };
+		CDC9D04426B2F76800215F5D /* ModelDataCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D04326B2F76800215F5D /* ModelDataCases.swift */; };
+		CDFEB2EC26B51B8600DED9C0 /* CaseRow.swiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEB2EB26B51B8600DED9C0 /* CaseRow.swiftUI.swift */; };
 		B818804C26B458F2004F3D38 /* CreateReportSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818804B26B458F2004F3D38 /* CreateReportSecondView.swift */; };
 		B818804E26B45BDF004F3D38 /* CreateReportThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818804D26B45BDF004F3D38 /* CreateReportThirdView.swift */; };
 		B818805026B46EEF004F3D38 /* CreateReportForthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818804F26B46EEF004F3D38 /* CreateReportForthView.swift */; };
@@ -86,6 +90,10 @@
 		1CF6486C26B1A39600299951 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		1CF6486E26B1A3C600299951 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		1CF6487026B1A3F600299951 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDraftRow.swift; sourceTree = "<group>"; };
+		CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CaseDrafts.json; sourceTree = "<group>"; };
+		CDC9D04326B2F76800215F5D /* ModelDataCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataCases.swift; sourceTree = "<group>"; };
+		CDFEB2EB26B51B8600DED9C0 /* CaseRow.swiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseRow.swiftUI.swift; sourceTree = "<group>"; };
 		B818804B26B458F2004F3D38 /* CreateReportSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportSecondView.swift; sourceTree = "<group>"; };
 		B818804D26B45BDF004F3D38 /* CreateReportThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportThirdView.swift; sourceTree = "<group>"; };
 		B818804F26B46EEF004F3D38 /* CreateReportForthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportForthView.swift; sourceTree = "<group>"; };
@@ -138,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				1C95623E26B286B600D3A18E /* HomeListView.swift */,
+				CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */,
+				CDFEB2EB26B51B8600DED9C0 /* CaseRow.swiftUI.swift */,
 			);
 			path = "Reusable Views";
 			sourceTree = "<group>";
@@ -224,6 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				1CF6484126B1A28700299951 /* UpHear.xcdatamodeld */,
+				CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */,
+				CDC9D04326B2F76800215F5D /* ModelDataCases.swift */,
 				1C60D47426B43AF50072C589 /* User.swift */,
 				1C60D47626B4C1A10072C589 /* Company.swift */,
 				1C60D47826B4C52F0072C589 /* Case.swift */,
@@ -387,6 +399,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDC9D04026B2BA5700215F5D /* CaseDrafts.json in Resources */,
 				1CF6483E26B1A28700299951 /* Preview Assets.xcassets in Resources */,
 				1CF6483B26B1A28700299951 /* Assets.xcassets in Resources */,
 			);
@@ -415,9 +428,11 @@
 			files = (
 				1C60D47326B3FBC40072C589 /* BaseRequest.swift in Sources */,
 				1C95624126B2882500D3A18E /* HomeView.swift in Sources */,
+				CDC9D04426B2F76800215F5D /* ModelDataCases.swift in Sources */,
 				1C60D47926B4C52F0072C589 /* Case.swift in Sources */,
 				1CF6484326B1A28700299951 /* UpHear.xcdatamodeld in Sources */,
 				1C95624326B2888300D3A18E /* DraftsView.swift in Sources */,
+				CDFEB2EC26B51B8600DED9C0 /* CaseRow.swiftUI.swift in Sources */,
 				1CF6487126B1A3F600299951 /* APIService.swift in Sources */,
 				1C95624726B289ED00D3A18E /* CreateReportView.swift in Sources */,
 				1C60D47126B3E9370072C589 /* Auth.swift in Sources */,
@@ -437,6 +452,7 @@
 				1C95624926B28E1700D3A18E /* ReportSummaryView.swift in Sources */,
 				1CF6486D26B1A39600299951 /* ContentViewModel.swift in Sources */,
 				1CF6486F26B1A3C600299951 /* Constant.swift in Sources */,
+				CDC9D03E26B2B0AB00215F5D /* CaseDraftRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
