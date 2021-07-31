@@ -13,7 +13,7 @@
 		1C95624526B2890D00D3A18E /* TermsConditionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624426B2890D00D3A18E /* TermsConditionView.swift */; };
 		1C95624726B289ED00D3A18E /* CreateReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624626B289ED00D3A18E /* CreateReportView.swift */; };
 		1C95624926B28E1700D3A18E /* ReportSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624826B28E1700D3A18E /* ReportSummaryView.swift */; };
-		1C95624E26B29D3000D3A18E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624D26B29D3000D3A18E /* Color.swift */; };
+		1C95624E26B29D3000D3A18E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624D26B29D3000D3A18E /* Colors.swift */; };
 		1CF6483726B1A28600299951 /* UpHearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6483626B1A28600299951 /* UpHearApp.swift */; };
 		1CF6483926B1A28600299951 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6483826B1A28600299951 /* ContentView.swift */; };
 		1CF6483B26B1A28700299951 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CF6483A26B1A28700299951 /* Assets.xcassets */; };
@@ -25,6 +25,9 @@
 		1CF6486D26B1A39600299951 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6486C26B1A39600299951 /* ContentViewModel.swift */; };
 		1CF6486F26B1A3C600299951 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6486E26B1A3C600299951 /* Constant.swift */; };
 		1CF6487126B1A3F600299951 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6487026B1A3F600299951 /* APIService.swift */; };
+		B818804C26B458F2004F3D38 /* CreateReportSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818804B26B458F2004F3D38 /* CreateReportSecondView.swift */; };
+		B818804E26B45BDF004F3D38 /* CreateReportThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818804D26B45BDF004F3D38 /* CreateReportThirdView.swift */; };
+		B818805026B46EEF004F3D38 /* CreateReportForthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818804F26B46EEF004F3D38 /* CreateReportForthView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +54,7 @@
 		1C95624426B2890D00D3A18E /* TermsConditionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionView.swift; sourceTree = "<group>"; };
 		1C95624626B289ED00D3A18E /* CreateReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportView.swift; sourceTree = "<group>"; };
 		1C95624826B28E1700D3A18E /* ReportSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportSummaryView.swift; sourceTree = "<group>"; };
-		1C95624D26B29D3000D3A18E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		1C95624D26B29D3000D3A18E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		1CF6483326B1A28600299951 /* UpHear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpHear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CF6483626B1A28600299951 /* UpHearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpHearApp.swift; sourceTree = "<group>"; };
 		1CF6483826B1A28600299951 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +72,9 @@
 		1CF6486C26B1A39600299951 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		1CF6486E26B1A3C600299951 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		1CF6487026B1A3F600299951 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		B818804B26B458F2004F3D38 /* CreateReportSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportSecondView.swift; sourceTree = "<group>"; };
+		B818804D26B45BDF004F3D38 /* CreateReportThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportThirdView.swift; sourceTree = "<group>"; };
+		B818804F26B46EEF004F3D38 /* CreateReportForthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportForthView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +122,7 @@
 		1C95624C26B2992500D3A18E /* Themes */ = {
 			isa = PBXGroup;
 			children = (
-				1C95624D26B29D3000D3A18E /* Color.swift */,
+				1C95624D26B29D3000D3A18E /* Colors.swift */,
 			);
 			path = Themes;
 			sourceTree = "<group>";
@@ -207,6 +213,9 @@
 				1C95624226B2888300D3A18E /* DraftsView.swift */,
 				1C95624426B2890D00D3A18E /* TermsConditionView.swift */,
 				1C95624626B289ED00D3A18E /* CreateReportView.swift */,
+				B818804B26B458F2004F3D38 /* CreateReportSecondView.swift */,
+				B818804D26B45BDF004F3D38 /* CreateReportThirdView.swift */,
+				B818804F26B46EEF004F3D38 /* CreateReportForthView.swift */,
 				1C95624826B28E1700D3A18E /* ReportSummaryView.swift */,
 			);
 			path = Views;
@@ -376,8 +385,11 @@
 				1CF6483926B1A28600299951 /* ContentView.swift in Sources */,
 				1C95624526B2890D00D3A18E /* TermsConditionView.swift in Sources */,
 				1CF6483726B1A28600299951 /* UpHearApp.swift in Sources */,
-				1C95624E26B29D3000D3A18E /* Color.swift in Sources */,
+				B818804C26B458F2004F3D38 /* CreateReportSecondView.swift in Sources */,
+				1C95624E26B29D3000D3A18E /* Colors.swift in Sources */,
+				B818805026B46EEF004F3D38 /* CreateReportForthView.swift in Sources */,
 				1C95623F26B286B600D3A18E /* HomeListView.swift in Sources */,
+				B818804E26B45BDF004F3D38 /* CreateReportThirdView.swift in Sources */,
 				1C95624926B28E1700D3A18E /* ReportSummaryView.swift in Sources */,
 				1CF6486D26B1A39600299951 /* ContentViewModel.swift in Sources */,
 				1CF6486F26B1A3C600299951 /* Constant.swift in Sources */,
