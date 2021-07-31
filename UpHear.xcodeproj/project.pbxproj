@@ -25,6 +25,11 @@
 		1CF6486D26B1A39600299951 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6486C26B1A39600299951 /* ContentViewModel.swift */; };
 		1CF6486F26B1A3C600299951 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6486E26B1A3C600299951 /* Constant.swift */; };
 		1CF6487126B1A3F600299951 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6487026B1A3F600299951 /* APIService.swift */; };
+		CDC9D03E26B2B0AB00215F5D /* CaseDraftRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */; };
+		CDC9D04026B2BA5700215F5D /* CaseDrafts.json in Resources */ = {isa = PBXBuildFile; fileRef = CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */; };
+		CDC9D04226B2C08800215F5D /* Case.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D04126B2C08800215F5D /* Case.swift */; };
+		CDC9D04426B2F76800215F5D /* ModelDataCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D04326B2F76800215F5D /* ModelDataCases.swift */; };
+		CDFEB2EC26B51B8600DED9C0 /* CaseRow.swiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEB2EB26B51B8600DED9C0 /* CaseRow.swiftUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +74,11 @@
 		1CF6486C26B1A39600299951 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		1CF6486E26B1A3C600299951 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		1CF6487026B1A3F600299951 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDraftRow.swift; sourceTree = "<group>"; };
+		CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CaseDrafts.json; sourceTree = "<group>"; };
+		CDC9D04126B2C08800215F5D /* Case.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case.swift; sourceTree = "<group>"; };
+		CDC9D04326B2F76800215F5D /* ModelDataCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataCases.swift; sourceTree = "<group>"; };
+		CDFEB2EB26B51B8600DED9C0 /* CaseRow.swiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseRow.swiftUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				1C95623E26B286B600D3A18E /* HomeListView.swift */,
+				CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */,
+				CDFEB2EB26B51B8600DED9C0 /* CaseRow.swiftUI.swift */,
 			);
 			path = "Reusable Views";
 			sourceTree = "<group>";
@@ -186,6 +198,9 @@
 			isa = PBXGroup;
 			children = (
 				1CF6484126B1A28700299951 /* UpHear.xcdatamodeld */,
+				CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */,
+				CDC9D04126B2C08800215F5D /* Case.swift */,
+				CDC9D04326B2F76800215F5D /* ModelDataCases.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -341,6 +356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDC9D04026B2BA5700215F5D /* CaseDrafts.json in Resources */,
 				1CF6483E26B1A28700299951 /* Preview Assets.xcassets in Resources */,
 				1CF6483B26B1A28700299951 /* Assets.xcassets in Resources */,
 			);
@@ -368,8 +384,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C95624126B2882500D3A18E /* HomeView.swift in Sources */,
+				CDC9D04426B2F76800215F5D /* ModelDataCases.swift in Sources */,
+				CDC9D04226B2C08800215F5D /* Case.swift in Sources */,
 				1CF6484326B1A28700299951 /* UpHear.xcdatamodeld in Sources */,
 				1C95624326B2888300D3A18E /* DraftsView.swift in Sources */,
+				CDFEB2EC26B51B8600DED9C0 /* CaseRow.swiftUI.swift in Sources */,
 				1CF6487126B1A3F600299951 /* APIService.swift in Sources */,
 				1C95624726B289ED00D3A18E /* CreateReportView.swift in Sources */,
 				1CF6484026B1A28700299951 /* Persistence.swift in Sources */,
@@ -381,6 +400,7 @@
 				1C95624926B28E1700D3A18E /* ReportSummaryView.swift in Sources */,
 				1CF6486D26B1A39600299951 /* ContentViewModel.swift in Sources */,
 				1CF6486F26B1A3C600299951 /* Constant.swift in Sources */,
+				CDC9D03E26B2B0AB00215F5D /* CaseDraftRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
