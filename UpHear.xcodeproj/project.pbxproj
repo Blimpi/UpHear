@@ -35,6 +35,7 @@
 		B818804C26B458F2004F3D38 /* CreateReportSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818804B26B458F2004F3D38 /* CreateReportSecondView.swift */; };
 		B818804E26B45BDF004F3D38 /* CreateReportThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818804D26B45BDF004F3D38 /* CreateReportThirdView.swift */; };
 		B818805026B46EEF004F3D38 /* CreateReportForthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818804F26B46EEF004F3D38 /* CreateReportForthView.swift */; };
+		B818805226B6BC83004F3D38 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805126B6BC83004F3D38 /* TextStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		B818804B26B458F2004F3D38 /* CreateReportSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportSecondView.swift; sourceTree = "<group>"; };
 		B818804D26B45BDF004F3D38 /* CreateReportThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportThirdView.swift; sourceTree = "<group>"; };
 		B818804F26B46EEF004F3D38 /* CreateReportForthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportForthView.swift; sourceTree = "<group>"; };
+		B818805126B6BC83004F3D38 /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				1C95623E26B286B600D3A18E /* HomeListView.swift */,
+				B818805126B6BC83004F3D38 /* TextStyle.swift */,
 			);
 			path = "Reusable Views";
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				1C60D47126B3E9370072C589 /* Auth.swift in Sources */,
 				1C60D47526B43AF50072C589 /* User.swift in Sources */,
 				1CF6484026B1A28700299951 /* Persistence.swift in Sources */,
+				B818805226B6BC83004F3D38 /* TextStyle.swift in Sources */,
 				1C60D47E26B515330072C589 /* DataManager.swift in Sources */,
 				1CF6483926B1A28600299951 /* ContentView.swift in Sources */,
 				1C95624526B2890D00D3A18E /* TermsConditionView.swift in Sources */,

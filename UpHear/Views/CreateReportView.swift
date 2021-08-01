@@ -29,7 +29,10 @@ struct CreateReportView: View {
                         VStack{
                             Spacer().frame(height:43)
                             Text("Select Identity Type").font(.title2.weight(.bold))
-                            Text("Do you consider yourself as a victim or witness in this discrimination case?").font(.headline.weight(.medium)).multilineTextAlignment(.center).padding(.init(top: 15, leading: 36, bottom: 0, trailing: 36))
+                            grayText(content: "Do you consider yourself as a victim or witness in this discrimination case?", size: 17, weight: .medium)
+                                
+                                .multilineTextAlignment(.center)
+                                .padding(.init(top: 15, leading: 36, bottom: 0, trailing: 36))
                             Spacer().frame(height: 49)
                             Button(action: { }) {
                                 Image("Victim_Card").renderingMode(.original)
