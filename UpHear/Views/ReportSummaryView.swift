@@ -26,9 +26,55 @@ struct ReportSummaryView: View {
         NavigationView{
             VStack{
                 Rectangle().fill(Color.white).border(Color.gray, width: 3).cornerRadius(8).overlay(
-                    List{
-                        Text("hello")
-                    }
+                    ScrollView(.vertical){
+                        VStack(alignment: .leading){
+                            VStack(alignment: .leading){
+                                Text("identity Type")
+                                //TextStyle1(content: "Victim")
+                                Spacer().frame(height: 11)
+                            }
+                            VStack(alignment: .leading){
+                                Text("Publications Type")
+                                Text("Identified")
+                                Spacer().frame(height: 11)
+                            }
+                            VStack(alignment: .leading){
+                                Text("Date and Time of Incident")
+                                Text("27 July 2021 - 08:00 AM")
+                                Spacer().frame(height: 11)
+                            }
+                            VStack(alignment: .leading){
+                                Text("Place of Incident")
+                                Text("Meeting Room")
+                                Spacer().frame(height: 11)
+                            }
+                            VStack(alignment: .leading){
+                                Text("Victim Name")
+                                Text("Exol")
+                                Spacer().frame(height: 11)
+                            }
+                            VStack(alignment: .leading){
+                                Text("Perpretator Name")
+                                Text("Army")
+                                Spacer().frame(height: 11)
+                            }
+                            VStack(alignment: .leading){
+                                Text("Please describe the incident in detail")
+                                Text("As a women in this workplace, I got gender discrimination. Working mothers still make less money than their male colleagues, regardless of credentials and experience, and female workers are often penalized for taking time off to give birth, bond with their child, or receive prenatal care.")
+                                Spacer().frame(height: 11)
+                            }
+                            VStack(alignment: .leading){
+                                Text("Incident Evidence")
+                                HStack{
+                                    Image("Add_Incident_Button").renderingMode(.original)
+                                }
+                                Spacer().frame(height: 11)
+                            }
+                            
+                            Text("").frame(maxWidth: .infinity)
+                        }.padding(.init(top: 16, leading: 21, bottom: 16, trailing: 21))
+                        
+                    }.padding(.bottom,5).clipped()
                     
                 ).padding(.horizontal,31)
                 Button(action: { }) {
