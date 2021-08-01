@@ -32,13 +32,14 @@
 		1CF6486D26B1A39600299951 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6486C26B1A39600299951 /* ContentViewModel.swift */; };
 		1CF6486F26B1A3C600299951 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6486E26B1A3C600299951 /* Constant.swift */; };
 		1CF6487126B1A3F600299951 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6487026B1A3F600299951 /* APIService.swift */; };
-		CDC9D03E26B2B0AB00215F5D /* CaseDraftRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */; };
-		CDC9D04026B2BA5700215F5D /* CaseDrafts.json in Resources */ = {isa = PBXBuildFile; fileRef = CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */; };
-		CDC9D04426B2F76800215F5D /* ModelDataCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D04326B2F76800215F5D /* ModelDataCases.swift */; };
-		CDFEB2EC26B51B8600DED9C0 /* CaseRow.swiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEB2EB26B51B8600DED9C0 /* CaseRow.swiftUI.swift */; };
 		B818804C26B458F2004F3D38 /* CreateReportSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818804B26B458F2004F3D38 /* CreateReportSecondView.swift */; };
 		B818804E26B45BDF004F3D38 /* CreateReportThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818804D26B45BDF004F3D38 /* CreateReportThirdView.swift */; };
 		B818805026B46EEF004F3D38 /* CreateReportForthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818804F26B46EEF004F3D38 /* CreateReportForthView.swift */; };
+		CDC9D03E26B2B0AB00215F5D /* CaseDraftRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */; };
+		CDC9D04026B2BA5700215F5D /* CaseDrafts.json in Resources */ = {isa = PBXBuildFile; fileRef = CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */; };
+		CDC9D04426B2F76800215F5D /* ModelDataCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D04326B2F76800215F5D /* ModelDataCases.swift */; };
+		CDE59F8A26B6B3B0009B4D8D /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE59F8926B6B3B0009B4D8D /* LandingView.swift */; };
+		CDFEB2EC26B51B8600DED9C0 /* CaseRow.swiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEB2EB26B51B8600DED9C0 /* CaseRow.swiftUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,13 +91,14 @@
 		1CF6486C26B1A39600299951 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		1CF6486E26B1A3C600299951 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		1CF6487026B1A3F600299951 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDraftRow.swift; sourceTree = "<group>"; };
-		CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CaseDrafts.json; sourceTree = "<group>"; };
-		CDC9D04326B2F76800215F5D /* ModelDataCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataCases.swift; sourceTree = "<group>"; };
-		CDFEB2EB26B51B8600DED9C0 /* CaseRow.swiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseRow.swiftUI.swift; sourceTree = "<group>"; };
 		B818804B26B458F2004F3D38 /* CreateReportSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportSecondView.swift; sourceTree = "<group>"; };
 		B818804D26B45BDF004F3D38 /* CreateReportThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportThirdView.swift; sourceTree = "<group>"; };
 		B818804F26B46EEF004F3D38 /* CreateReportForthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportForthView.swift; sourceTree = "<group>"; };
+		CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDraftRow.swift; sourceTree = "<group>"; };
+		CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CaseDrafts.json; sourceTree = "<group>"; };
+		CDC9D04326B2F76800215F5D /* ModelDataCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataCases.swift; sourceTree = "<group>"; };
+		CDE59F8926B6B3B0009B4D8D /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
+		CDFEB2EB26B51B8600DED9C0 /* CaseRow.swiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseRow.swiftUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +267,7 @@
 				B818804D26B45BDF004F3D38 /* CreateReportThirdView.swift */,
 				B818804F26B46EEF004F3D38 /* CreateReportForthView.swift */,
 				1C95624826B28E1700D3A18E /* ReportSummaryView.swift */,
+				CDE59F8926B6B3B0009B4D8D /* LandingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				1CF6483926B1A28600299951 /* ContentView.swift in Sources */,
 				1C95624526B2890D00D3A18E /* TermsConditionView.swift in Sources */,
 				1C60D47726B4C1A10072C589 /* Company.swift in Sources */,
+				CDE59F8A26B6B3B0009B4D8D /* LandingView.swift in Sources */,
 				1C60D47B26B5145E0072C589 /* Action.swift in Sources */,
 				1CF6483726B1A28600299951 /* UpHearApp.swift in Sources */,
 				B818804C26B458F2004F3D38 /* CreateReportSecondView.swift in Sources */,
