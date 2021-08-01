@@ -7,22 +7,22 @@
 
 import Foundation
 
-class APIRequest: NSObject {
+class Auth: NSObject {
     
-    static func fetchUsers(url: String,
+    static func fetchUserData(url: String,
                           header: [String: String],
                           showLoader: Bool,
-                          successCompletion: @escaping ([User]) -> Void,
+                          successCompletion: @escaping (UserData) -> Void,
                           failCompletion: @escaping (String) -> Void) {
         BaseRequest.GET(url: url, header: header, showLoader: showLoader) {
             response in
             
-            var dataModel = DataManager.USERS
+            var dataModel = DataManager.USERDATA
             
             do {
-//                let userModel = try JSONDecoder().decode(User.self, from: response as! Data)
-//                dataModel = userModel
-//                successCompletion(dataModel!)
+                let userModel = try JSONDecoder().decode(UserData.self, from: response as! Data)
+                dataModel = userModel
+                successCompletion(dataModel!)
             } catch let error {
                 print("error reading json file: \(error.localizedDescription)")
             }

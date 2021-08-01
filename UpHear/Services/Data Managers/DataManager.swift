@@ -8,8 +8,6 @@
 import Foundation
 
 struct DataManager {
-    static var USER: User!
-    static var USERS = [User]()
+    static var USERDATA: UserData!
     static var COMPANY: Company!
-    static var CASES = [Case]()
 }
