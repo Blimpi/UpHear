@@ -58,7 +58,6 @@ struct ReportSummaryView: View {
         }
         
     }
-    
 }
 
 struct ReportSummaryView_Previews: PreviewProvider {

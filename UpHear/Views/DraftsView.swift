@@ -20,17 +20,24 @@ struct Draft: Identifiable{
 
 struct DraftsView: View {
     
-    let drafts: [Draft] = [
-        .init(id:0, isAnonymous: true, victimID: 01, perpetratorName: "Wimpi", incidentTime: "20:00", incidentDate: "20-July-2021", incidentDetails:"Saya terdiskriminasi banget!"),
-        .init(id:0, isAnonymous: true, victimID: 01, perpetratorName: "Wimpi", incidentTime: "20:00", incidentDate: "20-July-2021", incidentDetails:"Saya terdiskriminasi banget!"),
-        .init(id:0, isAnonymous: true, victimID: 01, perpetratorName: "Wimpi", incidentTime: "20:00", incidentDate: "20-July-2021", incidentDetails:"Saya terdiskriminasi banget!"),
-        .init(id:0, isAnonymous: true, victimID: 01, perpetratorName: "Wimpi", incidentTime: "20:00", incidentDate: "20-July-2021", incidentDetails:"Saya terdiskriminasi banget!"),
-        
-    ]
+//    let drafts: [Draft] = [
+//        .init(id:0, isAnonymous: true, victimID: 01, perpetratorName: "Wimpi", incidentTime: "20:00", incidentDate: "20-July-2021", incidentDetails:"Saya terdiskriminasi banget!"),
+//        .init(id:0, isAnonymous: true, victimID: 01, perpetratorName: "Wimpi", incidentTime: "20:00", incidentDate: "20-July-2021", incidentDetails:"Saya terdiskriminasi banget!"),
+//        .init(id:0, isAnonymous: true, victimID: 01, perpetratorName: "Wimpi", incidentTime: "20:00", incidentDate: "20-July-2021", incidentDetails:"Saya terdiskriminasi banget!"),
+//        .init(id:0, isAnonymous: true, victimID: 01, perpetratorName: "Wimpi", incidentTime: "20:00", incidentDate: "20-July-2021", incidentDetails:"Saya terdiskriminasi banget!"),
+//
+//  ]
     
     var body: some View {
+        
         NavigationView{
-
+            
+            VStack{
+                List{
+                    CaseDraftRow()
+                }.listStyle(PlainListStyle())
+            }
+            .navigationTitle("My Drafts")
         }
     }
 }
