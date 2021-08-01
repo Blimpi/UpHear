@@ -31,13 +31,15 @@ struct DraftsView: View {
     var body: some View {
         
         NavigationView{
-            
             VStack{
                 List{
                     CaseDraftRow()
                 }.listStyle(PlainListStyle())
             }
-            .navigationTitle("My Drafts")
+            .navigationBarTitle(("My Drafts"),displayMode: .inline)
+            .navigationBarItems(leading: Button(action: { }) {
+                    Image(systemName: "chevron.left")
+            })
         }
     }
 }
