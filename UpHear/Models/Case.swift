@@ -13,7 +13,7 @@ struct Case: Codable {
     let isAnonymous: Bool?
     let victim: User?
     let perpetrator: User?
-    let incidentTime: Date?
+    let incidentTime: String?
     let incidentPlace: String?
     let incidentDetail: String?
     
