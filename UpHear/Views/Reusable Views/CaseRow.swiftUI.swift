@@ -43,10 +43,10 @@ struct CaseRow_swiftUI: View {
                 
                 Image("chevron")
                     
-            }.padding()
+            }.padding(.horizontal)
         }.frame(height:164)
         .shadow(radius: 7)
-        .padding()
+        .padding(.horizontal,29)
     }
 }
 
