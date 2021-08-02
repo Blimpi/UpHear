@@ -19,3 +19,13 @@ struct grayText : View{
     }
 }
 
+struct summaryText : View{
+    var context: String
+    
+    init(_ content:String){
+        context = content
+    }
+    var body: some View{
+        Text(context).font(.system(size: 18).weight(.medium))
+    }
+}

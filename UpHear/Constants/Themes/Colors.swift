@@ -11,4 +11,6 @@ struct Colors{
     static let primaryColor = Color("primaryColor")
     static let secondaryColor = Color("secondaryColor")
     static let customGray = Color("customGray")
+    static let lightBlue = Color("lightBlue")
+    static let cardBackground = Color("cardBgColor")
 }

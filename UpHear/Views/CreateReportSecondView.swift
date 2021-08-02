@@ -28,7 +28,8 @@ struct CreateReportSecondView: View {
                         VStack{
                             Spacer().frame(height:43)
                             Text("Select Publication Type").font(.title2.weight(.bold))
-                            Text("Do you consider yourself as a victim or witness in this discrimination case?").font(.headline.weight(.medium)).multilineTextAlignment(.center).padding(.init(top: 15, leading: 36, bottom: 0, trailing: 36))
+                            grayText(content: "Do you consider yourself as a victim or witness in this discrimination case?", size: 17, weight: .medium).multilineTextAlignment(.center)
+                                .padding(.init(top: 15, leading: 36, bottom: 0, trailing: 36))
                             Spacer().frame(height: 49)
                             Button(action: { }) {
                                 Image("Identified_Card").renderingMode(.original)
@@ -57,28 +58,23 @@ struct CreateReportSecondView: View {
                         RoundedRectangle(cornerRadius: 3).fill(Color.white).frame(width: 34, height: 6, alignment: .center)
                         Spacer()
                     }
-                    
                     VStack{
                         Text("2").padding(.init(top: 49, leading: 0, bottom: 0, trailing: 0)).foregroundColor(.white).font(.body)
                         RoundedRectangle(cornerRadius: 3).fill(Color.white).frame(width: 34, height: 6, alignment: .center)
                         Spacer()
                     }
-                    
                     VStack{
                         Text("3").padding(.init(top: 49, leading: 0, bottom: 0, trailing: 0)).foregroundColor(.white).font(.body)
                         RoundedRectangle(cornerRadius: 3).fill(Color.white).frame(width: 34, height: 6, alignment: .center)
                         Spacer()
                     }
-                    
                     VStack{
                         Text("4").padding(.init(top: 49, leading: 0, bottom: 0, trailing: 0)).foregroundColor(.white).font(.body)
                         RoundedRectangle(cornerRadius: 3).fill(Color.white).frame(width: 34, height: 6, alignment: .center)
                         Spacer()
                     }
                 }
-                
-                
-                
+  
             }.navigationBarTitle(("Report a Case"),displayMode: .inline)
             .navigationBarItems(leading: Button(action: { }) {
                     Image(systemName: "chevron.left")
