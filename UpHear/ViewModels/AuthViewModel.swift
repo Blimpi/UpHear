@@ -25,7 +25,7 @@ class AuthViewModel: ObservableObject {
         
         AuthRequest.fetchUserData(url: url, header: headers, showLoader: false) { response in
             
-            if verifyCredentials(email: email) {
+            if self.verifyCredentials(email: email) {
                 
             }
             
