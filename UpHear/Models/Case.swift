@@ -28,6 +28,7 @@ struct Case: Codable {
     let incidentTime: String?
     let incidentPlace: String?
     let incidentDetail: String?
+    let status: String?
     
     enum CodingKeys: String, CodingKey {
         case caseID = "CaseID"
@@ -41,5 +42,12 @@ struct Case: Codable {
         case incidentTime = "IncidentTime"
         case incidentPlace = "IncidentPlace"
         case incidentDetail = "IncidentDetail"
+        case status = "Status"
     }
+}
+
+enum caseStatus: String {
+    case ongoing = "On-Going"
+    case waiting = "Waiting"
+    case closed = "Closed"
 }

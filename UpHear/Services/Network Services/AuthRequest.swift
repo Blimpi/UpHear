@@ -1,5 +1,5 @@
 //
-//  Auth.swift
+//  AuthRequest.swift
 //  UpHear
 //
 //  Created by Timothy Ananda on 30/07/21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Auth: NSObject {
+class AuthRequest: NSObject {
     
     static func fetchUserData(url: String,
                           header: [String: String],

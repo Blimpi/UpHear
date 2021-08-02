@@ -21,7 +21,7 @@ class APITestViewModel: ObservableObject {
             "Authorization": "Bearer keyNHgPpNaQW4eEMC"
         ]
         
-        Auth.fetchUserData(url: NetworkConstant.GET_USERS_LIST, header: headers, showLoader: false) { response in
+        AuthRequest.fetchUserData(url: NetworkConstants.GET_USERS_LIST, header: headers, showLoader: false) { response in
             print(response)
             
             self.userData = response
