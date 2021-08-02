@@ -29,38 +29,38 @@ struct ReportSummaryView: View {
                     ScrollView(.vertical){
                         VStack(alignment: .leading){
                             VStack(alignment: .leading){
-                                Text("identity Type")
-                                //TextStyle1(content: "Victim")
+                                Text("identity Type").font(.system(size: 14))
+                                summaryText("Victim")
                                 Spacer().frame(height: 11)
                             }
                             VStack(alignment: .leading){
-                                Text("Publications Type")
-                                Text("Identified")
+                                Text("Publications Type").font(.system(size: 14))
+                                summaryText("Identified")
                                 Spacer().frame(height: 11)
                             }
                             VStack(alignment: .leading){
-                                Text("Date and Time of Incident")
-                                Text("27 July 2021 - 08:00 AM")
+                                Text("Date and Time of Incident").font(.system(size: 14))
+                                summaryText("27 July 2021 - 08:00 AM")
                                 Spacer().frame(height: 11)
                             }
                             VStack(alignment: .leading){
-                                Text("Place of Incident")
-                                Text("Meeting Room")
+                                Text("Place of Incident").font(.system(size: 14))
+                                summaryText("Meeting Room")
                                 Spacer().frame(height: 11)
                             }
                             VStack(alignment: .leading){
-                                Text("Victim Name")
-                                Text("Exol")
+                                Text("Victim Name").font(.system(size: 14))
+                                summaryText("Exol")
                                 Spacer().frame(height: 11)
                             }
                             VStack(alignment: .leading){
-                                Text("Perpretator Name")
-                                Text("Army")
+                                Text("Perpretator Name").font(.system(size: 14))
+                                summaryText("Army")
                                 Spacer().frame(height: 11)
                             }
                             VStack(alignment: .leading){
-                                Text("Please describe the incident in detail")
-                                Text("As a women in this workplace, I got gender discrimination. Working mothers still make less money than their male colleagues, regardless of credentials and experience, and female workers are often penalized for taking time off to give birth, bond with their child, or receive prenatal care.")
+                                Text("Please describe the incident in detail").font(.system(size: 14))
+                                Text("As a women in this workplace, I got gender discrimination. Working mothers still make less money than their male colleagues, regardless of credentials and experience, and female workers are often penalized for taking time off to give birth, bond with their child, or receive prenatal care.").font(.system(size: 15).weight(.medium))
                                 Spacer().frame(height: 11)
                             }
                             VStack(alignment: .leading){
