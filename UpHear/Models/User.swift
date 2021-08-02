@@ -17,19 +17,18 @@ struct UserDataResponse: Codable, Identifiable {
     let createdTime: String?
 }
 
-
 struct User: Codable {
-    let Email: String?
-    let Role: String?
-    let Name: String?
-    let Company: [String]?
-    let Password: String?
+    let email: String?
+    let password: String?
+    let name: String?
+    let role: String?
+    let company: [String]?
     
-//    enum CodingKeys: String, CodingKey {
-//        case email = "Email"
-//        case password = "Password"
-//        case name = "Name"
-//        case role = "Role"
-//        case company = "Company"
-//    }
+    enum CodingKeys: String, CodingKey {
+        case email = "Email"
+        case password = "Password"
+        case name = "Name"
+        case role = "Role"
+        case company = "Company"
+    }
 }

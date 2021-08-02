@@ -15,7 +15,7 @@ struct APITestView: View {
         List {
             ForEach((viewModel.userData?.records ?? [UserDataResponse]()), content: {
                 userDataResponse in
-                TestItemView(title: (userDataResponse.fields?.Name)!)
+                TestItemView(title: (userDataResponse.fields?.name)!)
             })
         }
     }
