@@ -22,22 +22,18 @@ struct HomeView: View {
     var body: some View {
         NavigationView{
             ZStack{
-                Rectangle()
-                    .fill(Color.buttonColor)
-                    .ignoresSafeArea()
+                VStack{
+                    Image("bgTnC").renderingMode(.original).ignoresSafeArea()
+                    Spacer()
+                }
                 VStack{
                     VStack{
                         Topbar(selected: self.$selected).padding(.top)
                     }
                     
                     ZStack{
-                        Rectangle()
-                            .fill(Color.white)
-                            .ignoresSafeArea()
-                        
                         VStack{
                             if self.selected == 0{
-                                
                                 onGoingCasesView()
                             }
                             else{
@@ -45,17 +41,12 @@ struct HomeView: View {
                                 closedCasesView()
                             }
                             Button(action: {}, label: {
-                                Text("Report a Case")
-                                    .fontWeight(.bold)
-                                    .font(.title)
-                                
-                            }).frame(width: 335, height: 50, alignment: .center)
-                            .background(Color.buttonColor)
+                                Text("Report a Case").frame(maxWidth: .infinity, maxHeight: 50)
+                            }).frame(alignment: .center)
+                            .background(Color.primaryColor)
                             .cornerRadius(10)
                             .foregroundColor(.white)
-                            .padding(.bottom,50)
-                            .padding(.top,30)
-                            .font(Font.system(size: 17))
+                            .font(Font.system(size: 17)).padding(.horizontal,27)
                         }
                     }
                 }
@@ -72,7 +63,7 @@ struct Topbar : View {
     
     var body : some View{
         HStack{
-            //Ongoing
+            Spacer()
             Button(action: {
                 self.selected = 0
                 
@@ -88,7 +79,7 @@ struct Topbar : View {
             }
             .foregroundColor(self.selected == 0 ? .white : .gray)
             
-            //Closed
+            Spacer()
             Button(action: {
                 
                 self.selected = 1
@@ -104,38 +95,14 @@ struct Topbar : View {
                 }
             }
             .foregroundColor(self.selected == 1 ? .white : .gray)
-
+            Spacer()
             }
-            .animation(.default)
+            
     }
 }
-
-
-enum segment: String, CaseIterable{
-    case onGoing = "OnGoing"
-    case closed = "Closed"
-}
-
-
-struct ChosenSegment: View{
-    var selectedSegment: segment
-    
-    var body: some View{
-        switch selectedSegment{
-        case .onGoing:
-            onGoingCasesView()
-            
-            
-        case .closed:
-            closedCasesView()
-        }
-    }
-}
-
 
 struct onGoingCasesView: View{
     var body: some View{
-        
         List{
             Text("Ini onGoing Cases")
             CaseRow_swiftUI()
