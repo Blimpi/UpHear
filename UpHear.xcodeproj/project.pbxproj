@@ -44,6 +44,7 @@
 		CDC9D04026B2BA5700215F5D /* CaseDrafts.json in Resources */ = {isa = PBXBuildFile; fileRef = CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */; };
 		CDC9D04426B2F76800215F5D /* ModelDataCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D04326B2F76800215F5D /* ModelDataCases.swift */; };
 		CDE59F8A26B6B3B0009B4D8D /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE59F8926B6B3B0009B4D8D /* LandingView.swift */; };
+		CDE59F8C26B7E722009B4D8D /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE59F8B26B7E722009B4D8D /* UserProfile.swift */; };
 		CDFEB2EC26B51B8600DED9C0 /* CaseRow.swiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEB2EB26B51B8600DED9C0 /* CaseRow.swiftUI.swift */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +109,7 @@
 		CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CaseDrafts.json; sourceTree = "<group>"; };
 		CDC9D04326B2F76800215F5D /* ModelDataCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataCases.swift; sourceTree = "<group>"; };
 		CDE59F8926B6B3B0009B4D8D /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
+		CDE59F8B26B7E722009B4D8D /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		CDFEB2EB26B51B8600DED9C0 /* CaseRow.swiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseRow.swiftUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -290,6 +292,7 @@
 				1C95624826B28E1700D3A18E /* ReportSummaryView.swift */,
 				CDE59F8926B6B3B0009B4D8D /* LandingView.swift */,
 				1C60D48426B6A18E0072C589 /* APITestView.swift */,
+				CDE59F8B26B7E722009B4D8D /* UserProfile.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				1C60D47526B43AF50072C589 /* User.swift in Sources */,
 				1CF6484026B1A28700299951 /* Persistence.swift in Sources */,
 				B818805226B6BC83004F3D38 /* TextStyle.swift in Sources */,
+				CDE59F8C26B7E722009B4D8D /* UserProfile.swift in Sources */,
 				1C60D47E26B515330072C589 /* DataManager.swift in Sources */,
 				1CF6483926B1A28600299951 /* ContentView.swift in Sources */,
 				1C95624526B2890D00D3A18E /* TermsConditionView.swift in Sources */,
