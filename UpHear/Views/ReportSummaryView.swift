@@ -81,10 +81,10 @@ struct ReportSummaryView: View {
                     Rectangle().fill(Color.white).border(Colors.primaryColor, width: 2)
                         .cornerRadius(8)
                         .frame(maxWidth: .infinity, maxHeight:50, alignment: .center)
-                        .padding(.horizontal, 31).padding(.top,10).overlay(
+                        .overlay(
                             Text("Save to Draft").accentColor(Colors.primaryColor)
                         )
-                }
+                }.padding(.horizontal, 31).padding(.top,10)
                 Button(action: { }) {
                     Rectangle().fill(Colors.primaryColor)
                         .cornerRadius(8)

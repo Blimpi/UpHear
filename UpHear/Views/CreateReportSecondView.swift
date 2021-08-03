@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CreateReportSecondView: View {
+    
     @State var isIdentityNil = true;
     
     init(){
@@ -51,32 +52,10 @@ struct CreateReportSecondView: View {
                         }
                     )
                 }
-                
-                HStack(alignment: .center, spacing: 32){
-                    VStack{
-                        Text("1").padding(.init(top: 49, leading: 0, bottom: 0, trailing: 0)).foregroundColor(.white).font(.body)
-                        RoundedRectangle(cornerRadius: 3).fill(Color.white).frame(width: 34, height: 6, alignment: .center)
-                        Spacer()
-                    }
-                    VStack{
-                        Text("2").padding(.init(top: 49, leading: 0, bottom: 0, trailing: 0)).foregroundColor(.white).font(.body)
-                        RoundedRectangle(cornerRadius: 3).fill(Color.white).frame(width: 34, height: 6, alignment: .center)
-                        Spacer()
-                    }
-                    VStack{
-                        Text("3").padding(.init(top: 49, leading: 0, bottom: 0, trailing: 0)).foregroundColor(.white).font(.body)
-                        RoundedRectangle(cornerRadius: 3).fill(Color.white).frame(width: 34, height: 6, alignment: .center)
-                        Spacer()
-                    }
-                    VStack{
-                        Text("4").padding(.init(top: 49, leading: 0, bottom: 0, trailing: 0)).foregroundColor(.white).font(.body)
-                        RoundedRectangle(cornerRadius: 3).fill(Color.white).frame(width: 34, height: 6, alignment: .center)
-                        Spacer()
-                    }
-                }
+                CustomPageControl(pageNumber: 2)
   
             }.navigationBarTitle(("Report a Case"),displayMode: .inline)
-            .navigationBarItems(leading: Button(action: { }) {
+            .navigationBarItems(leading: Button(action: {}) {
                     Image(systemName: "chevron.left")
             }.accentColor(Colors.primaryColor), trailing: Button(action: {}){
                 Text("Close")

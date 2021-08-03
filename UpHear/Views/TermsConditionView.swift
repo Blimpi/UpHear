@@ -33,10 +33,11 @@ struct TermsConditionView: View {
                                     Text("Your agreement is important. Please read the following terms before using UpHear")
                                         .padding(.top)
                                         .font(Font.system(size:16))
+                                        .multilineTextAlignment(.center)
                                 }
 
                                 Section{ //List Agreements
-                                    List{
+                                    VStack{
                                         HStack{
                                             Image("tnc1")
                                             Text("Reporters are responsible for all submitted reports")
@@ -57,19 +58,19 @@ struct TermsConditionView: View {
                                             Text("UpHear ensures to protect the confidentiality of reporter's identity, and is not responsible if HR may need to disclose reporter's identity if necessary.")
                                         }
                                     }.font(Font.system(size:13))
-                                    .padding()
+                                    .padding(.horizontal,43)
+                                    .padding(.vertical,37)
                                     
                                     Text("By tapping “Agree to Terms”, you agree to UpHear’s Terms of Service and Privacy Policy.")
                                         .font(Font.system(size:11))
                                         .fontWeight(.light)
-                                        .frame(width: 304, height:30, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                        .frame(width: 304, height:30, alignment: .center)
+                                        .multilineTextAlignment(.center)
                                         
-                                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                                        Text("Agree to Terms")
-                                            .fontWeight(.bold)
-                                                .font(.title)
+                                    Button(action: {}, label: {
+                                        Text("Agree to Terms").font(.body)
                                             
-                                    }).frame(width: 335, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                    }).frame(width: 335, height: 50, alignment: .center)
                                     .background(Color.buttonColor)
                                     .cornerRadius(10)
                                     .foregroundColor(.white)
