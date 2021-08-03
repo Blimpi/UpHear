@@ -191,7 +191,6 @@ struct statusTimeline: View{
                         }else{
                             Circle().fill(Colors.lightBlue).frame(width: 17, height: 17).padding(.top,3).padding(.bottom,-4)
                         }
-                        
                         Rectangle().fill(Colors.lightBlue).frame(width: 3, height: 25,alignment: .center).padding(.vertical,-4)
                         Rectangle().fill(Colors.lightBlue).frame(width: 3, height: 25,alignment: .center).padding(.vertical,-4)
                     }

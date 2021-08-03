@@ -23,8 +23,6 @@ struct RequiredActionsCard: View {
                     Spacer()
                     HStack{
                         Image(systemName: "exclamationmark.circle.fill").font(.system(size: 35)).foregroundColor(Colors.secondaryColor)
-                        Spacer().frame(width:-10)
-                        Image(systemName: "plus.circle.fill").font(.system(size: 35)).foregroundColor(Colors.primaryColor)
                     }
                 }.padding()
                 
