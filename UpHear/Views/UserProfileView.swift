@@ -38,12 +38,12 @@ struct UserProfileView: View {
                         .shadow(radius: 7)
                         .padding(.top, 60)
                     //Email
-                    Text(viewModel.user?.email ?? "No User")
+                    Text(viewModel.user.email ?? "No User")
                         .font(Font.system(size: 16))
                         .foregroundColor(.subheadline)
                         .padding(.bottom,2)
                     //Company Name
-                    Text("Wimpi.inc")
+                    Text(viewModel.user.companyName ?? "No Company")
                         .font(Font.system(size: 16))
                         .foregroundColor(.subheadline)
                         .padding(.bottom,2)
@@ -108,7 +108,7 @@ struct UserProfileView: View {
                         
                         TextField(
                                 "  Enter Full Name",
-                                 text: $fullName
+                            text: $viewModel.name
                         ).frame(width: 335, height:45)
                         .border(Color.gray, width: 2)
                         .cornerRadius(4)
@@ -119,7 +119,7 @@ struct UserProfileView: View {
                         
                         TextField(
                                 "  Enter Current Position",
-                                 text: $position
+                            text: $position //$viewModel.user.position
                         ).frame(width: 335, height:45)
                         .border(Color.gray, width: 2)
                         .cornerRadius(4)
@@ -129,7 +129,7 @@ struct UserProfileView: View {
                             .foregroundColor(.buttonColor)
                         TextField(
                                 "  Enter Current Division",
-                                 text: $division
+                            text: $division //$viewModel.user.division
                         ).frame(width: 335, height:45)
                         .border(Color.gray, width: 2)
                         .cornerRadius(4)

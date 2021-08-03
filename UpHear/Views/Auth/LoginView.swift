@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LoginView: View {
+    
+    @ObservedObject var viewModel = AuthViewModel()
+    
     @State var email = ""
     @State var password = ""
     
@@ -31,7 +34,7 @@ struct LoginView: View {
                     .cornerRadius(4)
                     .padding(.init(top: 10, leading: 23, bottom: 10, trailing: 23))
                     
-                    Button(action: { }) {
+                    Button(action: { viewModel.login(email: email, password: password) }) {
                         Rectangle().fill(Colors.primaryColor)
                             .cornerRadius(8)
                             .frame(maxWidth: .infinity, maxHeight:50, alignment: .center)
