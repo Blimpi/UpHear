@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct UserProfile: View {
+struct UserProfileView: View {
+    @ObservedObject var viewModel: UserProfileViewModel = UserProfileViewModel()
+    
     @State var fullName = ""
     @State var position = ""
     @State var division = ""
@@ -36,7 +38,7 @@ struct UserProfile: View {
                         .shadow(radius: 7)
                         .padding(.top, 60)
                     //Email
-                    Text("Wimpigarfield@gmail.com")
+                    Text(viewModel.user?.email ?? "No User")
                         .font(Font.system(size: 16))
                         .foregroundColor(.subheadline)
                         .padding(.bottom,2)
@@ -161,6 +163,6 @@ struct UserProfile: View {
     
 struct UserProfile_Previews: PreviewProvider {
     static var previews: some View {
-        UserProfile()
+        UserProfileView()
     }
 }
