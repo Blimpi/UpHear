@@ -10,10 +10,6 @@ import SwiftUI
 struct UserProfileView: View {
     @ObservedObject var viewModel: UserProfileViewModel = UserProfileViewModel()
     
-    @State var fullName = ""
-    @State var position = ""
-    @State var division = ""
-    
     init(){
         UINavigationBar.appearance().backgroundColor = .clear
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(.white)]
@@ -43,7 +39,7 @@ struct UserProfileView: View {
                         .foregroundColor(.subheadline)
                         .padding(.bottom,2)
                     //Company Name
-                    Text(viewModel.user.companyName ?? "No Company")
+                    Text(viewModel.user.companyName?[0] ?? "No Company")
                         .font(Font.system(size: 16))
                         .foregroundColor(.subheadline)
                         .padding(.bottom,2)
@@ -119,7 +115,7 @@ struct UserProfileView: View {
                         
                         TextField(
                                 "  Enter Current Position",
-                            text: $position //$viewModel.user.position
+                            text: $viewModel.position
                         ).frame(width: 335, height:45)
                         .border(Color.gray, width: 2)
                         .cornerRadius(4)
@@ -129,7 +125,7 @@ struct UserProfileView: View {
                             .foregroundColor(.buttonColor)
                         TextField(
                                 "  Enter Current Division",
-                            text: $division //$viewModel.user.division
+                            text: $viewModel.division
                         ).frame(width: 335, height:45)
                         .border(Color.gray, width: 2)
                         .cornerRadius(4)
