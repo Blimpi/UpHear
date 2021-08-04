@@ -29,12 +29,28 @@ struct UserProfile: View {
                     Spacer()
                 }
                 VStack{
-                    Image("Bismo")
-                        .resizable()
-                        .clipShape(Circle())
-                        .frame(width: 104, height: 101, alignment: .center)
-                        .shadow(radius: 7)
-                        .padding(.top, 60)
+                    ZStack{
+                        Image("Bismo")
+                            .resizable()
+                            .clipShape(Circle())
+                            .frame(width: 104, height: 101, alignment: .center)
+                            .shadow(radius: 7)
+                            .padding(.top, 60)
+                        
+                        Button(action: {
+                            print("Tapped")
+                        }) {
+                            HStack{
+                                Image("cameraIcon")
+                                    .resizable()
+                                    .clipShape(Circle())
+                                    .frame(width: 22, height: 19, alignment: .center)
+                                    .shadow(radius: 7)
+                                    .padding(.top, 60)
+                            }
+                        }.offset(x: 35, y: 40)
+                    }
+                    
                     //Email
                     Text("Wimpigarfield@gmail.com")
                         .font(Font.system(size: 16))
@@ -46,7 +62,6 @@ struct UserProfile: View {
                         .foregroundColor(.subheadline)
                         .padding(.bottom,2)
                         
-                    
                     //Button edit profile
                     Button(action: {}, label: {
                         Text("Edit Profile")
@@ -56,6 +71,7 @@ struct UserProfile: View {
                     .cornerRadius(19.5)
                     .foregroundColor(.white)
                     .font(Font.system(size: 17))
+                    
                     
                     //Card
                     ZStack{
@@ -145,9 +161,7 @@ struct UserProfile: View {
                     .padding(.bottom,50)
                     .padding(.top,30)
                     .font(Font.system(size: 17))
-                    
                 }
-
             }
             .navigationBarTitle(("Profile"),displayMode: .inline)
             .navigationBarItems(leading: Button(action: { }) {
