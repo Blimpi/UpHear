@@ -27,19 +27,34 @@ struct DraftsView: View {
 //        .init(id:0, isAnonymous: true, victimID: 01, perpetratorName: "Wimpi", incidentTime: "20:00", incidentDate: "20-July-2021", incidentDetails:"Saya terdiskriminasi banget!"),
 //
 //  ]
-    
+    init(){
+        UINavigationBar.appearance().backgroundColor = .clear
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().isTranslucent = true
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+    }
     var body: some View {
         
         NavigationView{
-            VStack{
-                List{
-                    CaseDraftRow()
-                }.listStyle(PlainListStyle())
+            ZStack{
+                ZStack{
+                    
+                    List{
+                        Spacer()
+                        CaseDraftRow()
+                    }.listStyle(PlainListStyle())
+                    VStack{
+                        Image("navBarBG").ignoresSafeArea()
+                        Spacer()
+                    }
+                    
+                }
+                .navigationBarTitle(("Draft Case"),displayMode: .inline)
+                .navigationBarItems(leading: Button(action: { }) {
+                    Image(systemName: "chevron.left").accentColor(.white).font(.system(size: 24).weight(.semibold))
+                })
             }
-            .navigationBarTitle(("My Drafts"),displayMode: .inline)
-            .navigationBarItems(leading: Button(action: { }) {
-                    Image(systemName: "chevron.left")
-            })
         }
     }
 }

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct UserProfileView: View {
+    @ObservedObject var viewModel: UserProfileViewModel = UserProfileViewModel()
+    
     @State var fullName = ""
     @State var position = ""
     @State var division = ""
@@ -52,12 +54,12 @@ struct UserProfileView: View {
                     }
                     
                     //Email
-                    Text("Wimpigarfield@gmail.com")
+                    Text(viewModel.user.email ?? "No User")
                         .font(Font.system(size: 16))
                         .foregroundColor(.subheadline)
                         .padding(.bottom,2)
                     //Company Name
-                    Text("Wimpi.inc")
+                    Text(viewModel.user.companyName ?? "No Company")
                         .font(Font.system(size: 16))
                         .foregroundColor(.subheadline)
                         .padding(.bottom,2)
@@ -71,7 +73,6 @@ struct UserProfileView: View {
                     .cornerRadius(19.5)
                     .foregroundColor(.white)
                     .font(Font.system(size: 17))
-                    
                     
                     //Card
                     ZStack{
@@ -122,7 +123,7 @@ struct UserProfileView: View {
                         
                         TextField(
                                 "  Enter Full Name",
-                                 text: $fullName
+                            text: $viewModel.name
                         ).frame(width: 335, height:45)
                         .border(Color.gray, width: 2)
                         .cornerRadius(4)
@@ -133,7 +134,7 @@ struct UserProfileView: View {
                         
                         TextField(
                                 "  Enter Current Position",
-                                 text: $position
+                            text: $position //$viewModel.user.position
                         ).frame(width: 335, height:45)
                         .border(Color.gray, width: 2)
                         .cornerRadius(4)
@@ -143,7 +144,7 @@ struct UserProfileView: View {
                             .foregroundColor(.buttonColor)
                         TextField(
                                 "  Enter Current Division",
-                                 text: $division
+                            text: $division //$viewModel.user.division
                         ).frame(width: 335, height:45)
                         .border(Color.gray, width: 2)
                         .cornerRadius(4)

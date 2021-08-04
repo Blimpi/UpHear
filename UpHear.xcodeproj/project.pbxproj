@@ -22,6 +22,9 @@
 		1C60D48C26B7ECBA0072C589 /* RequiredActionsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D48B26B7ECBA0072C589 /* RequiredActionsCard.swift */; };
 		1C60D48F26B7F5B40072C589 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D48E26B7F5B40072C589 /* AuthViewModel.swift */; };
 		1C60D49126B82DE90072C589 /* CreateReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D49026B82DE90072C589 /* CreateReportViewModel.swift */; };
+		1C60D49326B92A710072C589 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D49226B92A710072C589 /* Extensions.swift */; };
+		1C60D49626B940D80072C589 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D49526B940D80072C589 /* UserDefaultsManager.swift */; };
+		1C60D49826B9A8900072C589 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D49726B9A8900072C589 /* UserProfileViewModel.swift */; };
 		1C95623F26B286B600D3A18E /* HomeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95623E26B286B600D3A18E /* HomeListView.swift */; };
 		1C95624126B2882500D3A18E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624026B2882500D3A18E /* HomeView.swift */; };
 		1C95624326B2888300D3A18E /* DraftsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624226B2888300D3A18E /* DraftsView.swift */; };
@@ -50,8 +53,8 @@
 		CDC9D04026B2BA5700215F5D /* CaseDrafts.json in Resources */ = {isa = PBXBuildFile; fileRef = CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */; };
 		CDC9D04426B2F76800215F5D /* ModelDataCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D04326B2F76800215F5D /* ModelDataCases.swift */; };
 		CDE59F8A26B6B3B0009B4D8D /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE59F8926B6B3B0009B4D8D /* LandingView.swift */; };
+		CDFEB2EC26B51B8600DED9C0 /* CaseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEB2EB26B51B8600DED9C0 /* CaseCard.swift */; };
 		CDE59F8C26B7E722009B4D8D /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE59F8B26B7E722009B4D8D /* UserProfileView.swift */; };
-		CDFEB2EC26B51B8600DED9C0 /* CaseRow.swiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEB2EB26B51B8600DED9C0 /* CaseRow.swiftUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,9 @@
 		1C60D48B26B7ECBA0072C589 /* RequiredActionsCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequiredActionsCard.swift; sourceTree = "<group>"; };
 		1C60D48E26B7F5B40072C589 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		1C60D49026B82DE90072C589 /* CreateReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportViewModel.swift; sourceTree = "<group>"; };
+		1C60D49226B92A710072C589 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1C60D49526B940D80072C589 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		1C60D49726B9A8900072C589 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
 		1C95623E26B286B600D3A18E /* HomeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListView.swift; sourceTree = "<group>"; };
 		1C95624026B2882500D3A18E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1C95624226B2888300D3A18E /* DraftsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftsView.swift; sourceTree = "<group>"; };
@@ -121,8 +127,8 @@
 		CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CaseDrafts.json; sourceTree = "<group>"; };
 		CDC9D04326B2F76800215F5D /* ModelDataCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataCases.swift; sourceTree = "<group>"; };
 		CDE59F8926B6B3B0009B4D8D /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
+		CDFEB2EB26B51B8600DED9C0 /* CaseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseCard.swift; sourceTree = "<group>"; };
 		CDE59F8B26B7E722009B4D8D /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
-		CDFEB2EB26B51B8600DED9C0 /* CaseRow.swiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseRow.swiftUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +190,14 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		1C60D49426B940A70072C589 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1C60D49526B940D80072C589 /* UserDefaultsManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		1C95623D26B2869200D3A18E /* Reusable Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,7 +205,7 @@
 				1C95623E26B286B600D3A18E /* HomeListView.swift */,
 				B818805126B6BC83004F3D38 /* TextStyle.swift */,
 				CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */,
-				CDFEB2EB26B51B8600DED9C0 /* CaseRow.swiftUI.swift */,
+				CDFEB2EB26B51B8600DED9C0 /* CaseCard.swift */,
 			);
 			path = "Reusable Views";
 			sourceTree = "<group>";
@@ -296,6 +310,7 @@
 				1C60D48626B6AE480072C589 /* APITestViewModel.swift */,
 				1C60D48E26B7F5B40072C589 /* AuthViewModel.swift */,
 				1C60D49026B82DE90072C589 /* CreateReportViewModel.swift */,
+				1C60D49726B9A8900072C589 /* UserProfileViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -326,9 +341,11 @@
 		1CF6486926B1A2E500299951 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				1C60D49426B940A70072C589 /* Helpers */,
 				1CF6483626B1A28600299951 /* UpHearApp.swift */,
 				1CF6484426B1A28700299951 /* Info.plist */,
 				1CF6483F26B1A28700299951 /* Persistence.swift */,
+				1C60D49226B92A710072C589 /* Extensions.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -492,19 +509,21 @@
 				1C60D47926B4C52F0072C589 /* Case.swift in Sources */,
 				1CF6484326B1A28700299951 /* UpHear.xcdatamodeld in Sources */,
 				1C95624326B2888300D3A18E /* DraftsView.swift in Sources */,
-				CDFEB2EC26B51B8600DED9C0 /* CaseRow.swiftUI.swift in Sources */,
+				CDFEB2EC26B51B8600DED9C0 /* CaseCard.swift in Sources */,
 				1CF6487126B1A3F600299951 /* APIService.swift in Sources */,
 				1C95624726B289ED00D3A18E /* CreateReportView.swift in Sources */,
 				1C60D48A26B7E91E0072C589 /* LoginView.swift in Sources */,
 				1C60D47126B3E9370072C589 /* AuthRequest.swift in Sources */,
 				B818805426B6FE63004F3D38 /* CaseDetailView.swift in Sources */,
 				1C60D47526B43AF50072C589 /* User.swift in Sources */,
+				1C60D49826B9A8900072C589 /* UserProfileViewModel.swift in Sources */,
 				1CF6484026B1A28700299951 /* Persistence.swift in Sources */,
 				B818805826B7B36B004F3D38 /* SubmitMoreEvidence.swift in Sources */,
 				B818805226B6BC83004F3D38 /* TextStyle.swift in Sources */,
 				CDE59F8C26B7E722009B4D8D /* UserProfileView.swift in Sources */,
 				1C60D47E26B515330072C589 /* DataManager.swift in Sources */,
 				1CF6483926B1A28600299951 /* ContentView.swift in Sources */,
+				1C60D49326B92A710072C589 /* Extensions.swift in Sources */,
 				1C95624526B2890D00D3A18E /* TermsConditionView.swift in Sources */,
 				1C60D47726B4C1A10072C589 /* Company.swift in Sources */,
 				CDE59F8A26B6B3B0009B4D8D /* LandingView.swift in Sources */,
@@ -518,6 +537,7 @@
 				1C60D49126B82DE90072C589 /* CreateReportViewModel.swift in Sources */,
 				B818804E26B45BDF004F3D38 /* CreateReportThirdView.swift in Sources */,
 				1C95624926B28E1700D3A18E /* ReportSummaryView.swift in Sources */,
+				1C60D49626B940D80072C589 /* UserDefaultsManager.swift in Sources */,
 				1CF6486D26B1A39600299951 /* ContentViewModel.swift in Sources */,
 				1CF6486F26B1A3C600299951 /* Constants.swift in Sources */,
 				CDC9D03E26B2B0AB00215F5D /* CaseDraftRow.swift in Sources */,
@@ -679,7 +699,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"UpHear/Preview Content\"";
-				DEVELOPMENT_TEAM = V8U6HJ6HPQ;
+				DEVELOPMENT_TEAM = D2R8L25XGM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = UpHear/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -701,7 +721,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"UpHear/Preview Content\"";
-				DEVELOPMENT_TEAM = V8U6HJ6HPQ;
+				DEVELOPMENT_TEAM = D2R8L25XGM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = UpHear/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

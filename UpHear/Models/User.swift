@@ -23,6 +23,9 @@ struct User: Codable {
     let name: String?
     let role: String?
     let company: [String]?
+    let companyName: String?
+    let position: String?
+    let division: String?
     
     enum CodingKeys: String, CodingKey {
         case email = "Email"
@@ -30,5 +33,19 @@ struct User: Codable {
         case name = "Name"
         case role = "Role"
         case company = "Company"
+        case companyName = "Name (from Company)"
+        case position = "Position"
+        case division = "Division"
+    }
+    
+    init() {
+        email = ""
+        password = ""
+        name = ""
+        role = ""
+        company = [""]
+        companyName = ""
+        position = ""
+        division = ""
     }
 }

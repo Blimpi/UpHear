@@ -15,21 +15,13 @@ struct LandingView: View {
                 .ignoresSafeArea()
             
             VStack{
-                
+                Spacer()
                 Text("UpHear")
                     .font(.system(size: 55))
                     .foregroundColor(.white)
-                
-                
-                
-                
-                
+                Spacer()
                 Button(action: {}, label: {
-                    Text("Get Started")
-                        .fontWeight(.bold)
-                        .font(.title)
-                    
-                    
+                    Text("Get Started").font(.body).foregroundColor(Colors.primaryColor)
                 }).frame(width: 335, height: 50, alignment: .center)
                 .background(Color.white)
                 .cornerRadius(10)

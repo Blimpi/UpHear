@@ -15,30 +15,30 @@ class AuthViewModel: ObservableObject {
     }
     
     func login(email: String, password: String) {
-        //let hashedPassword = password hashed
+        let lowercasedEmail = email.lowercased()
+        let hashedPassword = password.sha256()
         
         let headers = [
             "Authorization": "Bearer keyNHgPpNaQW4eEMC"
         ]
         
-        let url = "https://api.airtable.com/v0/appAre4MVvocsZOpK/tbl6ChR5gz43HU3AB?fields%5B%5D=&filterByFormula=%7BEmail%7D+%3D+'\(email)'"
+        let url = "https://api.airtable.com/v0/appAre4MVvocsZOpK/tbl6ChR5gz43HU3AB?filterByFormula=AND(%7BEmail%7D+%3D+'\(lowercasedEmail)'%2C%7BPassword%7D+%3D+'\(hashedPassword)')"
         
         AuthRequest.fetchUserData(url: url, header: headers, showLoader: false) { response in
             
-            if self.verifyCredentials(email: email) {
-                
+            if let records = response.records {
+                if records.isEmpty {
+                    print("login failed")
+                }
+                else {
+                    if let user = records[0].fields {
+                        UserProfileCache.save(user)
+                    }
+                }
             }
-            
-            UserDefaults.standard.set(email, forKey: Constants.UserDefaults.currentUser)
         } failCompletion: { message in
             print(message)
         }
-    }
-    
-    private func verifyCredentials(email: String) -> Bool {
-        
-        
-        return false
     }
     
 }
