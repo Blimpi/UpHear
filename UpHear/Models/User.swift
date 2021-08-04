@@ -23,7 +23,7 @@ struct User: Codable {
     let name: String?
     let role: String?
     let company: [String]?
-    let companyName: String?
+    let companyName: [String]?
     let position: String?
     let division: String?
     
@@ -44,7 +44,7 @@ struct User: Codable {
         name = ""
         role = ""
         company = [""]
-        companyName = ""
+        companyName = [""]
         position = ""
         division = ""
     }

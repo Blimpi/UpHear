@@ -10,4 +10,5 @@ import Foundation
 struct DataManager {
     static var USERDATA: UserData!
     static var COMPANY: Company!
+    static var CASEDATA: CaseData!
 }

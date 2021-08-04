@@ -25,6 +25,7 @@
 		1C60D49326B92A710072C589 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D49226B92A710072C589 /* Extensions.swift */; };
 		1C60D49626B940D80072C589 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D49526B940D80072C589 /* UserDefaultsManager.swift */; };
 		1C60D49826B9A8900072C589 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D49726B9A8900072C589 /* UserProfileViewModel.swift */; };
+		1C60D49A26BA40890072C589 /* CaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D49926BA40890072C589 /* CaseRequest.swift */; };
 		1C95623F26B286B600D3A18E /* HomeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95623E26B286B600D3A18E /* HomeListView.swift */; };
 		1C95624126B2882500D3A18E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624026B2882500D3A18E /* HomeView.swift */; };
 		1C95624326B2888300D3A18E /* DraftsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624226B2888300D3A18E /* DraftsView.swift */; };
@@ -53,8 +54,8 @@
 		CDC9D04026B2BA5700215F5D /* CaseDrafts.json in Resources */ = {isa = PBXBuildFile; fileRef = CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */; };
 		CDC9D04426B2F76800215F5D /* ModelDataCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D04326B2F76800215F5D /* ModelDataCases.swift */; };
 		CDE59F8A26B6B3B0009B4D8D /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE59F8926B6B3B0009B4D8D /* LandingView.swift */; };
-		CDFEB2EC26B51B8600DED9C0 /* CaseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEB2EB26B51B8600DED9C0 /* CaseCard.swift */; };
 		CDE59F8C26B7E722009B4D8D /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE59F8B26B7E722009B4D8D /* UserProfileView.swift */; };
+		CDFEB2EC26B51B8600DED9C0 /* CaseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEB2EB26B51B8600DED9C0 /* CaseCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		1C60D49226B92A710072C589 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1C60D49526B940D80072C589 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		1C60D49726B9A8900072C589 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
+		1C60D49926BA40890072C589 /* CaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseRequest.swift; sourceTree = "<group>"; };
 		1C95623E26B286B600D3A18E /* HomeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListView.swift; sourceTree = "<group>"; };
 		1C95624026B2882500D3A18E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1C95624226B2888300D3A18E /* DraftsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftsView.swift; sourceTree = "<group>"; };
@@ -127,8 +129,8 @@
 		CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CaseDrafts.json; sourceTree = "<group>"; };
 		CDC9D04326B2F76800215F5D /* ModelDataCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataCases.swift; sourceTree = "<group>"; };
 		CDE59F8926B6B3B0009B4D8D /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
-		CDFEB2EB26B51B8600DED9C0 /* CaseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseCard.swift; sourceTree = "<group>"; };
 		CDE59F8B26B7E722009B4D8D /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		CDFEB2EB26B51B8600DED9C0 /* CaseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				1CF6487026B1A3F600299951 /* APIService.swift */,
 				1C60D47026B3E9370072C589 /* AuthRequest.swift */,
 				1C60D47226B3FBC40072C589 /* BaseRequest.swift */,
+				1C60D49926BA40890072C589 /* CaseRequest.swift */,
 			);
 			path = "Network Services";
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 				1C60D48F26B7F5B40072C589 /* AuthViewModel.swift in Sources */,
 				1C60D48526B6A18E0072C589 /* APITestView.swift in Sources */,
 				1C60D47926B4C52F0072C589 /* Case.swift in Sources */,
+				1C60D49A26BA40890072C589 /* CaseRequest.swift in Sources */,
 				1CF6484326B1A28700299951 /* UpHear.xcdatamodeld in Sources */,
 				1C95624326B2888300D3A18E /* DraftsView.swift in Sources */,
 				CDFEB2EC26B51B8600DED9C0 /* CaseCard.swift in Sources */,
