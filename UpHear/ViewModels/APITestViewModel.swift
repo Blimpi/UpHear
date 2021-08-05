@@ -13,6 +13,8 @@ class APITestViewModel: ObservableObject {
     init() {
         loadData()
 //        print(userData!)
+        
+        testPost()
     }
     
     func loadData() {
@@ -24,9 +26,38 @@ class APITestViewModel: ObservableObject {
         AuthRequest.fetchUserData(url: NetworkConstants.GET_USERS_LIST, header: headers, showLoader: false) { response in
             print(response)
             
-            self.userData = response
+            DispatchQueue.main.async {
+                self.userData = response
+            }
         } failCompletion: { message in
             print(message)
+        }
+    }
+    
+    func testPost() {
+        let newCase = Case()
+        
+        newCase.caseID = "CA123"
+        newCase.reporterID = ["recu46CkJGzJ7kapn"]
+        newCase.isAnonymous = "false"
+        newCase.victimID = ["recu46CkJGzJ7kapn"]
+        newCase.perpetratorID = ["recu46CkJGzJ7kapn"]
+        newCase.incidentTime = "2021-07-30T12:19:34.000Z"
+        newCase.incidentPlace = "Kantor"
+        newCase.incidentDetail = "qwerty"
+        
+        let headers = [
+            "Authorization": "Bearer keyNHgPpNaQW4eEMC",
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        ]
+        
+        CaseRequest.addCase(url: NetworkConstants.POST_CASE, header: headers, caseItem: newCase, showLoader: false) { responseData in
+            if responseData.records?.count != 0 {
+                print(responseData)
+            }
+        } failCompletion: { message in
+            print("POST data to server fail with reason: \(message)")
         }
     }
 }

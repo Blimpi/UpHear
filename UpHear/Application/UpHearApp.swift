@@ -13,7 +13,7 @@ struct UpHearApp: App {
 
     var body: some Scene {
         WindowGroup {
-            UserProfileView()
+            APITestView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

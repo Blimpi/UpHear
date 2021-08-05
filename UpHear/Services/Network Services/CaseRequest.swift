@@ -38,10 +38,24 @@ class CaseRequest: NSObject {
                         failCompletion: @escaping (String) -> Void) {
         
         let jsonString = """
-            {"records":[{"fields": {"CaseID": "\(caseItem.caseID)","Reporter": ["\(caseItem.reporterID)"],"isAnonymous": "\(caseItem.isAnonymous)","Victim": ["\(caseItem.victimID)"],}}]}
+            {"records":[{"fields": {"CaseID": "\(caseItem.caseID)","Reporter": ["\(caseItem.reporterID[0])"],"isAnonymous": "\(caseItem.isAnonymous)","Victim": ["\(caseItem.victimID[0])"],"Perpetrator": ["\(caseItem.perpetratorID[0])"],"IncidentTime": "\(caseItem.incidentTime)","IncidentPlace": "\(caseItem.incidentPlace)","IncidentDetail": "\(caseItem.incidentDetail)","Status": "\(caseItem.status)"}}]}
         """
-//        
-//        BaseRequest.POST(url: url, header: header, jsonString: jsonString, showLoader: showLoader, successCompletion: , failCompletion: )
+        
+        BaseRequest.POST(url: url, header: header, jsonString: jsonString, showLoader: showLoader) { response in
+            
+            var dataModel = DataManager.CASEDATA
+            
+            do {
+                let newCase = try JSONDecoder().decode(CaseData.self, from: response as! Data)
+                dataModel = newCase
+                successCompletion(dataModel!)
+            } catch let error {
+                print("Error: \(error)")
+            }
+            
+        } failCompletion: { message in
+            print("Error: \(message)")
+        }
     }
     
 }
