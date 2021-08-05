@@ -50,12 +50,12 @@ struct UserProfileView: View {
                     }
                     
                     //Email
-                    Text(viewModel.user.email ?? "No User")
+                    Text(viewModel.user.email)
                         .font(Font.system(size: 16))
                         .foregroundColor(.subheadline)
                         .padding(.bottom,2)
                     //Company Name
-                    Text(viewModel.user.companyName?[0] ?? "No Company")
+                    Text(viewModel.user.companyName[0])
                         .font(Font.system(size: 16))
                         .foregroundColor(.subheadline)
                         .padding(.bottom,2)
