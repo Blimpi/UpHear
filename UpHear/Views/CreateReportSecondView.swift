@@ -52,7 +52,7 @@ struct CreateReportSecondView: View {
                         }
                     )
                 }
-                CustomPageControl(pageNumber: 2)
+
   
             }.navigationBarTitle(("Report a Case"),displayMode: .inline)
             .navigationBarItems(leading: Button(action: {}) {

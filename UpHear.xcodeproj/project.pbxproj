@@ -50,6 +50,7 @@
 		B818805226B6BC83004F3D38 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805126B6BC83004F3D38 /* TextStyle.swift */; };
 		B818805426B6FE63004F3D38 /* CaseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805326B6FE63004F3D38 /* CaseDetailView.swift */; };
 		B818805826B7B36B004F3D38 /* SubmitMoreEvidence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805726B7B36B004F3D38 /* SubmitMoreEvidence.swift */; };
+		B818805A26BA8412004F3D38 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805926BA8412004F3D38 /* CustomPageControl.swift */; };
 		CDC9D03E26B2B0AB00215F5D /* CaseDraftRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */; };
 		CDC9D04026B2BA5700215F5D /* CaseDrafts.json in Resources */ = {isa = PBXBuildFile; fileRef = CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */; };
 		CDC9D04426B2F76800215F5D /* ModelDataCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D04326B2F76800215F5D /* ModelDataCases.swift */; };
@@ -125,6 +126,7 @@
 		B818805126B6BC83004F3D38 /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
 		B818805326B6FE63004F3D38 /* CaseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDetailView.swift; sourceTree = "<group>"; };
 		B818805726B7B36B004F3D38 /* SubmitMoreEvidence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitMoreEvidence.swift; sourceTree = "<group>"; };
+		B818805926BA8412004F3D38 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
 		CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDraftRow.swift; sourceTree = "<group>"; };
 		CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CaseDrafts.json; sourceTree = "<group>"; };
 		CDC9D04326B2F76800215F5D /* ModelDataCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataCases.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				B818805126B6BC83004F3D38 /* TextStyle.swift */,
 				CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */,
 				CDFEB2EB26B51B8600DED9C0 /* CaseCard.swift */,
+				B818805926BA8412004F3D38 /* CustomPageControl.swift */,
 			);
 			path = "Reusable Views";
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 				1C95624E26B29D3000D3A18E /* Colors.swift in Sources */,
 				B818805026B46EEF004F3D38 /* CreateReportForthView.swift in Sources */,
 				1C60D48726B6AE480072C589 /* APITestViewModel.swift in Sources */,
+				B818805A26BA8412004F3D38 /* CustomPageControl.swift in Sources */,
 				1C95623F26B286B600D3A18E /* HomeListView.swift in Sources */,
 				1C60D49126B82DE90072C589 /* CreateReportViewModel.swift in Sources */,
 				B818804E26B45BDF004F3D38 /* CreateReportThirdView.swift in Sources */,
