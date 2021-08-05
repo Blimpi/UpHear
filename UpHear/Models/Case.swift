@@ -16,19 +16,19 @@ struct CaseDataResponse: Codable {
     let createdTime: String?
 }
 
-struct Case: Codable {
-    let caseID: String?
-    let reporterID: [String]?
-    let reporterName: String?
-    let isAnonymous: Bool?
-    let victimID: [String]?
-    let victimName: String?
-    let perpetratorID: [String]?
-    let perpetratorName: String?
-    let incidentTime: String?
-    let incidentPlace: String?
-    let incidentDetail: String?
-    let status: String?
+class Case: Codable {
+    var caseID: String
+    var reporterID: [String]
+    var reporterName: String
+    var isAnonymous: Bool
+    var victimID: [String]
+    var victimName: String
+    var perpetratorID: [String]
+    var perpetratorName: String
+    var incidentTime: String
+    var incidentPlace: String
+    var incidentDetail: String
+    var status: String
     
     enum CodingKeys: String, CodingKey {
         case caseID = "CaseID"
