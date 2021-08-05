@@ -64,7 +64,7 @@ struct CreateReportForthView: View {
                         }
                     )
                 }
-                CustomPageControl(pageNumber: 4)
+
                 
                 
                 

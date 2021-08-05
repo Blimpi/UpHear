@@ -71,13 +71,6 @@ struct CreateReportThirdView: View {
                                 .padding(.trailing,23)
                             }.padding(.leading,42)
                             
-//                            HStack{
-//                                DatePicker(selection: $dateOfIncident, in: ...Date(), displayedComponents: .date) {
-//                                }
-//                                Spacer()
-//                                Spacer()
-//                            }
-                            
                             Text("").frame(maxWidth: .infinity)
                             Spacer()
                             Button(action: { }) {
@@ -93,7 +86,7 @@ struct CreateReportThirdView: View {
                     )
                 }
                 
-                CustomPageControl(pageNumber: 3)
+
                 
                 
                 
