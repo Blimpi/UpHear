@@ -33,5 +33,8 @@ struct TestItemView: View {
 struct APITestView_Previews: PreviewProvider {
     static var previews: some View {
         APITestView()
+        
+        APITestView()
+            .previewLayout(.fixed(width: 812, height: 375))
     }
 }
