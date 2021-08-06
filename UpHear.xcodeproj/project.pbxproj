@@ -56,6 +56,11 @@
 		CDC9D04426B2F76800215F5D /* ModelDataCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D04326B2F76800215F5D /* ModelDataCases.swift */; };
 		CDE59F8A26B6B3B0009B4D8D /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE59F8926B6B3B0009B4D8D /* LandingView.swift */; };
 		CDE59F8C26B7E722009B4D8D /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE59F8B26B7E722009B4D8D /* UserProfileView.swift */; };
+		CDE59F9526BBCF29009B4D8D /* HRHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE59F9426BBCF29009B4D8D /* HRHomeView.swift */; };
+		CDE59F9726BC3D6B009B4D8D /* HRCaseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE59F9626BC3D6B009B4D8D /* HRCaseCardView.swift */; };
+		CDE59F9926BC459C009B4D8D /* HRCaseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE59F9826BC459C009B4D8D /* HRCaseDetailView.swift */; };
+		CDE59F9B26BD05CF009B4D8D /* HRActionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE59F9A26BD05CF009B4D8D /* HRActionCard.swift */; };
+		CDE59F9F26BD0E13009B4D8D /* HRAddActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE59F9E26BD0E13009B4D8D /* HRAddActionView.swift */; };
 		CDFEB2EC26B51B8600DED9C0 /* CaseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEB2EB26B51B8600DED9C0 /* CaseCard.swift */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +137,11 @@
 		CDC9D04326B2F76800215F5D /* ModelDataCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataCases.swift; sourceTree = "<group>"; };
 		CDE59F8926B6B3B0009B4D8D /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		CDE59F8B26B7E722009B4D8D /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		CDE59F9426BBCF29009B4D8D /* HRHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRHomeView.swift; sourceTree = "<group>"; };
+		CDE59F9626BC3D6B009B4D8D /* HRCaseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRCaseCardView.swift; sourceTree = "<group>"; };
+		CDE59F9826BC459C009B4D8D /* HRCaseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRCaseDetailView.swift; sourceTree = "<group>"; };
+		CDE59F9A26BD05CF009B4D8D /* HRActionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRActionCard.swift; sourceTree = "<group>"; };
+		CDE59F9E26BD0E13009B4D8D /* HRAddActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRAddActionView.swift; sourceTree = "<group>"; };
 		CDFEB2EB26B51B8600DED9C0 /* CaseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -212,6 +222,8 @@
 				CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */,
 				CDFEB2EB26B51B8600DED9C0 /* CaseCard.swift */,
 				B818805926BA8412004F3D38 /* CustomPageControl.swift */,
+				CDE59F9626BC3D6B009B4D8D /* HRCaseCardView.swift */,
+				CDE59F9A26BD05CF009B4D8D /* HRActionCard.swift */,
 			);
 			path = "Reusable Views";
 			sourceTree = "<group>";
@@ -324,6 +336,7 @@
 		1CF6486826B1A2BA00299951 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CDE59F9126BBCE6B009B4D8D /* HR */,
 				1C60D48826B7E9080072C589 /* Auth */,
 				1C95623D26B2869200D3A18E /* Reusable Views */,
 				1CF6483826B1A28600299951 /* ContentView.swift */,
@@ -372,6 +385,16 @@
 				1C60D46F26B3D25C0072C589 /* Network Services */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		CDE59F9126BBCE6B009B4D8D /* HR */ = {
+			isa = PBXGroup;
+			children = (
+				CDE59F9426BBCF29009B4D8D /* HRHomeView.swift */,
+				CDE59F9826BC459C009B4D8D /* HRCaseDetailView.swift */,
+				CDE59F9E26BD0E13009B4D8D /* HRAddActionView.swift */,
+			);
+			path = HR;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -504,6 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE59F9B26BD05CF009B4D8D /* HRActionCard.swift in Sources */,
 				1C60D48C26B7ECBA0072C589 /* RequiredActionsCard.swift in Sources */,
 				1C60D48126B572780072C589 /* NetworkConstants.swift in Sources */,
 				1C60D47326B3FBC40072C589 /* BaseRequest.swift in Sources */,
@@ -520,6 +544,7 @@
 				1CF6487126B1A3F600299951 /* APIService.swift in Sources */,
 				1C95624726B289ED00D3A18E /* CreateReportView.swift in Sources */,
 				1C60D48A26B7E91E0072C589 /* LoginView.swift in Sources */,
+				CDE59F9726BC3D6B009B4D8D /* HRCaseCardView.swift in Sources */,
 				1C60D47126B3E9370072C589 /* AuthRequest.swift in Sources */,
 				B818805426B6FE63004F3D38 /* CaseDetailView.swift in Sources */,
 				1C60D47526B43AF50072C589 /* User.swift in Sources */,
@@ -538,9 +563,12 @@
 				1CF6483726B1A28600299951 /* UpHearApp.swift in Sources */,
 				B818804C26B458F2004F3D38 /* CreateReportSecondView.swift in Sources */,
 				1C95624E26B29D3000D3A18E /* Colors.swift in Sources */,
+				CDE59F9F26BD0E13009B4D8D /* HRAddActionView.swift in Sources */,
 				B818805026B46EEF004F3D38 /* CreateReportForthView.swift in Sources */,
 				1C60D48726B6AE480072C589 /* APITestViewModel.swift in Sources */,
+				CDE59F9926BC459C009B4D8D /* HRCaseDetailView.swift in Sources */,
 				B818805A26BA8412004F3D38 /* CustomPageControl.swift in Sources */,
+				CDE59F9526BBCF29009B4D8D /* HRHomeView.swift in Sources */,
 				1C95623F26B286B600D3A18E /* HomeListView.swift in Sources */,
 				1C60D49126B82DE90072C589 /* CreateReportViewModel.swift in Sources */,
 				B818804E26B45BDF004F3D38 /* CreateReportThirdView.swift in Sources */,
