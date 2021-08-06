@@ -14,7 +14,7 @@ class APITestViewModel: ObservableObject {
         loadData()
 //        print(userData!)
         
-        testPost()
+//        testPost()
     }
     
     func loadData() {
@@ -23,7 +23,7 @@ class APITestViewModel: ObservableObject {
             "Authorization": "Bearer keyNHgPpNaQW4eEMC"
         ]
         
-        AuthRequest.fetchUserData(url: NetworkConstants.GET_USERS_LIST, header: headers, showLoader: false) { response in
+        AuthRequest.fetchUserData(url: NetworkConstants.USER_URL, header: headers, showLoader: false) { response in
             print(response)
             
             DispatchQueue.main.async {
@@ -52,7 +52,7 @@ class APITestViewModel: ObservableObject {
             "Accept": "application/json"
         ]
         
-        CaseRequest.addCase(url: NetworkConstants.POST_CASE, header: headers, caseItem: newCase, showLoader: false) { responseData in
+        CaseRequest.addCase(url: NetworkConstants.CASE_URL, header: headers, caseItem: newCase, showLoader: false) { responseData in
             if responseData.records?.count != 0 {
                 print(responseData)
             }
