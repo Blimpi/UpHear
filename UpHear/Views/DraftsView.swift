@@ -7,17 +7,6 @@
 
 import SwiftUI
 
-
-struct Draft: Identifiable{
-    var id: Int
-    var isAnonymous: Bool
-    var victimID: Int
-    var perpetratorName: String
-    var incidentTime: String
-    var incidentDate: String
-    var incidentDetails: String
-}
-
 struct DraftsView: View {
     
 //    let drafts: [Draft] = [
