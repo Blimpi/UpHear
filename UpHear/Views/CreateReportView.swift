@@ -9,10 +9,12 @@ import SwiftUI
 
 struct CreateReportView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-
-    @State var isIdentityNil = true
-    @State var currentPage = 4
+    @ObservedObject var viewModel: CreateReportViewModel = CreateReportViewModel()
+    @State var identityType: identityCondition = .nothing
+    @State var isAnonym: publicationType = .nothing
     @State var showAlert = false
+    @State var isVictim: Bool?
+    @State var currentPage = 4
     init(){
         UINavigationBar.appearance().backgroundColor = .clear
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(named: "primaryColor")!]
@@ -27,8 +29,7 @@ struct CreateReportView: View {
             VStack{
                 Spacer().frame(height: 97)
                 Rectangle().fill(Color.white).cornerRadius(46).overlay(
-                    CreateReportPage(page: $currentPage, isButtonShow: isIdentityNil)
-                    
+                    CreateReportPage(page: $currentPage,isVictim: $isVictim, isButtonSelect: $identityType, isAnonym: $isAnonym, birthdate: Date(), vm: viewModel)
                 )
             }
             CustomPageControl(pageNumber: $currentPage)
@@ -64,42 +65,69 @@ struct CreateReportView: View {
         }
     }
 }
-
+enum identityCondition: Int {
+    case victim = 1
+    case witness = 2
+    case nothing = 0
+}
+enum publicationType{
+    case anonymous
+    case identified
+    case nothing
+}
 
 struct CreateReportPage:View{
     @Binding var page:Int
+    @Binding var isVictim:Bool?
+    @Binding var isButtonSelect:identityCondition
+    @Binding var isAnonym: publicationType
     @State var isButtonShow = false
-    @State var placeOfIncident = ""
-    @ObservedObject var viewModel: CreateReportViewModel = CreateReportViewModel()
+    @State var placeOfIncident = "adasdas ad asdasdasd asd asd asdasd asd asdas dasdas das das dasd as dasd asd as dasd asd as dasd asd asd asd asd asd asd asd asd asd asd as das dasd asd asd asdazs asd asd asd asd asd as dad sdadasdasdasdasda sdad asd asd asd asd asdasd asadsar gtqdaS GASD GAD GS "
+    @State var birthdate:Date
+    @State var vm: CreateReportViewModel
     var body: some View{
         if (page==1){
             VStack{
                 Spacer().frame(height:43)
                 Text("Select Identity Type").font(.title2.weight(.bold))
                 grayText(content: "Do you consider yourself as a victim or witness in this discrimination case?", size: 17, weight: .medium)
-                    
                     .multilineTextAlignment(.center)
                     .padding(.init(top: 15, leading: 36, bottom: 0, trailing: 36))
                 Spacer().frame(height: 49)
                 Button(action: {
-                    
+                    isButtonSelect = .victim
                     page+=1
                 }) {
-                    Image("Victim_Card").renderingMode(.original)
+                    if(isButtonSelect != .victim){
+                        Image("Victim_Card").renderingMode(.original)
+                    }else{
+                        Image("bgTnC").renderingMode(.original)
+                    }
+                    
                 }
-                Button(action: { page+=1}) {
-                    Image("Witness_Card").renderingMode(.original)
+                Button(action: {
+                        isButtonSelect = .witness
+                        page+=1})
+                {
+                    if(isButtonSelect != .witness){
+                        Image("Witness_Card").renderingMode(.original)
+                    }else{
+                        Image("bgTnC").renderingMode(.original)
+                    }
                 }
                 Spacer()
                 Spacer()
-                Button(action: { }) {
+                Button(action: {
+                        page+=1
+                    
+                }) {
                     Rectangle().fill(Colors.primaryColor)
                         .cornerRadius(8)
                         .frame(maxWidth: .infinity, maxHeight:50, alignment: .center)
                         .padding(.horizontal, 23).overlay(
                             Text("Next").accentColor(.white)
                         )
-                }.opacity(isButtonShow ? 0 : 1)
+                }.opacity(isButtonSelect == .nothing ? 0 : 1)
             }
         }else if(page == 2){
             VStack{
@@ -109,36 +137,58 @@ struct CreateReportPage:View{
                     .padding(.init(top: 15, leading: 36, bottom: 0, trailing: 36))
                 Spacer().frame(height: 49)
                 Button(action: {
-                    //viewModel.caseReport?.isAnonymous = false
+                    isAnonym = .identified
+                    vm.caseReport?.isAnonymous = false
+                    page+=1
                 }) {
-                    Image("Identified_Card").renderingMode(.original)
+                    if(isAnonym != .identified){
+                        Image("Identified_Card").renderingMode(.original)
+                    }else{
+                        Image("bgTnC").renderingMode(.original)
+                    }
+                    
                 }
-                Button(action: { }) {
-                    Image("Anonymous_Card").renderingMode(.original)
+                Button(action: {
+                    isAnonym = .anonymous
+                    vm.caseReport?.isAnonymous = true
+                    page+=1
+                }) {
+                    if(isAnonym != .anonymous){
+                        Image("Anonymous_Card").renderingMode(.original)
+                    }else{
+                        Image("bgTnC").renderingMode(.original)
+                    }
                 }
                 Spacer()
                 Spacer()
-                Button(action: { }) {
+                Button(action: {
+                    page+=1
+                }) {
                     Rectangle().fill(Colors.primaryColor)
                         .cornerRadius(8)
                         .frame(maxWidth: .infinity, maxHeight:50, alignment: .center)
                         .padding(.horizontal, 23).overlay(
                             Text("Next").accentColor(.white)
                         )
-                }.opacity(isButtonShow ? 0 : 1)
+                }.opacity(isAnonym == .nothing ? 0 : 1)
             }
         }else if(page == 3){
+            
             VStack(alignment: .leading){
                 Spacer().frame(height:41)
                 VStack(alignment: .leading){
-                    Text("Date and time of incident").font(.system(size: 16))
-                    TextField(
-                            "  Enter date and time of incident",
-                             text: $placeOfIncident
-                    ).frame(height:45)
-                    .border(Color.gray, width: 2)
-                    .cornerRadius(4)
-                    .padding(.trailing,23)
+                    VStack(){
+                        Text("Date and time of incident").font(.system(size: 16))
+    //                    TextField(
+    //                            "  Enter date and time of incident",
+    //                             text: $placeOfIncident
+    //                    ).frame(height:45)
+    //                    .border(Color.gray, width: 2)
+    //                    .cornerRadius(4)
+    //                    .padding(.trailing,23)
+                        testPicker()
+                    }
+                    
                     
                     Text("Place of incident").font(.system(size: 16))
                     
@@ -203,6 +253,7 @@ struct CreateReportPage:View{
                     }
                     
                 }.padding(.leading, 27)
+                
                 Text("").frame(maxWidth: .infinity)
                 Spacer()
                 Button(action: { }) {

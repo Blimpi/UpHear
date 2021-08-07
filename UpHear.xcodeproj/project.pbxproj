@@ -51,6 +51,7 @@
 		B818805426B6FE63004F3D38 /* CaseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805326B6FE63004F3D38 /* CaseDetailView.swift */; };
 		B818805826B7B36B004F3D38 /* SubmitMoreEvidence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805726B7B36B004F3D38 /* SubmitMoreEvidence.swift */; };
 		B818805A26BA8412004F3D38 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805926BA8412004F3D38 /* CustomPageControl.swift */; };
+		B818805C26BC5763004F3D38 /* testPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805B26BC5763004F3D38 /* testPicker.swift */; };
 		CDC9D03E26B2B0AB00215F5D /* CaseDraftRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */; };
 		CDC9D04026B2BA5700215F5D /* CaseDrafts.json in Resources */ = {isa = PBXBuildFile; fileRef = CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */; };
 		CDC9D04426B2F76800215F5D /* ModelDataCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D04326B2F76800215F5D /* ModelDataCases.swift */; };
@@ -127,6 +128,7 @@
 		B818805326B6FE63004F3D38 /* CaseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDetailView.swift; sourceTree = "<group>"; };
 		B818805726B7B36B004F3D38 /* SubmitMoreEvidence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitMoreEvidence.swift; sourceTree = "<group>"; };
 		B818805926BA8412004F3D38 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
+		B818805B26BC5763004F3D38 /* testPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testPicker.swift; sourceTree = "<group>"; };
 		CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDraftRow.swift; sourceTree = "<group>"; };
 		CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CaseDrafts.json; sourceTree = "<group>"; };
 		CDC9D04326B2F76800215F5D /* ModelDataCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataCases.swift; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 				1C95624226B2888300D3A18E /* DraftsView.swift */,
 				1C95624426B2890D00D3A18E /* TermsConditionView.swift */,
 				1C95624626B289ED00D3A18E /* CreateReportView.swift */,
+				B818805B26BC5763004F3D38 /* testPicker.swift */,
 				B818805726B7B36B004F3D38 /* SubmitMoreEvidence.swift */,
 				B818804B26B458F2004F3D38 /* CreateReportSecondView.swift */,
 				B818804D26B45BDF004F3D38 /* CreateReportThirdView.swift */,
@@ -545,6 +548,7 @@
 				1C60D49126B82DE90072C589 /* CreateReportViewModel.swift in Sources */,
 				B818804E26B45BDF004F3D38 /* CreateReportThirdView.swift in Sources */,
 				1C95624926B28E1700D3A18E /* ReportSummaryView.swift in Sources */,
+				B818805C26BC5763004F3D38 /* testPicker.swift in Sources */,
 				1C60D49626B940D80072C589 /* UserDefaultsManager.swift in Sources */,
 				1CF6486D26B1A39600299951 /* ContentViewModel.swift in Sources */,
 				1CF6486F26B1A3C600299951 /* Constants.swift in Sources */,
