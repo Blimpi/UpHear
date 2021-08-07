@@ -61,7 +61,7 @@ struct waitingCasesView: View{
     var body: some View{
         List{
             ForEach((1...4), id: \.self) {i in
-                HRCaseCardView  ().padding(.vertical, 8)
+                CaseCard().padding(.vertical, 8)
             }
         }.listStyle(PlainListStyle())
     }
@@ -83,7 +83,7 @@ struct HRTopbar : View {
                         .font(Font.system(size: 17))
                     RoundedRectangle(cornerRadius: 3)
                         .fill(self.selected == 0 ? Color.yellow : Color.clear)
-                        .frame(width: 97, height: 6, alignment: .center)
+                        .frame(width: 88, height: 6, alignment: .center)
                 }
             }
             .foregroundColor(self.selected == 0 ? .white : .gray)
@@ -96,9 +96,10 @@ struct HRTopbar : View {
                     Text("Ongoing")
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                         .font(Font.system(size: 17))
+                        
                     RoundedRectangle(cornerRadius: 3)
                         .fill(self.selected == 1 ? Color.yellow : Color.clear)
-                        .frame(width: 97, height: 6, alignment: .center)
+                        .frame(width: 88, height: 6, alignment: .center)
                 }
             }
             .foregroundColor(self.selected == 1 ? .white : .gray)
@@ -114,7 +115,7 @@ struct HRTopbar : View {
                         .font(Font.system(size: 17))
                     RoundedRectangle(cornerRadius: 3)
                         .fill(self.selected == 2 ? Color.yellow : Color.clear)
-                        .frame(width: 97, height: 6, alignment: .center)
+                        .frame(width: 88, height: 6, alignment: .center)
                 }
             }
             .foregroundColor(self.selected == 2 ? .white : .gray)

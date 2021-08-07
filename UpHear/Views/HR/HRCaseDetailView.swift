@@ -59,6 +59,8 @@ struct HRCaseDetailView: View {
 struct HRCaseDetailSegment : View{
     var body : some View{
         VStack(alignment: .leading){
+            
+    
             VStack(alignment: .leading){
                 Text("Report as")
                     .font(.custom("SF Pro Text", size: 14))

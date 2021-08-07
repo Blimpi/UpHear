@@ -65,8 +65,6 @@ struct HomeView: View {
             }
             .navigationTitle("My Cases")
         }
-        
-        
     }
 }
 
@@ -104,9 +102,22 @@ struct Topbar : View {
             }
             .foregroundColor(self.selected == 1 ? .white : .gray)
             Spacer()
-            }
+        }
     }
 }
+//KALO G ADA CASES, Tampilin View ini. Panggil di contentView
+struct noCases : View{
+    var body : some View{
+        VStack{
+            Image("noCases")
+            Text("No Cases")
+                .font(Font.system(size: 20))
+                .foregroundColor(.subheadline)
+        }
+    }
+}
+
+
 struct HomePageHeader :View{
     var body: some View{
         HStack{
@@ -120,12 +131,13 @@ struct HomePageHeader :View{
             Spacer()
             Spacer()
             Button(action: {}, label: {
-                Image(systemName: "doc.circle.fill").accentColor(.white).font(.system(size: 30))
+                Image(systemName: "tray.circle.fill").accentColor(.white).font(.system(size: 30))
             })
             Spacer()
         }
     }
 }
+
 struct onGoingCasesView: View{
     var body: some View{
         List{
@@ -146,8 +158,14 @@ struct closedCasesView: View{
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
-}
+//struct HomeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomeView()
+//    }
+//}
+
+//struct noCases_Previews: PreviewProvider {
+//    static var previews: some View {
+//        noCases()
+//    }
+//}

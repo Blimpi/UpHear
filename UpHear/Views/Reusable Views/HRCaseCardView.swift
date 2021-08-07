@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+//GAJADI DI PAKE
 struct HRCaseCardView: View {
     var body: some View {
         ZStack{
