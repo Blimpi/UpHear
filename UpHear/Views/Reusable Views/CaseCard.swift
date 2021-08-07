@@ -12,7 +12,7 @@ struct CaseCard: View {
         ZStack{
             RoundedRectangle(cornerRadius: 25.0, style: .continuous)
                 .fill(Color.cardBgColor)
-                .frame(height:164)
+                .frame(width: 323, height:193)
                 .shadow(color: .black.opacity(0.5), radius:4, x: 0, y: 2)
                 .overlay(
                     ZStack{
@@ -28,18 +28,21 @@ struct CaseCard: View {
                                     .font(.system(size: 35).bold())
                                     .foregroundColor(Colors.secondaryColor)
                             }
+                            Text("#ReportA0015")
+                                .font(Font.system(size:18))
+                                .foregroundColor(.subheadline)
+                                .padding(.bottom, 13)
+                            
                             Text("Date of Incident")
                                 .font(Font.system(size: 12))
-                                .fontWeight(.semibold)
                                 .foregroundColor(.subheadline)
                             
                             Text("20 July 2021")
                                 .padding(.bottom, 5)
                                 .font(Font.system(size: 18))
                                 
-                            Text("Perpretator Name:")
+                            Text("Offender Name:")
                                 .font(Font.system(size: 12))
-                                .fontWeight(.semibold)
                                 .foregroundColor(.subheadline)
                             
                             Text("Wimpi")
