@@ -10,9 +10,15 @@ import SwiftUI
 struct TermsConditionView: View {
     var body: some View {
         ZStack{
-            Rectangle()
-                .fill(Color.buttonColor)
-                .ignoresSafeArea()
+            VStack{
+                Image("bgTermsAndCondition")
+                    .resizable()
+                    .offset(x: 0, y: 0)
+                    .frame(width: 390, height: 240)
+                Spacer()
+            }
+
+            
             VStack{
                 Image("imageHeader").padding(.top,40)
                 

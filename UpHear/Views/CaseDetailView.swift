@@ -73,6 +73,7 @@ struct DetailTopbar : View {
                    RoundedRectangle(cornerRadius: 3)
                        .fill(self.selected == 0 ? Color.yellow : Color.clear)
                        .frame(width: 97, height: 6, alignment: .center)
+                        .padding(.top,-3)
                }
            }.foregroundColor(self.selected == 0 ? .white : .gray)
         Spacer()
@@ -86,6 +87,7 @@ struct DetailTopbar : View {
                    RoundedRectangle(cornerRadius: 3)
                        .fill(self.selected == 1 ? Color.yellow : Color.clear)
                        .frame(width: 97, height: 6, alignment: .center)
+                        .padding(.top,-3)
                }
            }.foregroundColor(self.selected == 1 ? .white : .gray)
         Spacer()
@@ -134,7 +136,7 @@ struct detailsCaseView: View{
                     
                     Rectangle().fill(Color.clear)
                     .frame(height: 219, alignment: .leading)
-                    .border(Color.black, width: 4)
+                    .border(Color.primaryColor, width: 2)
                     .cornerRadius(8)
                     .overlay(
                         ScrollView{

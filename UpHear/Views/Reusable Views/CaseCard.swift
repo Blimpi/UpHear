@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct CaseCard: View {
+    
+    let dateHeader:LocalizedStringKey = "Date of Incident"
+    let offenderHeader:LocalizedStringKey = "Offender Name"
+    
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 25.0, style: .continuous)
@@ -25,7 +29,7 @@ struct CaseCard: View {
                                     .padding(.bottom, 5)
                                 Spacer()
                                 Image(systemName: "exclamationmark.circle.fill")
-                                    .font(.system(size: 35).bold())
+                                    .font(.system(size: 26).bold())
                                     .foregroundColor(Colors.secondaryColor)
                             }
                             Text("#ReportA0015")
@@ -33,7 +37,7 @@ struct CaseCard: View {
                                 .foregroundColor(.subheadline)
                                 .padding(.bottom, 13)
                             
-                            Text("Date of Incident")
+                            Text(dateHeader)
                                 .font(Font.system(size: 12))
                                 .foregroundColor(.subheadline)
                             
@@ -41,7 +45,7 @@ struct CaseCard: View {
                                 .padding(.bottom, 5)
                                 .font(Font.system(size: 18))
                                 
-                            Text("Offender Name:")
+                            Text(offenderHeader)
                                 .font(Font.system(size: 12))
                                 .foregroundColor(.subheadline)
                             

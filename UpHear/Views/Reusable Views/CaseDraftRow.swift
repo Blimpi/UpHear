@@ -12,8 +12,9 @@ struct CaseDraftRow: View {
     
     var body: some View {
         ZStack{
-            RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/, style: .continuous)
+            RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .fill(Color.cardBgColor)
+                
             HStack{
                 VStack(alignment: .leading){
                     //Text("Case \(kasus.id)").font(.largeTitle)
@@ -48,9 +49,10 @@ struct CaseDraftRow: View {
                 Image("editIcon")
             }.padding()
 
-        }.frame(height:110)
+        }.frame(width: 331, height: 141)
         .shadow(radius: 7)
         .padding()
+        
     }
     
 }
