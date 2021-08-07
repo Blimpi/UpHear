@@ -8,5 +8,6 @@
 import Foundation
 
 class NetworkConstants: NSObject {
-    static let GET_USERS_LIST = "https://api.airtable.com/v0/appAre4MVvocsZOpK/Users?"
+    static let USER_URL = "https://api.airtable.com/v0/appAre4MVvocsZOpK/Users"
+    static let CASE_URL = "https://api.airtable.com/v0/appAre4MVvocsZOpK/Cases"
 }

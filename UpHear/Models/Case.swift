@@ -20,7 +20,7 @@ class Case: Codable {
     var caseID: String
     var reporterID: [String]
     var reporterName: String
-    var isAnonymous: Bool
+    var isAnonymous: String
     var victimID: [String]
     var victimName: String
     var perpetratorID: [String]
@@ -44,10 +44,19 @@ class Case: Codable {
         case incidentDetail = "IncidentDetail"
         case status = "Status"
     }
-}
-
-enum caseStatus: String {
-    case ongoing = "On-Going"
-    case waiting = "Waiting"
-    case closed = "Closed"
+    
+    init() {
+        caseID = ""
+        reporterID = [""]
+        reporterName = ""
+        isAnonymous = "false"
+        victimID = [""]
+        victimName = ""
+        perpetratorID = [""]
+        perpetratorName = ""
+        incidentTime = ""
+        incidentPlace = ""
+        incidentDetail = ""
+        status = caseStatus.waiting.rawValue
+    }
 }
