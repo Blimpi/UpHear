@@ -45,13 +45,12 @@
 		1CF6486D26B1A39600299951 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6486C26B1A39600299951 /* ContentViewModel.swift */; };
 		1CF6486F26B1A3C600299951 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6486E26B1A3C600299951 /* Constants.swift */; };
 		1CF6487126B1A3F600299951 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6487026B1A3F600299951 /* APIService.swift */; };
-		B818804C26B458F2004F3D38 /* CreateReportSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818804B26B458F2004F3D38 /* CreateReportSecondView.swift */; };
-		B818804E26B45BDF004F3D38 /* CreateReportThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818804D26B45BDF004F3D38 /* CreateReportThirdView.swift */; };
-		B818805026B46EEF004F3D38 /* CreateReportForthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818804F26B46EEF004F3D38 /* CreateReportForthView.swift */; };
 		B818805226B6BC83004F3D38 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805126B6BC83004F3D38 /* TextStyle.swift */; };
 		B818805426B6FE63004F3D38 /* CaseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805326B6FE63004F3D38 /* CaseDetailView.swift */; };
 		B818805826B7B36B004F3D38 /* SubmitMoreEvidence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805726B7B36B004F3D38 /* SubmitMoreEvidence.swift */; };
 		B818805A26BA8412004F3D38 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805926BA8412004F3D38 /* CustomPageControl.swift */; };
+		B818805C26BC5763004F3D38 /* testPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805B26BC5763004F3D38 /* testPicker.swift */; };
+		B852412626BE771C0005975B /* CreateReportPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B852412526BE771C0005975B /* CreateReportPage.swift */; };
 		CDC9D03E26B2B0AB00215F5D /* CaseDraftRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */; };
 		CDC9D04026B2BA5700215F5D /* CaseDrafts.json in Resources */ = {isa = PBXBuildFile; fileRef = CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */; };
 		CDC9D04426B2F76800215F5D /* ModelDataCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D04326B2F76800215F5D /* ModelDataCases.swift */; };
@@ -127,13 +126,12 @@
 		1CF6486C26B1A39600299951 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		1CF6486E26B1A3C600299951 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1CF6487026B1A3F600299951 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		B818804B26B458F2004F3D38 /* CreateReportSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportSecondView.swift; sourceTree = "<group>"; };
-		B818804D26B45BDF004F3D38 /* CreateReportThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportThirdView.swift; sourceTree = "<group>"; };
-		B818804F26B46EEF004F3D38 /* CreateReportForthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportForthView.swift; sourceTree = "<group>"; };
 		B818805126B6BC83004F3D38 /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
 		B818805326B6FE63004F3D38 /* CaseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDetailView.swift; sourceTree = "<group>"; };
 		B818805726B7B36B004F3D38 /* SubmitMoreEvidence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitMoreEvidence.swift; sourceTree = "<group>"; };
 		B818805926BA8412004F3D38 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
+		B818805B26BC5763004F3D38 /* testPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testPicker.swift; sourceTree = "<group>"; };
+		B852412526BE771C0005975B /* CreateReportPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportPage.swift; sourceTree = "<group>"; };
 		CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDraftRow.swift; sourceTree = "<group>"; };
 		CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CaseDrafts.json; sourceTree = "<group>"; };
 		CDC9D04326B2F76800215F5D /* ModelDataCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataCases.swift; sourceTree = "<group>"; };
@@ -224,6 +222,7 @@
 				CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */,
 				CDFEB2EB26B51B8600DED9C0 /* CaseCard.swift */,
 				B818805926BA8412004F3D38 /* CustomPageControl.swift */,
+				B852412526BE771C0005975B /* CreateReportPage.swift */,
 				CDE59F9626BC3D6B009B4D8D /* HRCaseCardView.swift */,
 				CDE59F9A26BD05CF009B4D8D /* HRActionCard.swift */,
 			);
@@ -348,10 +347,8 @@
 				1C95624226B2888300D3A18E /* DraftsView.swift */,
 				1C95624426B2890D00D3A18E /* TermsConditionView.swift */,
 				1C95624626B289ED00D3A18E /* CreateReportView.swift */,
+				B818805B26BC5763004F3D38 /* testPicker.swift */,
 				B818805726B7B36B004F3D38 /* SubmitMoreEvidence.swift */,
-				B818804B26B458F2004F3D38 /* CreateReportSecondView.swift */,
-				B818804D26B45BDF004F3D38 /* CreateReportThirdView.swift */,
-				B818804F26B46EEF004F3D38 /* CreateReportForthView.swift */,
 				1C95624826B28E1700D3A18E /* ReportSummaryView.swift */,
 				CDE59F8926B6B3B0009B4D8D /* LandingView.swift */,
 				1C60D48426B6A18E0072C589 /* APITestView.swift */,
@@ -565,18 +562,17 @@
 				CDE59F8A26B6B3B0009B4D8D /* LandingView.swift in Sources */,
 				1C60D47B26B5145E0072C589 /* HRAction.swift in Sources */,
 				1CF6483726B1A28600299951 /* UpHearApp.swift in Sources */,
-				B818804C26B458F2004F3D38 /* CreateReportSecondView.swift in Sources */,
 				1C95624E26B29D3000D3A18E /* Colors.swift in Sources */,
 				CDE59F9F26BD0E13009B4D8D /* HRAddActionView.swift in Sources */,
-				B818805026B46EEF004F3D38 /* CreateReportForthView.swift in Sources */,
 				1C60D48726B6AE480072C589 /* APITestViewModel.swift in Sources */,
 				CDE59F9926BC459C009B4D8D /* HRCaseDetailView.swift in Sources */,
 				B818805A26BA8412004F3D38 /* CustomPageControl.swift in Sources */,
+				B852412626BE771C0005975B /* CreateReportPage.swift in Sources */,
 				CDE59F9526BBCF29009B4D8D /* HRHomeView.swift in Sources */,
 				1C95623F26B286B600D3A18E /* HomeListView.swift in Sources */,
 				1C60D49126B82DE90072C589 /* CreateReportViewModel.swift in Sources */,
-				B818804E26B45BDF004F3D38 /* CreateReportThirdView.swift in Sources */,
 				1C95624926B28E1700D3A18E /* ReportSummaryView.swift in Sources */,
+				B818805C26BC5763004F3D38 /* testPicker.swift in Sources */,
 				1C60D49626B940D80072C589 /* UserDefaultsManager.swift in Sources */,
 				1CF6486D26B1A39600299951 /* ContentViewModel.swift in Sources */,
 				1CF6486F26B1A3C600299951 /* Constants.swift in Sources */,

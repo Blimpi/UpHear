@@ -10,9 +10,11 @@ import SwiftUI
 struct ReportSummaryView: View {
     @State var isIdentityNil = true
     @State var dateOfIncident:Date = Date()
+    @State var showAlert = false
     @State var victimName =  ""
     @State var placeOfIncident = ""
     @State var perpetratorName = ""
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     init(){
         UINavigationBar.appearance().backgroundColor = .clear
@@ -23,60 +25,64 @@ struct ReportSummaryView: View {
     }
     
     var body: some View {
-        NavigationView{
+        ZStack{
             VStack{
-                Rectangle().fill(Color.white).border(Color.gray, width: 3).cornerRadius(8).overlay(
-                    ScrollView(.vertical){
-                        VStack(alignment: .leading){
+                Rectangle()
+                    .fill(Color.white)
+                    .border(Color.gray, width: 3)
+                    .cornerRadius(8)
+                    .overlay(
+                        ScrollView(.vertical){
                             VStack(alignment: .leading){
-                                Text("identity Type").font(.system(size: 14))
-                                summaryText("Victim")
-                                Spacer().frame(height: 11)
-                            }
-                            VStack(alignment: .leading){
-                                Text("Publications Type").font(.system(size: 14))
-                                summaryText("Identified")
-                                Spacer().frame(height: 11)
-                            }
-                            VStack(alignment: .leading){
-                                Text("Date and Time of Incident").font(.system(size: 14))
-                                summaryText("27 July 2021 - 08:00 AM")
-                                Spacer().frame(height: 11)
-                            }
-                            VStack(alignment: .leading){
-                                Text("Place of Incident").font(.system(size: 14))
-                                summaryText("Meeting Room")
-                                Spacer().frame(height: 11)
-                            }
-                            VStack(alignment: .leading){
-                                Text("Victim Name").font(.system(size: 14))
-                                summaryText("Exol")
-                                Spacer().frame(height: 11)
-                            }
-                            VStack(alignment: .leading){
-                                Text("Perpretator Name").font(.system(size: 14))
-                                summaryText("Army")
-                                Spacer().frame(height: 11)
-                            }
-                            VStack(alignment: .leading){
-                                Text("Please describe the incident in detail").font(.system(size: 14))
-                                Text("As a women in this workplace, I got gender discrimination. Working mothers still make less money than their male colleagues, regardless of credentials and experience, and female workers are often penalized for taking time off to give birth, bond with their child, or receive prenatal care.").font(.system(size: 15).weight(.medium))
-                                Spacer().frame(height: 11)
-                            }
-                            VStack(alignment: .leading){
-                                Text("Incident Evidence")
-                                HStack{
-                                    Image("Add_Incident_Button").renderingMode(.original)
+                                VStack(alignment: .leading){
+                                    Text("identity Type").font(.system(size: 14))
+                                    summaryText("Victim")
+                                    Spacer().frame(height: 11)
                                 }
-                                Spacer().frame(height: 11)
-                            }
+                                VStack(alignment: .leading){
+                                    Text("Publications Type").font(.system(size: 14))
+                                    summaryText("Identified")
+                                    Spacer().frame(height: 11)
+                                }
+                                VStack(alignment: .leading){
+                                    Text("Date and Time of Incident").font(.system(size: 14))
+                                    summaryText("27 July 2021 - 08:00 AM")
+                                    Spacer().frame(height: 11)
+                                }
+                                VStack(alignment: .leading){
+                                    Text("Place of Incident").font(.system(size: 14))
+                                    summaryText("Meeting Room")
+                                    Spacer().frame(height: 11)
+                                }
+                                VStack(alignment: .leading){
+                                    Text("Victim Name").font(.system(size: 14))
+                                    summaryText("Exol")
+                                    Spacer().frame(height: 11)
+                                }
+                                VStack(alignment: .leading){
+                                    Text("Perpretator Name").font(.system(size: 14))
+                                    summaryText("Army")
+                                    Spacer().frame(height: 11)
+                                }
+                                VStack(alignment: .leading){
+                                    Text("Please describe the incident in detail").font(.system(size: 14))
+                                    Text("As a women in this workplace, I got gender discrimination. Working mothers still make less money than their male colleagues, regardless of credentials and experience, and female workers are often penalized for taking time off to give birth, bond with their child, or receive prenatal care.").font(.system(size: 15).weight(.medium))
+                                    Spacer().frame(height: 11)
+                                }
+                                VStack(alignment: .leading){
+                                    Text("Incident Evidence")
+                                    HStack{
+                                        Image("Add_Incident_Button").renderingMode(.original)
+                                    }
+                                    Spacer().frame(height: 11)
+                                }
+                                
+                                Text("").frame(maxWidth: .infinity)
+                            }.padding(.init(top: 16, leading: 21, bottom: 16, trailing: 21))
                             
-                            Text("").frame(maxWidth: .infinity)
-                        }.padding(.init(top: 16, leading: 21, bottom: 16, trailing: 21))
-                        
-                    }.padding(.bottom,5).clipped()
-                    
+                        }.padding(.bottom,5).clipped()
                 ).padding(.horizontal,31)
+                
                 Button(action: { }) {
                     Rectangle().fill(Color.white).border(Colors.primaryColor, width: 2)
                         .cornerRadius(8)
@@ -85,6 +91,7 @@ struct ReportSummaryView: View {
                             Text("Save to Draft").accentColor(Colors.primaryColor)
                         )
                 }.padding(.horizontal, 31).padding(.top,10)
+                
                 Button(action: { }) {
                     Rectangle().fill(Colors.primaryColor)
                         .cornerRadius(8)
@@ -93,16 +100,26 @@ struct ReportSummaryView: View {
                             Text("Submit Report").accentColor(.white)
                         )
                 }
-
-                
             }.navigationBarTitle(("Report Summary"),displayMode: .inline)
-            .navigationBarItems(leading: Button(action: { }) {
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            }) {
                     Image(systemName: "chevron.left")
-            }.accentColor(Colors.primaryColor), trailing: Button(action: {}){
+            }
+
+            .accentColor(Colors.primaryColor), trailing: Button(action: {
+                showAlert.toggle()
+            }){
                 Text("Close")
+            }).actionSheet(isPresented: $showAlert, content: {
+                .init(title: Text("Unsaved report"), message: Text("Are you sure want to discard this report? Your information will be lost."), buttons: [
+                    .default(Text("Save to draft")),
+                    .destructive(Text("Discard")),
+                    .cancel()
+                ])
             })
         }
-        
     }
 }
 
