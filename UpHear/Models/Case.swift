@@ -10,21 +10,21 @@ struct CaseData: Codable {
     let records: [CaseDataResponse]?
 }
 
-struct CaseDataResponse: Codable {
+struct CaseDataResponse: Codable, Identifiable {
     let id: String?
     let fields: Case?
     let createdTime: String?
 }
 
 class Case: Codable {
-    var caseID: String
+    var caseID: Int
     var reporterID: [String]
-    var reporterName: String
+    var reporterName: [String]
     var isAnonymous: String
     var victimID: [String]
-    var victimName: String
+    var victimName: [String]
     var perpetratorID: [String]
-    var perpetratorName: String
+    var perpetratorName: [String]
     var incidentTime: String
     var incidentPlace: String
     var incidentDetail: String
@@ -46,14 +46,14 @@ class Case: Codable {
     }
     
     init() {
-        caseID = ""
+        caseID = 0
         reporterID = [""]
-        reporterName = ""
+        reporterName = [""]
         isAnonymous = "false"
         victimID = [""]
-        victimName = ""
+        victimName = [""]
         perpetratorID = [""]
-        perpetratorName = ""
+        perpetratorName = [""]
         incidentTime = ""
         incidentPlace = ""
         incidentDetail = ""

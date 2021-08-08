@@ -37,7 +37,7 @@ class APITestViewModel: ObservableObject {
     func testPost() {
         let newCase = Case()
         
-        newCase.caseID = "CA123"
+//        newCase.caseID = "CA123"
         newCase.reporterID = ["recu46CkJGzJ7kapn"]
         newCase.isAnonymous = "false"
         newCase.victimID = ["recu46CkJGzJ7kapn"]

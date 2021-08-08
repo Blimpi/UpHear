@@ -12,6 +12,12 @@ struct CaseCard: View {
     let dateHeader:LocalizedStringKey = "Date of Incident"
     let offenderHeader:LocalizedStringKey = "Offender Name"
     
+    @State var status: String
+    @State var caseID: String
+    @State var incidentDate: String
+    @State var offenderName: String
+    
+    
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 25.0, style: .continuous)
@@ -22,7 +28,7 @@ struct CaseCard: View {
                     ZStack{
                         VStack(alignment: .leading){
                             HStack{
-                                Text("Need More detail")
+                                Text(status)
                                     .fontWeight(.bold)
                                     .font(Font.system(size:16))
                                     .foregroundColor(.primaryColor)
@@ -32,7 +38,7 @@ struct CaseCard: View {
                                     .font(.system(size: 26).bold())
                                     .foregroundColor(Colors.secondaryColor)
                             }
-                            Text("#ReportA0015")
+                            Text(caseID)
                                 .font(Font.system(size:18))
                                 .foregroundColor(.subheadline)
                                 .padding(.bottom, 13)
@@ -41,7 +47,7 @@ struct CaseCard: View {
                                 .font(Font.system(size: 12))
                                 .foregroundColor(.subheadline)
                             
-                            Text("20 July 2021")
+                            Text(incidentDate)
                                 .padding(.bottom, 5)
                                 .font(Font.system(size: 18))
                                 
@@ -49,7 +55,7 @@ struct CaseCard: View {
                                 .font(Font.system(size: 12))
                                 .foregroundColor(.subheadline)
                             
-                            Text("Wimpi")
+                            Text(offenderName)
                                 .font(Font.system(size: 18))
                             Spacer()
                             
@@ -71,8 +77,8 @@ extension Color{
     static let subheadline = Color("subHeadlineColor")
 }
 
-struct CaseRow_swiftUI_Previews: PreviewProvider {
+struct CaseCard_Previews: PreviewProvider {
     static var previews: some View {
-        CaseCard()
+        CaseCard(status: "Waiting", caseID: "CA001", incidentDate: "20 July 2021", offenderName: "Wimpi")
     }
 }

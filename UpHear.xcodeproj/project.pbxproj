@@ -27,6 +27,7 @@
 		1C60D49826B9A8900072C589 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D49726B9A8900072C589 /* UserProfileViewModel.swift */; };
 		1C60D49A26BA40890072C589 /* CaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D49926BA40890072C589 /* CaseRequest.swift */; };
 		1C60D49C26BD128D0072C589 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D49B26BD128D0072C589 /* HomeViewModel.swift */; };
+		1C60D4AE26C02F600072C589 /* UpHearLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C60D4AD26C02F600072C589 /* UpHearLaunchScreen.storyboard */; };
 		1C95623F26B286B600D3A18E /* HomeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95623E26B286B600D3A18E /* HomeListView.swift */; };
 		1C95624126B2882500D3A18E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624026B2882500D3A18E /* HomeView.swift */; };
 		1C95624326B2888300D3A18E /* DraftsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624226B2888300D3A18E /* DraftsView.swift */; };
@@ -103,6 +104,7 @@
 		1C60D49726B9A8900072C589 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
 		1C60D49926BA40890072C589 /* CaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseRequest.swift; sourceTree = "<group>"; };
 		1C60D49B26BD128D0072C589 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		1C60D4AD26C02F600072C589 /* UpHearLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = UpHearLaunchScreen.storyboard; path = UpHear/Application/UpHearLaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		1C95623E26B286B600D3A18E /* HomeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListView.swift; sourceTree = "<group>"; };
 		1C95624026B2882500D3A18E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1C95624226B2888300D3A18E /* DraftsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftsView.swift; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 			children = (
 				1C60D49426B940A70072C589 /* Helpers */,
 				1CF6483626B1A28600299951 /* UpHearApp.swift */,
+				1C60D4AD26C02F600072C589 /* UpHearLaunchScreen.storyboard */,
 				1CF6484426B1A28700299951 /* Info.plist */,
 				1CF6483F26B1A28700299951 /* Persistence.swift */,
 				1C60D49226B92A710072C589 /* Extensions.swift */,
@@ -509,6 +512,7 @@
 				CDE59FAE26BD7EB5009B4D8D /* Localizable.strings in Resources */,
 				1CF6483E26B1A28700299951 /* Preview Assets.xcassets in Resources */,
 				1CF6483B26B1A28700299951 /* Assets.xcassets in Resources */,
+				1C60D4AE26C02F600072C589 /* UpHearLaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -752,8 +756,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.1.0;
 				DEVELOPMENT_ASSET_PATHS = "\"UpHear/Preview Content\"";
-				DEVELOPMENT_TEAM = D2R8L25XGM;
+				DEVELOPMENT_TEAM = V8U6HJ6HPQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = UpHear/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -761,10 +766,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Blimpi.UpHear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -774,8 +780,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.1.0;
 				DEVELOPMENT_ASSET_PATHS = "\"UpHear/Preview Content\"";
-				DEVELOPMENT_TEAM = D2R8L25XGM;
+				DEVELOPMENT_TEAM = V8U6HJ6HPQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = UpHear/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -783,10 +790,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Blimpi.UpHear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

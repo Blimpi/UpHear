@@ -26,6 +26,7 @@ class User: Codable {
     var companyName: [String]
     var position: String
     var division: String
+    var agreedToS: String
     
     enum CodingKeys: String, CodingKey {
         case email = "Email"
@@ -36,6 +37,7 @@ class User: Codable {
         case companyName = "Name (from Company)"
         case position = "Position"
         case division = "Division"
+        case agreedToS = "agreedToS"
     }
     
     init() {
@@ -47,5 +49,18 @@ class User: Codable {
         companyName = [""]
         position = ""
         division = ""
+        agreedToS = "false"
+    }
+    
+    init(email: String, password: String) {
+        self.email = email
+        self.password = password
+        name = ""
+        role = ""
+        company = [""]
+        companyName = [""]
+        position = ""
+        division = ""
+        agreedToS = "false"
     }
 }

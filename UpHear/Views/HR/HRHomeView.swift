@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HRHomeView: View {
     
+    @ObservedObject var viewModel: HomeViewModel = HomeViewModel()
+    
     @State var selected = 0
     @State var isPresent:Bool = false
     
@@ -36,12 +38,12 @@ struct HRHomeView: View {
                     ZStack{
                         VStack{
                             if self.selected == 0{
-                                waitingCasesView()
+                                waitingCasesView(viewModel: viewModel)
                             }
                             else if self.selected == 1{
-                                onGoingCasesView()
+                                onGoingCasesView(viewModel: viewModel)
                             }else{
-                                closedCasesView()
+                                closedCasesView(viewModel: viewModel)
                             }
                             
                             //NavigationLink(destination: CreateReportView()
@@ -58,11 +60,14 @@ struct HRHomeView: View {
 
 
 struct waitingCasesView: View{
+    @ObservedObject var viewModel: HomeViewModel
+    
     var body: some View{
         List{
-            ForEach((1...4), id: \.self) {i in
-                CaseCard().padding(.vertical, 8)
-            }
+            ForEach((viewModel.caseData.records ?? [CaseDataResponse]()), content: { caseDataResponse in
+                CaseCard(status: caseDataResponse.fields!.status, caseID: String(caseDataResponse.fields!.caseID), incidentDate: caseDataResponse.fields!.incidentTime, offenderName: caseDataResponse.fields!.perpetratorName[0])
+                    .padding(.vertical, 8)
+            })
         }.listStyle(PlainListStyle())
     }
 }

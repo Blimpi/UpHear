@@ -8,10 +8,10 @@
 import Foundation
 
 class HomeViewModel: ObservableObject {
-    @Published var caseData: CaseData?
+    @Published var caseData: CaseData = CaseData(records: [])
     
     init() {
-        //
+        loadCases()
     }
     
     func loadCases() {
