@@ -13,7 +13,7 @@ struct UpHearApp: App {
     @State var isSignedIn: Bool
     
     init() {
-        if let userId = UserProfileCache.getId() {
+        if UserProfileCache.getId() != nil {
             isSignedIn = true
         }
         else {
@@ -28,7 +28,7 @@ struct UpHearApp: App {
 //                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
             }
             else {
-                    HomeView()
+                HomeView()
             }
         }
     }

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @ObservedObject var viewModel: HomeViewModel = HomeViewModel()
+    
     //@State private var selectedSegment:segment = .onGoing
     
     @State var selected = 0
@@ -42,10 +44,10 @@ struct HomeView: View {
                     ZStack{
                         VStack{
                             if self.selected == 0{
-                                onGoingCasesView()
+                                onGoingCasesView(viewModel: viewModel)
                             }
                             else{
-                                closedCasesView()
+                                closedCasesView(viewModel: viewModel)
                             }
                             //NavigationLink(destination: CreateReportView()
                             Button(action: {
@@ -150,23 +152,31 @@ struct HomePageHeader :View{
 }
 
 struct onGoingCasesView: View{
+    @ObservedObject var viewModel: HomeViewModel
+    
     var body: some View{
         List{
-            ForEach((1...4), id: \.self) {i in
-                CaseCard().padding(.vertical, 8)
-            }
-        }.listStyle(PlainListStyle())
+            ForEach((viewModel.caseData.records ?? [CaseDataResponse]()), content: { caseDataResponse in
+                CaseCard(status: caseDataResponse.fields!.status, caseID: String(caseDataResponse.fields!.caseID), incidentDate: caseDataResponse.fields!.incidentTime, offenderName: caseDataResponse.fields!.perpetratorName[0])
+                    .padding(.vertical, 8)
+            })
+        }
+        .listStyle(PlainListStyle())
         
     }
 }
 
 struct closedCasesView: View{
+    @ObservedObject var viewModel: HomeViewModel
+    
     var body: some View{
         List{
-            ForEach((1...4), id: \.self) {i in
-                CaseCard().padding(.vertical, 8)
-            }
-        }.listStyle(PlainListStyle())
+            ForEach((viewModel.caseData.records ?? [CaseDataResponse]()), content: { caseDataResponse in
+                CaseCard(status: caseDataResponse.fields!.status, caseID: String(caseDataResponse.fields!.caseID), incidentDate: caseDataResponse.fields!.incidentTime, offenderName: caseDataResponse.fields!.perpetratorName[0])
+                    .padding(.vertical, 8)
+            })
+        }
+        .listStyle(PlainListStyle())
     }
 }
 
