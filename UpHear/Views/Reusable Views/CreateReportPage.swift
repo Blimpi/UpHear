@@ -13,9 +13,16 @@ struct CreateReportPage:View{
     @Binding var isButtonSelect:identityCondition
     @Binding var isAnonym: publicationType
     @State var isButtonShow = false
-    @State var placeOfIncident = "adasdas ad asdasdasd asd asd asdasd asd asdas dasdas das das dasd as dasd asd as dasd asd as dasd asd asd asd asd asd asd asd asd asd asd as das dasd asd asd asdazs asd asd asd asd asd as dad sdadasdasdasdasda sdad asd asd asd asd asdasd asadsar gtqdaS GASD GAD GS "
+    @State var placeOfIncident = ""
     @State var birthdate:Date
     @State var vm: CreateReportViewModel
+    @State var showDatePicker = false
+    @State var showVictimPicker = false
+    @State var showPerpetratorPicker = false
+    @State var victimPickerInitialValue = "Select Victim Names"
+    @State var perpetratorPickerInitialValue = "Select Offender Name"
+    @State var victim:String = "Wimpi1"
+    @State var perpetrator = "Mung"
     var body: some View{
         if (page==1){
             VStack{
@@ -104,66 +111,147 @@ struct CreateReportPage:View{
                 }.opacity(isAnonym == .nothing ? 0 : 1)
             }
         }else if(page == 3){
-            
-            VStack(alignment: .leading){
-                Spacer().frame(height:41)
-                VStack(alignment: .leading){
-                    VStack(){
-                        Text("Date and time of incident").font(.system(size: 16))
-                        TextField(
-                                "  Enter date and time of incident",
-                                 text: $placeOfIncident
-                        ).frame(height:45)
-                        .border(Color.gray, width: 2)
-                        .cornerRadius(4)
-                        .padding(.trailing,23)
-                        //testPicker()
+            ZStack{
+                VStack{
+                    DatePicker("", selection: $birthdate, displayedComponents: [.date]).datePickerStyle(GraphicalDatePickerStyle())
+                    Button(action: {
+                        showDatePicker = false
+                    }, label: {
+                        Text("Done")
+                    })
+                }.padding(40)
+                .opacity(showDatePicker ? 1 : 0)
+                VStack{
+                    Spacer()
+                    HStack{
+                        Spacer()
+                        Button(action: {
+                            showVictimPicker = false
+                        }, label: {
+                            Text("Done")
+                        }).padding(.trailing,32)
                     }
+                    Spacer().frame(height: 32)
+                    Picker(selection: $victim, label: Text("Picker"), content: {
+                        Text("Wimpi").tag("Wimpi1")
+                        Text("Mung").tag("Mung1")
+                        Text("Mango").tag("Mango1")
+                        Text("Wimpi").tag("Wimpi2")
+                        Text("Mung").tag("Mung2")
+                        Text("Mango").tag("Mango2")
+                    }).frame(height: 150).animation(.none)
+                }.ignoresSafeArea()
+                .opacity(showVictimPicker ? 1 : 0)
+                VStack{
+                    Spacer()
+                    HStack{
+                        Spacer()
+                        Button(action: {
+                            showPerpetratorPicker = false
+                        }, label: {
+                            Text("Done")
+                        }).padding(.trailing,32)
+                    }
+                    Spacer().frame(height: 32)
+                    Picker(selection: $perpetrator, label: Text("Picker"), content: {
+                        Text("Wimpi").tag(1)
+                        Text("Mung").tag(2)
+                        Text("Mango").tag(3)
+                        Text("Wimpi").tag(4)
+                        Text("Mung").tag(5)
+                        Text("Mango").tag(6)
+                    }).frame(height: 150).animation(.none)
                     
-                    
-                    Text("Place of incident").font(.system(size: 16))
-                    
-                    TextField(
-                            "  Enter place of incident",
-                             text: $placeOfIncident
-                    ).frame(height:45)
-                    .border(Color.gray, width: 2)
-                    .cornerRadius(4)
-                    .padding(.trailing,23)
-                    
-                    Text("Victim Name").font(.system(size: 16))
-                    
-                    TextField(
-                            "  Enter victim name",
-                             text: $placeOfIncident
-                    ).frame(height:45)
-                    .border(Color.gray, width: 2)
-                    .cornerRadius(4)
-                    .padding(.trailing,23)
-                    
-                    Text("Perpetrator Name").font(.system(size: 16))
-                    TextField(
-                            "  Enter perpretator Name",
-                             text: $placeOfIncident
-                    ).frame(height:45)
-                    .border(Color.gray, width: 2)
-                    .cornerRadius(4)
-                    .padding(.trailing,23)
-                }.padding(.leading,42)
+                }.ignoresSafeArea()
+                .opacity(showPerpetratorPicker ? 1 : 0)
                 
-                Text("").frame(maxWidth: .infinity)
-                Spacer()
-                
-                Button(action: {
-                    page+=1
-                }) {
-                    Rectangle().fill(Colors.primaryColor)
-                        .cornerRadius(8)
-                        .frame(maxWidth: .infinity, maxHeight:50, alignment: .center)
-                        .padding(.horizontal, 23).overlay(
-                            Text("Next").accentColor(.white)
-                        )
-                }
+                VStack(alignment: .leading){
+                    Spacer().frame(height:41)
+                    VStack(alignment: .leading){
+                        VStack(alignment: .leading){
+                            Text("Date and time of incident").font(.system(size: 16))
+                            Button(action: {
+                                showDatePicker = true
+                            }, label: {
+                                HStack{
+                                    Text("Enter date and time of incident")
+                                        .foregroundColor(Colors.customGray)
+                                        .multilineTextAlignment(.leading)
+                                        .padding()
+                                    Spacer()
+                                }       
+                            }).frame(maxWidth: .infinity, maxHeight: 45)
+                            .background(Color.white)
+                            .border(Color.gray, width: 2)
+                            .cornerRadius(4)
+                            .padding(.trailing,23)
+                        }
+                        VStack(alignment: .leading){
+                            Text("Place of incident")
+                            TextField(
+                                    "  Enter place of incident",
+                                     text: $placeOfIncident
+                            ).frame(height:45)
+                            .border(Color.gray, width: 2)
+                            .cornerRadius(4)
+                            .padding(.trailing,23)
+                        }
+                        VStack(alignment: .leading){
+                            Text("Victim").font(.system(size: 16))
+                            Button(action: {
+                                showVictimPicker = true
+                                victimPickerInitialValue = victim
+                            }, label: {
+                                HStack{
+                                    Text("\(victimPickerInitialValue)")
+                                        .foregroundColor(Colors.customGray)
+                                        .multilineTextAlignment(.leading)
+                                        .padding()
+                                    Spacer()
+                                }
+                            }).frame(maxWidth: .infinity, maxHeight: 45)
+                            .background(Color.white)
+                            .border(Color.gray, width: 2)
+                            .cornerRadius(4)
+                            .padding(.trailing,23)
+                        }
+                        VStack(alignment: .leading){
+                            Text("Offender").font(.system(size: 16))
+                            Button(action: {
+                                showPerpetratorPicker = true
+                                perpetratorPickerInitialValue = perpetrator
+                            }, label: {
+                                HStack{
+                                    Text("\(perpetratorPickerInitialValue)")
+                                        .foregroundColor(Colors.customGray)
+                                        .multilineTextAlignment(.leading)
+                                        .padding()
+                                    Spacer()
+                                }
+                            }).frame(maxWidth: .infinity, maxHeight: 45)
+                            .background(Color.white)
+                            .border(Color.gray, width: 2)
+                            .cornerRadius(4)
+                            .padding(.trailing,23)
+                        }
+                    }.padding(.leading,42)
+                    
+                    Text("").frame(maxWidth: .infinity)
+                    Spacer()
+                    
+                    Button(action: {
+                        page+=1
+                        vm.caseReport?.incidentTime = "\(birthdate)"
+                        vm.caseReport?.perpetratorName = perpetratorPickerInitialValue
+                    }) {
+                        Rectangle().fill(Colors.primaryColor)
+                            .cornerRadius(8)
+                            .frame(maxWidth: .infinity, maxHeight:50, alignment: .center)
+                            .padding(.horizontal, 23).overlay(
+                                Text("Next").accentColor(.white)
+                            )
+                    }
+                }.opacity(!showDatePicker && !showVictimPicker && !showPerpetratorPicker ? 1 : 0)
             }
         }else if(page == 4){
             VStack(alignment: .leading){

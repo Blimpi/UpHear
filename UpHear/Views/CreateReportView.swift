@@ -14,7 +14,7 @@ struct CreateReportView: View {
     @State var isAnonym: publicationType = .nothing
     @State var showAlert = false
     @State var isVictim: Bool?
-    @State var currentPage = 4
+    @State var currentPage = 3
     init(){
         UINavigationBar.appearance().backgroundColor = .clear
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(named: "primaryColor")!]
