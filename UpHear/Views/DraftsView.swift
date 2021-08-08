@@ -23,6 +23,8 @@ struct DraftsView: View {
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         UINavigationBar.appearance().shadowImage = UIImage()
     }
+    
+    
     var body: some View {
         
         NavigationView{
@@ -31,10 +33,12 @@ struct DraftsView: View {
                     
                     List{
                         Spacer()
-                        CaseDraftRow()
+                        CaseDraftRow().padding(.top,16)
                     }.listStyle(PlainListStyle())
                     VStack{
-                        Image("navBarBG").ignoresSafeArea()
+                        Image("bgDraftPage")
+                            .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .ignoresSafeArea()
                         Spacer()
                     }
                     

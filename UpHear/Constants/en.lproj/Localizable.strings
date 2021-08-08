@@ -1,4 +1,4 @@
-"MyCases" = "MyCases";
+"MyCases" = "My Cases";
 "Ongoing" = "Ongoing";
 "Closed" = "Closed";
 "Report a Case" = "Report a Case";
@@ -17,16 +17,18 @@
 "Anonymous" = "Anonymous";
 "Identified" = "Identified";
 // Create Report #3
-"Date and time of Incident" = "Tanggal dan Waktu Kejadian";
-"Place of Incident" = "Tempat Kejadian";
-"Victim Name" = "Nama Korban";
-"Enter victim name" = "Masukkan nama korban";
-"Culprit Name" = "Nama Pelaku";
-"Enter culprit name" = "Masukkan nama pelaku";
+"Date and time of Incident" = "Date and time of Incident";
+"Place of Incident" = "Place of Incident";
+"Victim Name" = "Victim Name";
+"Enter victim name" = "Enter victim name";
+"Offender Name" = "Offender Name";
+"Enter culprit name" = "Enter culprit name";
 // Create Report #4
-"Please describe the incident in detail" = "Tolong jelaskan detil kejadian";
-"Incident Evidence" = "Bukti Kejadian";
+"Please describe the incident in detail" = "Please describe the incident in detail";
+"Incident Evidence" = "Incident Evidence";
 //Report Summary
-"Report Summary" = "Ringkasan Laporan";
-"Identity Type" = "Jenis Identitas";
-"Publications Type" = "Jenis Publikasi";
+"Report Summary" = "Report Summary";
+"Identity Type" = "Identity Type";
+"Publications Type" = "Publications Type";
+"Save to Draft" = "Save to Draft";
+"Submit Report" = "Submit Report";

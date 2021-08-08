@@ -14,6 +14,9 @@ struct HomeView: View {
     @State var selected = 0
     @State var isPresent:Bool = false
     
+    let button : LocalizedStringKey = "Report a Case"
+    let pageTitle:LocalizedStringKey = "My Cases"
+    
     init() {
            //Use this if NavigationBarTitle is with Large Font
            UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
@@ -24,15 +27,16 @@ struct HomeView: View {
             ZStack{
                 VStack{
                     Image("bgTnC")
-                        .resizable().aspectRatio(contentMode: .fit).ignoresSafeArea()
+                        .resizable()
+                        .ignoresSafeArea()
+                        .frame(width: 402, height: 185)
 
                     Spacer()
                 }
                 VStack{
                     VStack{
-                        
-                        HomePageHeader().padding(.vertical, 32)
-                        Topbar(selected: self.$selected).padding(.top)
+                        HomePageHeader().padding()
+                        Topbar(selected: self.$selected)
                     }
                     
                     ZStack{
@@ -41,15 +45,13 @@ struct HomeView: View {
                                 onGoingCasesView()
                             }
                             else{
-                                
                                 closedCasesView()
                             }
-                            
                             //NavigationLink(destination: CreateReportView()
                             Button(action: {
                                 isPresent.toggle()
                             }, label: {
-                                Text("Report a Case").frame(maxWidth: .infinity, maxHeight: 50).font(.body)
+                                Text(button).frame(maxWidth: .infinity, maxHeight: 50).font(.body)
                                     
                             }).frame(alignment: .center)
                             .background(Color.primaryColor)
@@ -63,13 +65,15 @@ struct HomeView: View {
                     }
                 }
             }
-            .navigationTitle("My Cases")
+            .navigationTitle(pageTitle)
         }
     }
 }
 
 struct Topbar : View {
     @Binding var selected : Int
+    let segment1 : LocalizedStringKey = "Ongoing"
+    let segment2 : LocalizedStringKey = "Closed"
     
     var body : some View{
         HStack{
@@ -78,12 +82,14 @@ struct Topbar : View {
                 self.selected = 0
             }) {
                 VStack{
-                    Text("Ongoing")
+                    Text(segment1)
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                         .font(Font.system(size: 17))
+                        
                     RoundedRectangle(cornerRadius: 3)
                         .fill(self.selected == 0 ? Color.yellow : Color.clear)
                         .frame(width: 97, height: 6, alignment: .center)
+                        .padding(.top,-3)
                 }
             }
             .foregroundColor(self.selected == 0 ? .white : .gray)
@@ -92,12 +98,13 @@ struct Topbar : View {
                 self.selected = 1
             }) {
                 VStack{
-                    Text("Closed")
+                    Text(segment2)
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                         .font(Font.system(size: 17))
                     RoundedRectangle(cornerRadius: 3)
                         .fill(self.selected == 1 ? Color.yellow : Color.clear)
                         .frame(width: 97, height: 6, alignment: .center)
+                        .padding(.top,-3)
                 }
             }
             .foregroundColor(self.selected == 1 ? .white : .gray)
@@ -107,10 +114,12 @@ struct Topbar : View {
 }
 //KALO G ADA CASES, Tampilin View ini. Panggil di contentView
 struct noCases : View{
+    let noCases:LocalizedStringKey = "No Cases"
+    
     var body : some View{
         VStack{
             Image("noCases")
-            Text("No Cases")
+            Text(noCases)
                 .font(Font.system(size: 20))
                 .foregroundColor(.subheadline)
         }
@@ -119,6 +128,8 @@ struct noCases : View{
 
 
 struct HomePageHeader :View{
+    
+    let pageHeader:LocalizedStringKey="MyCases"
     var body: some View{
         HStack{
             Spacer()
@@ -127,7 +138,7 @@ struct HomePageHeader :View{
             })
             Spacer()
             Spacer()
-            Text("My Cases").foregroundColor(.white).font(.title).bold()
+            Text(pageHeader).foregroundColor(.white).font(.title).bold()
             Spacer()
             Spacer()
             Button(action: {}, label: {
@@ -145,6 +156,7 @@ struct onGoingCasesView: View{
                 CaseCard().padding(.vertical, 8)
             }
         }.listStyle(PlainListStyle())
+        
     }
 }
 
