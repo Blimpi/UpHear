@@ -13,9 +13,9 @@ struct testPicker: View {
     @State var showPicker = false
         var body: some View {
             ZStack {
-//                DatePicker("labellasldadlsalsdalsdlasdasd", selection: $date, displayedComponents: [.date])
-//                    .datePickerStyle(CompactDatePickerStyle())
-//                    .labelsHidden()
+                DatePicker("labellasldadlsalsdalsdlasdasd", selection: $date, displayedComponents: [.date])
+                    .datePickerStyle(CompactDatePickerStyle())
+                    .labelsHidden()
                 VStack{
                     Button(action: {
                         showPicker = true
@@ -37,15 +37,17 @@ struct testPicker: View {
                     
                 }
                 .opacity(showPicker ? 0 : 1)
-                VStack{
-                    DatePicker("", selection: $date, displayedComponents: [.date]).datePickerStyle(GraphicalDatePickerStyle())
-                    Button(action: {
-                        showPicker = false
-                    }, label: {
-                        Text("Done")
-                    })
-                }.padding(40)
-                .opacity(showPicker ? 1 : 0)
+                
+                Picker(selection: $placeHolder, label: Text("Picker"), content: {
+                    Text("Wimpi").tag(1)
+                    Text("Mung").tag(2)
+                    Text("Mango").tag(3)
+                    Text("Wimpi").tag(4)
+                    Text("Mung").tag(5)
+                    Text("Mango").tag(6)
+                }).frame(height: 150).animation(.none)
+                
+               
                 
                     
 //                TextField(
