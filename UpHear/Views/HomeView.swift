@@ -158,14 +158,14 @@ struct closedCasesView: View{
     }
 }
 
-//struct HomeView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HomeView()
-//    }
-//}
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView()
+    }
+}
 
-//struct noCases_Previews: PreviewProvider {
-//    static var previews: some View {
-//        noCases()
-//    }
-//}
+struct noCases_Previews: PreviewProvider {
+    static var previews: some View {
+        noCases()
+    }
+}
