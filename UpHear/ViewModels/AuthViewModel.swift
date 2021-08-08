@@ -9,20 +9,27 @@ import Foundation
 
 class AuthViewModel: ObservableObject {
     
-    init() {
-        //
+    var mainView: UpHearApp
+    
+    init(mainView: UpHearApp) {
+        self.mainView = mainView
     }
     
     func authButtonPressed(mode: authMode, email: String, password: String) {
         if mode == .signIn {
-//            signIn(email: email, password: password)
+            signIn(email: email, password: password)
         }
         else if mode == .signUp {
-//            signUp(email: email, password: password)
+            signUp(email: email, password: password)
         }
     }
     
     func signIn(email: String, password: String) {
+        if !email.isValidEmail() {
+            //invalid email
+            return
+        }
+        
         let lowercasedEmail = email.lowercased()
         let hashedPassword = password.sha256()
         
@@ -40,8 +47,9 @@ class AuthViewModel: ObservableObject {
                 }
                 else {
                     if let user = records[0].fields {
-                        UserProfileCache.save(user)
+                        UserProfileCache.save(user, id: records[0].id!)
                     }
+                    self.mainView.isSignedIn = true
                 }
             }
         } failCompletion: { message in
@@ -50,8 +58,13 @@ class AuthViewModel: ObservableObject {
     }
     
     func signUp(email: String, password: String) {
+        if !email.isValidEmail() {
+            //invalid email
+            return
+        }
+        
         let lowercasedEmail = email.lowercased()
-//        let hashedPassword = password.sha256()
+        let hashedPassword = password.sha256()
         
         let headers = [
             "Authorization": "Bearer keyNHgPpNaQW4eEMC"
@@ -63,14 +76,37 @@ class AuthViewModel: ObservableObject {
             
             if let records = response.records {
                 if records.isEmpty {
-                    //post
+                    self.registerUser(email: lowercasedEmail, password: hashedPassword)
+                    self.signIn(email: lowercasedEmail, password: hashedPassword)
                 }
                 else {
-                    print("Email already ")
+                    print("Email already registered")
                 }
             }
         } failCompletion: { message in
             print(message)
+        }
+    }
+    
+    func registerUser(email: String, password: String) {
+        let headers = [
+            "Authorization": "Bearer keyNHgPpNaQW4eEMC",
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        ]
+        
+        let userItem: User = User(email: email, password: password)
+        
+        userItem.name = ""
+        userItem.role = "User"
+        userItem.company = ["recvpLKu4YoeV0hiI"]
+        
+        AuthRequest.addUser(url: NetworkConstants.USER_URL, header: headers, userItem: userItem, showLoader: false) { responseData in
+            if responseData.records?.count != 0 {
+                print(responseData)
+            }
+        } failCompletion: { message in
+            print("POST data to server fail with reason: \(message)")
         }
     }
     

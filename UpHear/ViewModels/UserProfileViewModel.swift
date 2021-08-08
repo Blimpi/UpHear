@@ -37,7 +37,7 @@ class UserProfileViewModel: ObservableObject {
                 }
                 else {
                     if let user = records[0].fields {
-                        UserProfileCache.save(user)
+                        UserProfileCache.save(user, id: records[0].id!)
                     }
                 }
             }

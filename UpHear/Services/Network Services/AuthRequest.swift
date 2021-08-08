@@ -30,4 +30,32 @@ class AuthRequest: NSObject {
         }
     }
     
+    static func addUser(url: String,
+                        header: [String: String],
+                        userItem: User,
+                        showLoader: Bool,
+                        successCompletion: @escaping (CaseData) -> Void,
+                        failCompletion: @escaping (String) -> Void) {
+        
+        let jsonString = """
+            {"records":[{"fields": {"Email": "\(userItem.email)","Password": "\(userItem.password)","Name": "\(userItem.name)","Role": "\(userItem.role)","Company": ["\(userItem.company[0])"],"Position": "\(userItem.position)","Division": "\(userItem.division)","agreedToS": "\(userItem.agreedToS)"}}]}
+        """
+        
+        BaseRequest.POST(url: url, header: header, jsonString: jsonString, showLoader: showLoader) { response in
+            
+            var dataModel = DataManager.CASEDATA
+            
+            do {
+                let newCase = try JSONDecoder().decode(CaseData.self, from: response as! Data)
+                dataModel = newCase
+                successCompletion(dataModel!)
+            } catch let error {
+                print("Error: \(error)")
+            }
+            
+        } failCompletion: { message in
+            print("Error: \(message)")
+        }
+    }
+    
 }

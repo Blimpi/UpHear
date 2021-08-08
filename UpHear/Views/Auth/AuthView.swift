@@ -9,13 +9,9 @@ import SwiftUI
 
 struct AuthView: View {
     
-    @ObservedObject var viewModel = AuthViewModel()
+    @ObservedObject var viewModel: AuthViewModel
     
     @State var mode: authMode
-    
-    init() {
-        mode = .signIn
-    }
     
     var body: some View {
         NavigationView{
@@ -157,8 +153,8 @@ struct signUpForm: View {
     }
 }
 
-struct AuthView_Previews: PreviewProvider {
-    static var previews: some View {
-        AuthView()
-    }
-}
+//struct AuthView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AuthView()
+//    }
+//}
