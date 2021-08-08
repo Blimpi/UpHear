@@ -18,7 +18,7 @@
 		1C60D48326B5888D0072C589 /* UserAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D48226B5888D0072C589 /* UserAction.swift */; };
 		1C60D48526B6A18E0072C589 /* APITestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D48426B6A18E0072C589 /* APITestView.swift */; };
 		1C60D48726B6AE480072C589 /* APITestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D48626B6AE480072C589 /* APITestViewModel.swift */; };
-		1C60D48A26B7E91E0072C589 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D48926B7E91E0072C589 /* LoginView.swift */; };
+		1C60D48A26B7E91E0072C589 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D48926B7E91E0072C589 /* AuthView.swift */; };
 		1C60D48C26B7ECBA0072C589 /* RequiredActionsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D48B26B7ECBA0072C589 /* RequiredActionsCard.swift */; };
 		1C60D48F26B7F5B40072C589 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D48E26B7F5B40072C589 /* AuthViewModel.swift */; };
 		1C60D49126B82DE90072C589 /* CreateReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D49026B82DE90072C589 /* CreateReportViewModel.swift */; };
@@ -94,7 +94,7 @@
 		1C60D48226B5888D0072C589 /* UserAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAction.swift; sourceTree = "<group>"; };
 		1C60D48426B6A18E0072C589 /* APITestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITestView.swift; sourceTree = "<group>"; };
 		1C60D48626B6AE480072C589 /* APITestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITestViewModel.swift; sourceTree = "<group>"; };
-		1C60D48926B7E91E0072C589 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1C60D48926B7E91E0072C589 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		1C60D48B26B7ECBA0072C589 /* RequiredActionsCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequiredActionsCard.swift; sourceTree = "<group>"; };
 		1C60D48E26B7F5B40072C589 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		1C60D49026B82DE90072C589 /* CreateReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportViewModel.swift; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 		1C60D48826B7E9080072C589 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				1C60D48926B7E91E0072C589 /* LoginView.swift */,
+				1C60D48926B7E91E0072C589 /* AuthView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -550,7 +550,7 @@
 				CDFEB2EC26B51B8600DED9C0 /* CaseCard.swift in Sources */,
 				1CF6487126B1A3F600299951 /* APIService.swift in Sources */,
 				1C95624726B289ED00D3A18E /* CreateReportView.swift in Sources */,
-				1C60D48A26B7E91E0072C589 /* LoginView.swift in Sources */,
+				1C60D48A26B7E91E0072C589 /* AuthView.swift in Sources */,
 				CDE59F9726BC3D6B009B4D8D /* HRCaseCardView.swift in Sources */,
 				1C60D47126B3E9370072C589 /* AuthRequest.swift in Sources */,
 				B818805426B6FE63004F3D38 /* CaseDetailView.swift in Sources */,

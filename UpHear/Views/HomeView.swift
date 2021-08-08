@@ -176,8 +176,8 @@ struct HomeView_Previews: PreviewProvider {
     }
 }
 
-//struct noCases_Previews: PreviewProvider {
-//    static var previews: some View {
-//        noCases()
-//    }
-//}
+struct noCases_Previews: PreviewProvider {
+    static var previews: some View {
+        noCases()
+    }
+}
