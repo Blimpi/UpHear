@@ -28,7 +28,7 @@ struct UserProfileView: View {
                 }
                 VStack{
                     ZStack{
-                        Image("Bismo")
+                        Image("Wimpi")
                         Image(uiImage: UIImage())
                             .resizable()
                             .clipShape(Circle())
