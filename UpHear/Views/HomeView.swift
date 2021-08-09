@@ -156,7 +156,7 @@ struct onGoingCasesView: View{
     
     var body: some View{
         List{
-            ForEach((viewModel.caseData.records ?? [CaseDataResponse]()), content: { caseDataResponse in
+            ForEach((viewModel.ongoingCases), content: { caseDataResponse in
                 CaseCard(status: caseDataResponse.fields!.status, caseID: String(caseDataResponse.fields!.caseID), incidentDate: caseDataResponse.fields!.incidentTime, offenderName: caseDataResponse.fields!.perpetratorName[0])
                     .padding(.vertical, 8)
             })
@@ -171,7 +171,7 @@ struct closedCasesView: View{
     
     var body: some View{
         List{
-            ForEach((viewModel.caseData.records ?? [CaseDataResponse]()), content: { caseDataResponse in
+            ForEach((viewModel.closedCases), content: { caseDataResponse in
                 CaseCard(status: caseDataResponse.fields!.status, caseID: String(caseDataResponse.fields!.caseID), incidentDate: caseDataResponse.fields!.incidentTime, offenderName: caseDataResponse.fields!.perpetratorName[0])
                     .padding(.vertical, 8)
             })

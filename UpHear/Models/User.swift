@@ -64,3 +64,8 @@ class User: Codable {
         agreedToS = "false"
     }
 }
+
+enum userRole: String {
+    case hr = "HR"
+    case user = "User"
+}
