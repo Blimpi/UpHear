@@ -31,7 +31,7 @@ struct HomeView: View {
                     Image("bgTnC")
                         .resizable()
                         .ignoresSafeArea()
-                        .frame(width: 402, height: 185)
+                        .frame(width: 402, height: 118)
 
                     Spacer()
                 }
@@ -44,10 +44,20 @@ struct HomeView: View {
                     ZStack{
                         VStack{
                             if self.selected == 0{
-                                onGoingCasesView(viewModel: viewModel)
+                                if viewModel.ongoingCases.isEmpty {
+                                    noCases()
+                                }
+                                else{
+                                    onGoingCasesView(viewModel: viewModel)
+                                }
                             }
                             else{
-                                closedCasesView(viewModel: viewModel)
+                                if viewModel.ongoingCases.isEmpty {
+                                    noCases()
+                                }
+                                else{
+                                    closedCasesView(viewModel: viewModel)
+                                }
                             }
                             //NavigationLink(destination: CreateReportView()
                             Button(action: {
@@ -120,10 +130,12 @@ struct noCases : View{
     
     var body : some View{
         VStack{
+            Spacer()
             Image("noCases")
             Text(noCases)
                 .font(Font.system(size: 20))
                 .foregroundColor(.subheadline)
+            Spacer()
         }
     }
 }
