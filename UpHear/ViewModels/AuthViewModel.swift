@@ -16,15 +16,6 @@ class AuthViewModel: ObservableObject {
     }
     
     func authButtonPressed(mode: authMode, email: String, password: String) {
-        if mode == .signIn {
-            signIn(email: email, password: password)
-        }
-        else if mode == .signUp {
-            signUp(email: email, password: password)
-        }
-    }
-    
-    func signIn(email: String, password: String) {
         if !email.isValidEmail() {
             //invalid email
             return
@@ -33,11 +24,21 @@ class AuthViewModel: ObservableObject {
         let lowercasedEmail = email.lowercased()
         let hashedPassword = password.sha256()
         
+        if mode == .signIn {
+            signIn(email: lowercasedEmail, password: hashedPassword)
+        }
+        else if mode == .signUp {
+            signUp(email: lowercasedEmail, password: hashedPassword)
+        }
+    }
+    
+    func signIn(email: String, password: String) {
+        
         let headers = [
             "Authorization": "Bearer keyNHgPpNaQW4eEMC"
         ]
         
-        let url = "https://api.airtable.com/v0/appAre4MVvocsZOpK/tbl6ChR5gz43HU3AB?filterByFormula=AND(%7BEmail%7D+%3D+'\(lowercasedEmail)'%2C%7BPassword%7D+%3D+'\(hashedPassword)')"
+        let url = "https://api.airtable.com/v0/appAre4MVvocsZOpK/tbl6ChR5gz43HU3AB?filterByFormula=AND(%7BEmail%7D+%3D+'\(email)'%2C%7BPassword%7D+%3D+'\(password)')"
         
         AuthRequest.fetchUserData(url: url, header: headers, showLoader: false) { response in
             
@@ -58,26 +59,18 @@ class AuthViewModel: ObservableObject {
     }
     
     func signUp(email: String, password: String) {
-        if !email.isValidEmail() {
-            //invalid email
-            return
-        }
-        
-        let lowercasedEmail = email.lowercased()
-        let hashedPassword = password.sha256()
         
         let headers = [
             "Authorization": "Bearer keyNHgPpNaQW4eEMC"
         ]
         
-        let url = "https://api.airtable.com/v0/appAre4MVvocsZOpK/tbl6ChR5gz43HU3AB?filterByFormula=%7BEmail%7D+%3D+'\(lowercasedEmail)'"
+        let url = "https://api.airtable.com/v0/appAre4MVvocsZOpK/tbl6ChR5gz43HU3AB?filterByFormula=%7BEmail%7D+%3D+'\(email)'"
         
         AuthRequest.fetchUserData(url: url, header: headers, showLoader: false) { response in
             
             if let records = response.records {
                 if records.isEmpty {
-                    self.registerUser(email: lowercasedEmail, password: hashedPassword)
-                    self.signIn(email: lowercasedEmail, password: hashedPassword)
+                    self.registerUser(email: email, password: password)
                 }
                 else {
                     print("Email already registered")
@@ -97,7 +90,7 @@ class AuthViewModel: ObservableObject {
         
         let userItem: User = User(email: email, password: password)
         
-        userItem.name = ""
+        userItem.name = email.components(separatedBy: "@")[0].capitalized
         userItem.role = "User"
         userItem.company = ["recvpLKu4YoeV0hiI"]
         
@@ -105,6 +98,7 @@ class AuthViewModel: ObservableObject {
             if responseData.records?.count != 0 {
                 print(responseData)
             }
+            self.signIn(email: email, password: password)
         } failCompletion: { message in
             print("POST data to server fail with reason: \(message)")
         }

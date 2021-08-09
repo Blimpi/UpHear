@@ -12,7 +12,7 @@ struct UserProfileCache {
     static let idKey = "userIdCache"
     
     static func save(_ value: User!, id: String) {
-        UserDefaults.standard.set(try? PropertyListEncoder().encode(id), forKey: idKey)
+        UserDefaults.standard.set(id, forKey: idKey)
         UserDefaults.standard.set(try? PropertyListEncoder().encode(value), forKey: key)
     }
     
@@ -28,8 +28,8 @@ struct UserProfileCache {
     
     static func getId() -> String! {
         var userId: String!
-        if let data = UserDefaults.standard.value(forKey: idKey) as? Data {
-            userId = try? PropertyListDecoder().decode(String.self, from: data)
+        if let data = UserDefaults.standard.string(forKey: idKey) {
+            userId = data
             return userId!
         } else {
             return userId

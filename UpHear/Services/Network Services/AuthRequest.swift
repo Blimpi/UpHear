@@ -34,20 +34,20 @@ class AuthRequest: NSObject {
                         header: [String: String],
                         userItem: User,
                         showLoader: Bool,
-                        successCompletion: @escaping (CaseData) -> Void,
+                        successCompletion: @escaping (UserData) -> Void,
                         failCompletion: @escaping (String) -> Void) {
         
         let jsonString = """
-            {"records":[{"fields": {"Email": "\(userItem.email)","Password": "\(userItem.password)","Name": "\(userItem.name)","Role": "\(userItem.role)","Company": ["\(userItem.company[0])"],"Position": "\(userItem.position)","Division": "\(userItem.division)","agreedToS": "\(userItem.agreedToS)"}}]}
+            {"records":[{"fields": {"Email": "\(userItem.email)","Password": "\(userItem.password)","Name": "\(userItem.name)","Role": "\(userItem.role)","Company": ["\(userItem.company[0])"],"Position": "\(userItem.position ?? "")","Division": "\(userItem.division ?? "")","agreedToS": "\(userItem.agreedToS)"}}]}
         """
         
         BaseRequest.POST(url: url, header: header, jsonString: jsonString, showLoader: showLoader) { response in
             
-            var dataModel = DataManager.CASEDATA
+            var dataModel = DataManager.USERDATA
             
             do {
-                let newCase = try JSONDecoder().decode(CaseData.self, from: response as! Data)
-                dataModel = newCase
+                let newUser = try JSONDecoder().decode(UserData.self, from: response as! Data)
+                dataModel = newUser
                 successCompletion(dataModel!)
             } catch let error {
                 print("Error: \(error)")

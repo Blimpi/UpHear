@@ -31,7 +31,7 @@ struct HomeView: View {
                     Image("bgTnC")
                         .resizable()
                         .ignoresSafeArea()
-                        .frame(width: 402, height: 185)
+                        .frame(width: 402, height: 118)
 
                     Spacer()
                 }
@@ -44,10 +44,20 @@ struct HomeView: View {
                     ZStack{
                         VStack{
                             if self.selected == 0{
-                                onGoingCasesView(viewModel: viewModel)
+                                if viewModel.ongoingCases.isEmpty {
+                                    noCases()
+                                }
+                                else{
+                                    onGoingCasesView(viewModel: viewModel)
+                                }
                             }
                             else{
-                                closedCasesView(viewModel: viewModel)
+                                if viewModel.ongoingCases.isEmpty {
+                                    noCases()
+                                }
+                                else{
+                                    closedCasesView(viewModel: viewModel)
+                                }
                             }
                             //NavigationLink(destination: CreateReportView()
                             Button(action: {
@@ -120,10 +130,12 @@ struct noCases : View{
     
     var body : some View{
         VStack{
+            Spacer()
             Image("noCases")
             Text(noCases)
                 .font(Font.system(size: 20))
                 .foregroundColor(.subheadline)
+            Spacer()
         }
     }
 }
@@ -156,8 +168,8 @@ struct onGoingCasesView: View{
     
     var body: some View{
         List{
-            ForEach((viewModel.caseData.records ?? [CaseDataResponse]()), content: { caseDataResponse in
-                CaseCard(status: caseDataResponse.fields!.status, caseID: String(caseDataResponse.fields!.caseID), incidentDate: caseDataResponse.fields!.incidentTime, offenderName: caseDataResponse.fields!.perpetratorName[0])
+            ForEach((viewModel.ongoingCases), content: { caseDataResponse in
+                CaseCard(status: caseDataResponse.fields!.status, caseID: "CA\(String(caseDataResponse.fields!.caseID))", incidentDate: String(caseDataResponse.fields!.incidentTime.prefix(10)), offenderName: caseDataResponse.fields!.perpetratorName[0])
                     .padding(.vertical, 8)
             })
         }
@@ -171,8 +183,8 @@ struct closedCasesView: View{
     
     var body: some View{
         List{
-            ForEach((viewModel.caseData.records ?? [CaseDataResponse]()), content: { caseDataResponse in
-                CaseCard(status: caseDataResponse.fields!.status, caseID: String(caseDataResponse.fields!.caseID), incidentDate: caseDataResponse.fields!.incidentTime, offenderName: caseDataResponse.fields!.perpetratorName[0])
+            ForEach((viewModel.closedCases), content: { caseDataResponse in
+                CaseCard(status: caseDataResponse.fields!.status, caseID: "CA\(String(caseDataResponse.fields!.caseID))", incidentDate: String(caseDataResponse.fields!.incidentTime.prefix(10)), offenderName: caseDataResponse.fields!.perpetratorName[0])
                     .padding(.vertical, 8)
             })
         }

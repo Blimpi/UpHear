@@ -15,9 +15,3 @@ struct Constants {
     }
     
 }
-
-enum caseStatus: String {
-    case waiting = "Waiting"
-    case ongoing = "Ongoing"
-    case closed = "Closed"
-}
