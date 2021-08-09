@@ -22,8 +22,6 @@ class HomeViewModel: ObservableObject {
                 loadUserCases(userName: currentUser.name)
             }
         }
-        
-//        filterCases()
     }
     
     func loadCases() {
