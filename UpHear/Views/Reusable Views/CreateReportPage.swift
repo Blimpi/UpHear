@@ -14,15 +14,16 @@ struct CreateReportPage:View{
     @Binding var isAnonym: publicationType
     @State var isButtonShow = false
     @State var placeOfIncident = ""
-    @State var birthdate:Date
+    @State var dateOfIncident:Date
     @State var vm: CreateReportViewModel
     @State var showDatePicker = false
     @State var showVictimPicker = false
     @State var showPerpetratorPicker = false
     @State var victimPickerInitialValue = "Select Victim Names"
     @State var perpetratorPickerInitialValue = "Select Offender Name"
-    @State var victim:String = "Wimpi1"
-    @State var perpetrator = "Mung"
+    @State var victim:String = "Select Victim Name"
+    @State var perpetrator = "Select Offender Name"
+    @State var description = ""
     var body: some View{
         if (page==1){
             VStack{
@@ -113,7 +114,7 @@ struct CreateReportPage:View{
         }else if(page == 3){
             ZStack{
                 VStack{
-                    DatePicker("", selection: $birthdate, displayedComponents: [.date]).datePickerStyle(GraphicalDatePickerStyle())
+                    DatePicker("", selection: $dateOfIncident, displayedComponents: [.date]).datePickerStyle(GraphicalDatePickerStyle())
                     Button(action: {
                         showDatePicker = false
                     }, label: {
@@ -139,8 +140,8 @@ struct CreateReportPage:View{
                         Text("Wimpi").tag("Wimpi2")
                         Text("Mung").tag("Mung2")
                         Text("Mango").tag("Mango2")
-                    }).frame(height: 150).animation(.none)
-                }.ignoresSafeArea()
+                    }).frame(height: 150).animation(.none).pickerStyle(MenuPickerStyle())
+                }
                 .opacity(showVictimPicker ? 1 : 0)
                 VStack{
                     Spacer()
@@ -174,7 +175,7 @@ struct CreateReportPage:View{
                                 showDatePicker = true
                             }, label: {
                                 HStack{
-                                    Text("Enter date and time of incident")
+                                    Text("\(dateOfIncident)")
                                         .foregroundColor(Colors.customGray)
                                         .multilineTextAlignment(.leading)
                                         .padding()
@@ -198,41 +199,82 @@ struct CreateReportPage:View{
                         }
                         VStack(alignment: .leading){
                             Text("Victim").font(.system(size: 16))
-                            Button(action: {
-                                showVictimPicker = true
-                                victimPickerInitialValue = victim
-                            }, label: {
-                                HStack{
-                                    Text("\(victimPickerInitialValue)")
-                                        .foregroundColor(Colors.customGray)
-                                        .multilineTextAlignment(.leading)
-                                        .padding()
-                                    Spacer()
-                                }
-                            }).frame(maxWidth: .infinity, maxHeight: 45)
-                            .background(Color.white)
+//                            Button(action: {
+//                                showVictimPicker = true
+//                                victimPickerInitialValue = victim
+//                            }, label: {
+//                                HStack{
+//                                    Text("\(victimPickerInitialValue)")
+//                                        .foregroundColor(Colors.customGray)
+//                                        .multilineTextAlignment(.leading)
+//                                        .padding()
+//                                    Spacer()
+//                                }
+//                            }).frame(maxWidth: .infinity, maxHeight: 45)
+//                            .background(Color.white)
+//                            .border(Color.gray, width: 2)
+//                            .cornerRadius(4)
+//                            .padding(.trailing,23)
+                            
+                            Picker(selection: $victim, label: Text(victim)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .multilineTextAlignment(.leading)
+                                    .foregroundColor(Colors.customGray).padding(.leading, 8), content: {
+                                Text("Wimpi").tag("Wimpi")
+                                Text("Mung").tag("Mung")
+                                Text("Mango").tag("Mango")
+                            }).frame(height: 45)
                             .border(Color.gray, width: 2)
                             .cornerRadius(4)
+                            .animation(.none)
                             .padding(.trailing,23)
+                            .pickerStyle(MenuPickerStyle())
+                            
+//                            Form{
+//                                Picker("Select Victim", selection: $victimPickerInitialValue) {
+//                                    ForEach(["Wimpi", "Wumbo", "Mango"], id: \.self) {
+//                                        Text($0)
+//                                    }
+//                                }
+//                            }.frame(maxWidth: .infinity, maxHeight: 100)
+//                            .background(Color.white)
+//                            .border(Color.gray, width: 2)
+//                            .cornerRadius(4)
+//                            .padding(.trailing,23)
+                            
                         }
                         VStack(alignment: .leading){
                             Text("Offender").font(.system(size: 16))
-                            Button(action: {
-                                showPerpetratorPicker = true
-                                perpetratorPickerInitialValue = perpetrator
-                            }, label: {
-                                HStack{
-                                    Text("\(perpetratorPickerInitialValue)")
-                                        .foregroundColor(Colors.customGray)
-                                        .multilineTextAlignment(.leading)
-                                        .padding()
-                                    Spacer()
-                                }
-                            }).frame(maxWidth: .infinity, maxHeight: 45)
-                            .background(Color.white)
+//                            Button(action: {
+//                                showPerpetratorPicker = true
+//                                perpetratorPickerInitialValue = perpetrator
+//                            }, label: {
+//                                HStack{
+//                                    Text("\(perpetratorPickerInitialValue)")
+//                                        .foregroundColor(Colors.customGray)
+//                                        .multilineTextAlignment(.leading)
+//                                        .padding()
+//                                    Spacer()
+//                                }
+//                            }).frame(maxWidth: .infinity, maxHeight: 45)
+//                            .background(Color.white)
+//                            .border(Color.gray, width: 2)
+//                            .cornerRadius(4)
+//                            .padding(.trailing,23)
+                            
+                            Picker(selection: $perpetrator, label: Text(perpetrator)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .multilineTextAlignment(.leading)
+                                    .foregroundColor(Colors.customGray).padding(.leading, 8), content: {
+                                Text("Wimpi").tag("Wimpi")
+                                Text("Mung").tag("Mung")
+                                Text("Mango").tag("Mango")
+                            }).frame(height: 45)
                             .border(Color.gray, width: 2)
                             .cornerRadius(4)
+                            .animation(.none)
                             .padding(.trailing,23)
+                            .pickerStyle(MenuPickerStyle())
                         }
                     }.padding(.leading,42)
                     
@@ -241,7 +283,7 @@ struct CreateReportPage:View{
                     
                     Button(action: {
                         page+=1
-                        vm.caseReport?.incidentTime = "\(birthdate)"
+                        vm.caseReport?.incidentTime = "\(dateOfIncident)"
                         vm.caseReport?.perpetratorName[0] = perpetratorPickerInitialValue
                     }) {
                         Rectangle().fill(Colors.primaryColor)
@@ -259,7 +301,7 @@ struct CreateReportPage:View{
                 VStack(alignment: .leading){
                     Text("Please describe the incident in detail").font(.system(size: 16))
                     TextEditor(
-                             text: $placeOfIncident
+                             text: $description
                     ).frame(height:255)
                     .border(Color.gray, width: 2)
                     .cornerRadius(4)

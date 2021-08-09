@@ -29,7 +29,7 @@ struct CreateReportView: View {
                 VStack{
                     Spacer().frame(height: 97)
                     Rectangle().fill(Color.white).cornerRadius(46).overlay(
-                        CreateReportPage(page: $currentPage,isVictim: $isVictim, isButtonSelect: $identityType, isAnonym: $isAnonym, birthdate: Date(), vm: viewModel)
+                        CreateReportPage(page: $currentPage,isVictim: $isVictim, isButtonSelect: $identityType, isAnonym: $isAnonym, dateOfIncident: Date(), vm: viewModel)
                     )
                 }
                 CustomPageControl(pageNumber: $currentPage)
