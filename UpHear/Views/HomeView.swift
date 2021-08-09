@@ -157,7 +157,7 @@ struct onGoingCasesView: View{
     var body: some View{
         List{
             ForEach((viewModel.ongoingCases), content: { caseDataResponse in
-                CaseCard(status: caseDataResponse.fields!.status, caseID: String(caseDataResponse.fields!.caseID), incidentDate: caseDataResponse.fields!.incidentTime, offenderName: caseDataResponse.fields!.perpetratorName[0])
+                CaseCard(status: caseDataResponse.fields!.status, caseID: "CA\(String(caseDataResponse.fields!.caseID))", incidentDate: String(caseDataResponse.fields!.incidentTime.prefix(10)), offenderName: caseDataResponse.fields!.perpetratorName[0])
                     .padding(.vertical, 8)
             })
         }
@@ -172,7 +172,7 @@ struct closedCasesView: View{
     var body: some View{
         List{
             ForEach((viewModel.closedCases), content: { caseDataResponse in
-                CaseCard(status: caseDataResponse.fields!.status, caseID: String(caseDataResponse.fields!.caseID), incidentDate: caseDataResponse.fields!.incidentTime, offenderName: caseDataResponse.fields!.perpetratorName[0])
+                CaseCard(status: caseDataResponse.fields!.status, caseID: "CA\(String(caseDataResponse.fields!.caseID))", incidentDate: String(caseDataResponse.fields!.incidentTime.prefix(10)), offenderName: caseDataResponse.fields!.perpetratorName[0])
                     .padding(.vertical, 8)
             })
         }

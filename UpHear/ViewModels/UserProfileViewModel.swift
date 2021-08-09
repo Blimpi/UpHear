@@ -52,8 +52,8 @@ class UserProfileViewModel: ObservableObject {
     
     func setupFields() {
         name = user.name
-        position = user.position
-        division = user.division
+        position = user.position ?? ""
+        division = user.division ?? ""
     }
     
     func logout() {

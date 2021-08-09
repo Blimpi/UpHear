@@ -24,8 +24,8 @@ class User: Codable {
     var role: String
     var company: [String]
     var companyName: [String]
-    var position: String
-    var division: String
+    var position: String?
+    var division: String?
     var agreedToS: String
     
     enum CodingKeys: String, CodingKey {
