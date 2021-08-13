@@ -79,6 +79,7 @@ struct SubmitMoreEvidence: View {
                             .padding(.trailing,23)
                             
                             Spacer()
+                            
                         }
                     )
                     Button(action: { }) {
