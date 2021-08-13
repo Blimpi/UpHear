@@ -55,4 +55,8 @@ class UserProfileViewModel: ObservableObject {
         position = user.position
         division = user.division
     }
+    
+    func logout() {
+        UserProfileCache.remove()
+    }
 }
