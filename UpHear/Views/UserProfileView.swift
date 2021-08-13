@@ -9,8 +9,11 @@ import SwiftUI
 
 struct UserProfileView: View {
     @ObservedObject var viewModel: UserProfileViewModel = UserProfileViewModel()
+    @ObservedObject var imageLoader:ImageLoader
+    @State var profilePic: UIImage = UIImage()
     
     init(){
+        imageLoader = ImageLoader(urlString: "https://asset.kompas.com/crops/Rk0Fy5EsGu0Y8QYND1-E8sxYAM4=/0x0:900x600/750x500/data/photo/2019/12/29/5e0887489f3e2.jpeg")
         UINavigationBar.appearance().backgroundColor = .clear
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(.white)]
         UINavigationBar.appearance().isTranslucent = true
@@ -28,13 +31,19 @@ struct UserProfileView: View {
                 }
                 VStack{
                     ZStack{
-                        Image("Wimpi")
-                        Image(uiImage: UIImage())
+                        
+                        Image(uiImage: profilePic)
                             .resizable()
+                            .aspectRatio(contentMode: .fit)
                             .clipShape(Circle())
                             .frame(width: 104, height: 101, alignment: .center)
                             .shadow(radius: 7)
                             .padding(.top, 60)
+                            .onReceive(imageLoader.didChange, perform: { data in
+                            self.profilePic = UIImage(data: data) ?? UIImage(named: "Wimpi")!
+                        })
+                        Image(uiImage: UIImage())
+                            
                         
                         Button(action: {
                             print("Tapped")
@@ -160,6 +169,7 @@ struct UserProfileView: View {
                     .padding(.top,30)
                     .font(Font.system(size: 17))
                 }
+                
             }
             .navigationBarTitle(("Profile"),displayMode: .inline)
             .navigationBarItems(leading: Button(action: { }) {

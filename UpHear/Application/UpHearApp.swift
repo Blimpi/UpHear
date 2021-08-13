@@ -10,26 +10,27 @@ import SwiftUI
 @main
 struct UpHearApp: App {
     let persistenceController = PersistenceController.shared
-    @State var isSignedIn: Bool
-    
-    init() {
-        if UserProfileCache.getId() != nil {
-            isSignedIn = true
-        }
-        else {
-            isSignedIn = false
-        }
-    }
+    @State var isSignedIn: Bool = true
+//
+//    init() {
+//        if UserProfileCache.getId() != nil {
+//            isSignedIn = true
+//        }
+//        else {
+//            isSignedIn = false
+//        }
+//    }
 
     var body: some Scene {
         WindowGroup {
-            if (isSignedIn == false) {
-                AuthView(viewModel: AuthViewModel(mainView: self), mode: .signIn)
-//                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            }
-            else {
-                HomeView()
-            }
+//            if (isSignedIn == false) {
+//                AuthView(viewModel: AuthViewModel(mainView: self), mode: .signIn)
+////                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
+//            }
+//            else {
+//                HomeView()
+//            }
+            UserProfileView()
         }
     }
 }

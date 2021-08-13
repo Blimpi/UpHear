@@ -17,7 +17,8 @@ class UserProfileViewModel: ObservableObject {
     init() {
         loginUser()
         
-        getUserData()
+        //getUserData()
+        
         
         setupFields()
     }
@@ -38,6 +39,7 @@ class UserProfileViewModel: ObservableObject {
                 else {
                     if let user = records[0].fields {
                         UserProfileCache.save(user, id: records[0].id!)
+                        self.user = UserProfileCache.get()
                     }
                 }
             }
