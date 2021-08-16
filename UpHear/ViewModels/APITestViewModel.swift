@@ -19,11 +19,7 @@ class APITestViewModel: ObservableObject {
     
     func loadData() {
         
-        let headers = [
-            "Authorization": "Bearer keyNHgPpNaQW4eEMC"
-        ]
-        
-        AuthRequest.fetchUserData(url: NetworkConstants.USER_URL, header: headers, showLoader: false) { response in
+        AuthRequest.fetchUserData(url: NetworkConstants.USER_URL, header: NetworkConstants.GET_HEADER, showLoader: false) { response in
             print(response)
             
             DispatchQueue.main.async {
@@ -46,13 +42,7 @@ class APITestViewModel: ObservableObject {
         newCase.incidentPlace = "Kantor"
         newCase.incidentDetail = "qwerty"
         
-        let headers = [
-            "Authorization": "Bearer keyNHgPpNaQW4eEMC",
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        ]
-        
-        CaseRequest.addCase(url: NetworkConstants.CASE_URL, header: headers, caseItem: newCase, showLoader: false) { responseData in
+        CaseRequest.addCase(url: NetworkConstants.CASE_URL, header: NetworkConstants.POST_HEADER, caseItem: newCase, showLoader: false) { responseData in
             if responseData.records?.count != 0 {
                 print(responseData)
             }

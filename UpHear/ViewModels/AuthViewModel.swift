@@ -34,13 +34,9 @@ class AuthViewModel: ObservableObject {
     
     func signIn(email: String, password: String) {
         
-        let headers = [
-            "Authorization": "Bearer keyNHgPpNaQW4eEMC"
-        ]
-        
         let url = "https://api.airtable.com/v0/appAre4MVvocsZOpK/tbl6ChR5gz43HU3AB?filterByFormula=AND(%7BEmail%7D+%3D+'\(email)'%2C%7BPassword%7D+%3D+'\(password)')"
         
-        AuthRequest.fetchUserData(url: url, header: headers, showLoader: false) { response in
+        AuthRequest.fetchUserData(url: url, header: NetworkConstants.GET_HEADER, showLoader: false) { response in
             
             if let records = response.records {
                 if records.isEmpty {
@@ -60,13 +56,9 @@ class AuthViewModel: ObservableObject {
     
     func signUp(email: String, password: String) {
         
-        let headers = [
-            "Authorization": "Bearer keyNHgPpNaQW4eEMC"
-        ]
-        
         let url = "https://api.airtable.com/v0/appAre4MVvocsZOpK/tbl6ChR5gz43HU3AB?filterByFormula=%7BEmail%7D+%3D+'\(email)'"
         
-        AuthRequest.fetchUserData(url: url, header: headers, showLoader: false) { response in
+        AuthRequest.fetchUserData(url: url, header: NetworkConstants.GET_HEADER, showLoader: false) { response in
             
             if let records = response.records {
                 if records.isEmpty {
@@ -82,11 +74,6 @@ class AuthViewModel: ObservableObject {
     }
     
     func registerUser(email: String, password: String) {
-        let headers = [
-            "Authorization": "Bearer keyNHgPpNaQW4eEMC",
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        ]
         
         let userItem: User = User(email: email, password: password)
         
@@ -94,7 +81,7 @@ class AuthViewModel: ObservableObject {
         userItem.role = "User"
         userItem.company = ["recvpLKu4YoeV0hiI"]
         
-        AuthRequest.addUser(url: NetworkConstants.USER_URL, header: headers, userItem: userItem, showLoader: false) { responseData in
+        AuthRequest.addUser(url: NetworkConstants.USER_URL, header: NetworkConstants.POST_HEADER, userItem: userItem, showLoader: false) { responseData in
             if responseData.records?.count != 0 {
                 print(responseData)
             }
