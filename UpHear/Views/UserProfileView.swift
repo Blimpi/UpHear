@@ -4,7 +4,6 @@
 //
 //  Created by Bismo Widianto on 02/08/21.
 //
-
 import SwiftUI
 
 struct UserProfileView: View {
@@ -21,12 +20,11 @@ struct UserProfileView: View {
         UINavigationBar.appearance().shadowImage = UIImage()
     }
     
-    
     var body: some View {
         NavigationView{
             ZStack{
                 VStack{
-                    Image("navBarBG").ignoresSafeArea()
+                    Image("bgUserProfile-1").ignoresSafeArea()
                     Spacer()
                 }
                 VStack{
@@ -44,7 +42,6 @@ struct UserProfileView: View {
                         })
                         Image(uiImage: UIImage())
                             
-                        
                         Button(action: {
                             print("Tapped")
                         }) {
@@ -169,15 +166,15 @@ struct UserProfileView: View {
                     .padding(.top,30)
                     .font(Font.system(size: 17))
                 }
-                
             }
             .navigationBarTitle(("Profile"),displayMode: .inline)
-            .navigationBarItems(leading: Button(action: { }) {
+            .navigationBarItems(leading: Button(action: {}) {
                     Image(systemName: "chevron.left")
             }.accentColor(.white), trailing: Button(action: {}){
                 Text("Done")
             })
         }
+        .navigationBarHidden(true)
     }
 }
     
@@ -186,3 +183,5 @@ struct UserProfileView_Previews: PreviewProvider {
         UserProfileView()
     }
 }
+
+////NavigationLink(destination: HomeView())

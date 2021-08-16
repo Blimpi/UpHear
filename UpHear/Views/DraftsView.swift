@@ -30,13 +30,12 @@ struct DraftsView: View {
         NavigationView{
             ZStack{
                 ZStack{
-                    
                     List{
                         Spacer()
                         CaseDraftRow().padding(.top,16)
                     }.listStyle(PlainListStyle())
                     VStack{
-                        Image("bgDraftPage")
+                        Image("bgDraftPage-1")
                             .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                             .ignoresSafeArea()
                         Spacer()

@@ -11,7 +11,7 @@ struct TermsConditionView: View {
     var body: some View {
         ZStack{
             VStack{
-                Image("bgTermsAndCondition")
+                Image("bgTnC-1")
                     .resizable()
                     .offset(x: 0, y: 0)
                     .frame(width: 390, height: 240)

@@ -57,7 +57,34 @@ struct HRHomeView: View {
     }
 }
 
+struct onGoingCasesView: View{
+    @ObservedObject var viewModel: HomeViewModel
+    
+    var body: some View{
+        List{
+            ForEach((viewModel.ongoingCases), content: { caseDataResponse in
+                CaseCard(status: caseDataResponse.fields!.status, caseID: "CA\(String(caseDataResponse.fields!.caseID))", incidentDate: String(caseDataResponse.fields!.incidentTime.prefix(10)), offenderName: caseDataResponse.fields!.perpetratorName[0])
+                    .padding(.vertical, 8)
+            })
+        }
+        .listStyle(PlainListStyle())
+        
+    }
+}
 
+struct closedCasesView: View{
+    @ObservedObject var viewModel: HomeViewModel
+    
+    var body: some View{
+        List{
+            ForEach((viewModel.closedCases), content: { caseDataResponse in
+                CaseCard(status: caseDataResponse.fields!.status, caseID: "CA\(String(caseDataResponse.fields!.caseID))", incidentDate: String(caseDataResponse.fields!.incidentTime.prefix(10)), offenderName: caseDataResponse.fields!.perpetratorName[0])
+                    .padding(.vertical, 8)
+            })
+        }
+        .listStyle(PlainListStyle())
+    }
+}
 
 struct waitingCasesView: View{
     @ObservedObject var viewModel: HomeViewModel
@@ -185,11 +212,11 @@ struct SearchBar: View {
     }
 }
 
-//struct SearchBar_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SearchBar(text: .constant(""))
-//    }
-//}
+struct SearchBar_Previews: PreviewProvider {
+    static var previews: some View {
+        SearchBar(text: .constant(""))
+    }
+}
 
 struct HRHomeView_Previews: PreviewProvider {
     static var previews: some View {
