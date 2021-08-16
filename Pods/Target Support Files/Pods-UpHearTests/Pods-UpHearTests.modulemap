@@ -1,0 +1,6 @@
+framework module Pods_UpHearTests {
+  umbrella header "Pods-UpHearTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

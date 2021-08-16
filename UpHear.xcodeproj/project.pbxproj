@@ -28,6 +28,7 @@
 		1C60D49A26BA40890072C589 /* CaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D49926BA40890072C589 /* CaseRequest.swift */; };
 		1C60D49C26BD128D0072C589 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60D49B26BD128D0072C589 /* HomeViewModel.swift */; };
 		1C60D4AE26C02F600072C589 /* UpHearLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C60D4AD26C02F600072C589 /* UpHearLaunchScreen.storyboard */; };
+		1C821C0826CA5B0300A14FEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C821C0726CA5B0200A14FEA /* GoogleService-Info.plist */; };
 		1C95623F26B286B600D3A18E /* HomeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95623E26B286B600D3A18E /* HomeListView.swift */; };
 		1C95624126B2882500D3A18E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624026B2882500D3A18E /* HomeView.swift */; };
 		1C95624326B2888300D3A18E /* DraftsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624226B2888300D3A18E /* DraftsView.swift */; };
@@ -46,6 +47,7 @@
 		1CF6486D26B1A39600299951 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6486C26B1A39600299951 /* ContentViewModel.swift */; };
 		1CF6486F26B1A3C600299951 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6486E26B1A3C600299951 /* Constants.swift */; };
 		1CF6487126B1A3F600299951 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6487026B1A3F600299951 /* APIService.swift */; };
+		6213CCB6D675EE73BA5DB056 /* Pods_UpHear_UpHearUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C30581E134E6B2D46D0ECD1 /* Pods_UpHear_UpHearUITests.framework */; };
 		B818805226B6BC83004F3D38 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805126B6BC83004F3D38 /* TextStyle.swift */; };
 		B818805426B6FE63004F3D38 /* CaseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805326B6FE63004F3D38 /* CaseDetailView.swift */; };
 		B818805826B7B36B004F3D38 /* SubmitMoreEvidence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805726B7B36B004F3D38 /* SubmitMoreEvidence.swift */; };
@@ -53,6 +55,7 @@
 		B818805C26BC5763004F3D38 /* testPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805B26BC5763004F3D38 /* testPicker.swift */; };
 		B852412626BE771C0005975B /* CreateReportPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B852412526BE771C0005975B /* CreateReportPage.swift */; };
 		B8A834F726C16F4F00D1C8B3 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A834F626C16F4F00D1C8B3 /* ImageLoader.swift */; };
+		CB319F27AA82713B06F1C9A8 /* Pods_UpHearTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C9AB0D431C4C70049E3567 /* Pods_UpHearTests.framework */; };
 		CDC9D03E26B2B0AB00215F5D /* CaseDraftRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */; };
 		CDC9D04026B2BA5700215F5D /* CaseDrafts.json in Resources */ = {isa = PBXBuildFile; fileRef = CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */; };
 		CDC9D04426B2F76800215F5D /* ModelDataCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D04326B2F76800215F5D /* ModelDataCases.swift */; };
@@ -65,6 +68,7 @@
 		CDE59F9F26BD0E13009B4D8D /* HRAddActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE59F9E26BD0E13009B4D8D /* HRAddActionView.swift */; };
 		CDE59FAE26BD7EB5009B4D8D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CDE59FB026BD7EB5009B4D8D /* Localizable.strings */; };
 		CDFEB2EC26B51B8600DED9C0 /* CaseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEB2EB26B51B8600DED9C0 /* CaseCard.swift */; };
+		CF7DFC1A071861885FB21D27 /* Pods_UpHear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B78061517C0E4B5F5FC838 /* Pods_UpHear.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +89,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C30581E134E6B2D46D0ECD1 /* Pods_UpHear_UpHearUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UpHear_UpHearUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C60D47026B3E9370072C589 /* AuthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequest.swift; sourceTree = "<group>"; };
 		1C60D47226B3FBC40072C589 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		1C60D47426B43AF50072C589 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -106,6 +111,7 @@
 		1C60D49926BA40890072C589 /* CaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseRequest.swift; sourceTree = "<group>"; };
 		1C60D49B26BD128D0072C589 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1C60D4AD26C02F600072C589 /* UpHearLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = UpHearLaunchScreen.storyboard; path = UpHear/Application/UpHearLaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		1C821C0726CA5B0200A14FEA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1C95623E26B286B600D3A18E /* HomeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListView.swift; sourceTree = "<group>"; };
 		1C95624026B2882500D3A18E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1C95624226B2888300D3A18E /* DraftsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftsView.swift; sourceTree = "<group>"; };
@@ -130,6 +136,13 @@
 		1CF6486C26B1A39600299951 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		1CF6486E26B1A3C600299951 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1CF6487026B1A3F600299951 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		26E62587667E5D285ED8EB7C /* Pods-UpHear-UpHearUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpHear-UpHearUITests.release.xcconfig"; path = "Target Support Files/Pods-UpHear-UpHearUITests/Pods-UpHear-UpHearUITests.release.xcconfig"; sourceTree = "<group>"; };
+		62C9AB0D431C4C70049E3567 /* Pods_UpHearTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UpHearTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68B78061517C0E4B5F5FC838 /* Pods_UpHear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UpHear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DDB3AFCF9B0CB1750BFD6B5 /* Pods-UpHear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpHear.release.xcconfig"; path = "Target Support Files/Pods-UpHear/Pods-UpHear.release.xcconfig"; sourceTree = "<group>"; };
+		A2DE693CD0D5FBC67200604F /* Pods-UpHearTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpHearTests.release.xcconfig"; path = "Target Support Files/Pods-UpHearTests/Pods-UpHearTests.release.xcconfig"; sourceTree = "<group>"; };
+		A3DFE2D7E9D2481BF6AAD672 /* Pods-UpHear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpHear.debug.xcconfig"; path = "Target Support Files/Pods-UpHear/Pods-UpHear.debug.xcconfig"; sourceTree = "<group>"; };
+		B66766BAB404B529A46461D7 /* Pods-UpHearTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpHearTests.debug.xcconfig"; path = "Target Support Files/Pods-UpHearTests/Pods-UpHearTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B818805126B6BC83004F3D38 /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
 		B818805326B6FE63004F3D38 /* CaseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDetailView.swift; sourceTree = "<group>"; };
 		B818805726B7B36B004F3D38 /* SubmitMoreEvidence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitMoreEvidence.swift; sourceTree = "<group>"; };
@@ -137,6 +150,7 @@
 		B818805B26BC5763004F3D38 /* testPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testPicker.swift; sourceTree = "<group>"; };
 		B852412526BE771C0005975B /* CreateReportPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportPage.swift; sourceTree = "<group>"; };
 		B8A834F626C16F4F00D1C8B3 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		CA1501CE8251F7B78A243E40 /* Pods-UpHear-UpHearUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpHear-UpHearUITests.debug.xcconfig"; path = "Target Support Files/Pods-UpHear-UpHearUITests/Pods-UpHear-UpHearUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDraftRow.swift; sourceTree = "<group>"; };
 		CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CaseDrafts.json; sourceTree = "<group>"; };
 		CDC9D04326B2F76800215F5D /* ModelDataCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataCases.swift; sourceTree = "<group>"; };
@@ -157,6 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF7DFC1A071861885FB21D27 /* Pods_UpHear.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB319F27AA82713B06F1C9A8 /* Pods_UpHearTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,12 +187,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6213CCB6D675EE73BA5DB056 /* Pods_UpHear_UpHearUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02ED5BB78C0F35CD3500992C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68B78061517C0E4B5F5FC838 /* Pods_UpHear.framework */,
+				1C30581E134E6B2D46D0ECD1 /* Pods_UpHear_UpHearUITests.framework */,
+				62C9AB0D431C4C70049E3567 /* Pods_UpHearTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0BFE73F3C960A744AFF76EEE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3DFE2D7E9D2481BF6AAD672 /* Pods-UpHear.debug.xcconfig */,
+				6DDB3AFCF9B0CB1750BFD6B5 /* Pods-UpHear.release.xcconfig */,
+				CA1501CE8251F7B78A243E40 /* Pods-UpHear-UpHearUITests.debug.xcconfig */,
+				26E62587667E5D285ED8EB7C /* Pods-UpHear-UpHearUITests.release.xcconfig */,
+				B66766BAB404B529A46461D7 /* Pods-UpHearTests.debug.xcconfig */,
+				A2DE693CD0D5FBC67200604F /* Pods-UpHearTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		1C60D46F26B3D25C0072C589 /* Network Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +303,8 @@
 				1CF6484C26B1A28700299951 /* UpHearTests */,
 				1CF6485726B1A28700299951 /* UpHearUITests */,
 				1CF6483426B1A28600299951 /* Products */,
+				0BFE73F3C960A744AFF76EEE /* Pods */,
+				02ED5BB78C0F35CD3500992C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -286,6 +329,7 @@
 				1CF6486726B1A2A200299951 /* ViewModels */,
 				1CF6486826B1A2BA00299951 /* Views */,
 				1CF6483C26B1A28700299951 /* Preview Content */,
+				1C821C0726CA5B0200A14FEA /* GoogleService-Info.plist */,
 			);
 			path = UpHear;
 			sourceTree = "<group>";
@@ -414,9 +458,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1CF6485D26B1A28700299951 /* Build configuration list for PBXNativeTarget "UpHear" */;
 			buildPhases = (
+				A860666B89A472A97D2D837D /* [CP] Check Pods Manifest.lock */,
 				1CF6482F26B1A28600299951 /* Sources */,
 				1CF6483026B1A28600299951 /* Frameworks */,
 				1CF6483126B1A28600299951 /* Resources */,
+				F47D2F9D1A8AA0982019D0B6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -431,6 +477,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1CF6486026B1A28700299951 /* Build configuration list for PBXNativeTarget "UpHearTests" */;
 			buildPhases = (
+				A1279E11F7CA9FA0E7CCB467 /* [CP] Check Pods Manifest.lock */,
 				1CF6484526B1A28700299951 /* Sources */,
 				1CF6484626B1A28700299951 /* Frameworks */,
 				1CF6484726B1A28700299951 /* Resources */,
@@ -449,9 +496,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1CF6486326B1A28700299951 /* Build configuration list for PBXNativeTarget "UpHearUITests" */;
 			buildPhases = (
+				8659EDF945160A472EB5F356 /* [CP] Check Pods Manifest.lock */,
 				1CF6485026B1A28700299951 /* Sources */,
 				1CF6485126B1A28700299951 /* Frameworks */,
 				1CF6485226B1A28700299951 /* Resources */,
+				4601B21FEFEBD87AF8E4C259 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -516,6 +565,7 @@
 				1CF6483E26B1A28700299951 /* Preview Assets.xcassets in Resources */,
 				1CF6483B26B1A28700299951 /* Assets.xcassets in Resources */,
 				1C60D4AE26C02F600072C589 /* UpHearLaunchScreen.storyboard in Resources */,
+				1C821C0826CA5B0300A14FEA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +584,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4601B21FEFEBD87AF8E4C259 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UpHear-UpHearUITests/Pods-UpHear-UpHearUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UpHear-UpHearUITests/Pods-UpHear-UpHearUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UpHear-UpHearUITests/Pods-UpHear-UpHearUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8659EDF945160A472EB5F356 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UpHear-UpHearUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1279E11F7CA9FA0E7CCB467 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UpHearTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A860666B89A472A97D2D837D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UpHear-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F47D2F9D1A8AA0982019D0B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UpHear/Pods-UpHear-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UpHear/Pods-UpHear-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UpHear/Pods-UpHear-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1CF6482F26B1A28600299951 /* Sources */ = {
@@ -756,6 +909,7 @@
 		};
 		1CF6485E26B1A28700299951 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3DFE2D7E9D2481BF6AAD672 /* Pods-UpHear.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -780,6 +934,7 @@
 		};
 		1CF6485F26B1A28700299951 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DDB3AFCF9B0CB1750BFD6B5 /* Pods-UpHear.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -804,6 +959,7 @@
 		};
 		1CF6486126B1A28700299951 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B66766BAB404B529A46461D7 /* Pods-UpHearTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -826,6 +982,7 @@
 		};
 		1CF6486226B1A28700299951 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2DE693CD0D5FBC67200604F /* Pods-UpHearTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -848,6 +1005,7 @@
 		};
 		1CF6486426B1A28700299951 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA1501CE8251F7B78A243E40 /* Pods-UpHear-UpHearUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -868,6 +1026,7 @@
 		};
 		1CF6486526B1A28700299951 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26E62587667E5D285ED8EB7C /* Pods-UpHear-UpHearUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
