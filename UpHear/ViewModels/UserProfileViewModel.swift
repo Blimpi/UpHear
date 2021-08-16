@@ -24,13 +24,10 @@ class UserProfileViewModel: ObservableObject {
     }
     
     func loginUser() {
-        let headers = [
-            "Authorization": "Bearer keyNHgPpNaQW4eEMC"
-        ]
         
         let url = "https://api.airtable.com/v0/appAre4MVvocsZOpK/tbl6ChR5gz43HU3AB?filterByFormula=AND(%7BEmail%7D+%3D+'wimpi@wumbo.com'%2C%7BPassword%7D+%3D+'96cae35ce8a9b0244178bf28e4966c2ce1b8385723a96a6b838858cdd6ca0a1e')"
         
-        AuthRequest.fetchUserData(url: url, header: headers, showLoader: false) { response in
+        AuthRequest.fetchUserData(url: url, header: NetworkConstants.GET_HEADER, showLoader: false) { response in
             
             if let records = response.records {
                 if records.isEmpty {

@@ -61,6 +61,8 @@ class Case: Codable {
     }
 }
 
+//MARK: Enum
+
 enum caseStatus: String {
     case waiting = "Waiting"
     case ongoing = "Ongoing"

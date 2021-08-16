@@ -65,6 +65,8 @@ class User: Codable {
     }
 }
 
+//MARK: Enum
+
 enum userRole: String {
     case hr = "HR"
     case user = "User"
