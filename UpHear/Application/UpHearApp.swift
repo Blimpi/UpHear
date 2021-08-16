@@ -6,20 +6,23 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct UpHearApp: App {
     let persistenceController = PersistenceController.shared
-    @State var isSignedIn: Bool = true
-//
-//    init() {
-//        if UserProfileCache.getId() != nil {
-//            isSignedIn = true
-//        }
-//        else {
-//            isSignedIn = false
-//        }
-//    }
+    @State var isSignedIn: Bool = false
+
+    init() {
+        FirebaseApp.configure()
+        
+        if UserProfileCache.getId() != nil {
+            isSignedIn = true
+        }
+        else {
+            isSignedIn = false
+        }
+    }
 
     var body: some Scene {
         WindowGroup {
