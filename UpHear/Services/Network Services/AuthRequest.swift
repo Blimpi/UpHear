@@ -38,7 +38,7 @@ class AuthRequest: NSObject {
                         failCompletion: @escaping (String) -> Void) {
         
         let jsonString = """
-            {"records":[{"fields": {"Email": "\(userItem.email)","Password": "\(userItem.password)","Name": "\(userItem.name)","Role": "\(userItem.role)","Company": ["\(userItem.company[0])"],"Position": "\(userItem.position ?? "")","Division": "\(userItem.division ?? "")","agreedToS": "\(userItem.agreedToS)"}}]}
+            {"records":[{"fields": {"Email": "\(userItem.email ?? "")","Password": "\(userItem.password ?? "")","Name": "\(userItem.name ?? "")","Role": "\(userItem.role ?? userRole.user.rawValue)","Company": ["\(userItem.company?[0] ?? "")"],"Position": "\(userItem.position ?? "")","Division": "\(userItem.division ?? "")","agreedToS": "\(userItem.agreedToS ?? APIbool.f.rawValue)"}}]}
         """
         
         BaseRequest.POST(url: url, header: header, jsonString: jsonString, showLoader: showLoader) { response in

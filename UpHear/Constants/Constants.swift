@@ -15,3 +15,8 @@ struct Constants {
     }
     
 }
+
+enum APIbool: String {
+    case t = "true"
+    case f = "false"
+}

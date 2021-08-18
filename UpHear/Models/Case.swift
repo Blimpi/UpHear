@@ -17,18 +17,18 @@ struct CaseDataResponse: Codable, Identifiable {
 }
 
 class Case: Codable {
-    var caseID: Int
-    var reporterID: [String]
-    var reporterName: [String]
-    var isAnonymous: String
-    var victimID: [String]
-    var victimName: [String]
-    var perpetratorID: [String]
-    var perpetratorName: [String]
-    var incidentTime: String
-    var incidentPlace: String
-    var incidentDetail: String
-    var status: String
+    var caseID: Int?
+    var reporterID: [String]?
+    var reporterName: [String]?
+    var isAnonymous: String?
+    var victimID: [String]?
+    var victimName: [String]?
+    var perpetratorID: [String]?
+    var perpetratorName: [String]?
+    var incidentTime: String?
+    var incidentPlace: String?
+    var incidentDetail: String?
+    var status: String?
     
     enum CodingKeys: String, CodingKey {
         case caseID = "CaseID"

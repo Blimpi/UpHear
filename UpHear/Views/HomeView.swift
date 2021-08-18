@@ -95,7 +95,7 @@ struct listCasesView: View{
         if selected == 0{
             List{
                 ForEach((viewModel.ongoingCases), content: { caseDataResponse in
-                    CaseCard(status: caseDataResponse.fields!.status, caseID: "CA\(String(caseDataResponse.fields!.caseID))", incidentDate: String(caseDataResponse.fields!.incidentTime.prefix(10)), offenderName: caseDataResponse.fields!.perpetratorName[0])
+                    CaseCard(status: caseDataResponse.fields?.status ?? "No Data", caseID: "CA\(String(caseDataResponse.fields?.caseID ?? 000))", incidentDate: String(caseDataResponse.fields?.incidentTime?.prefix(10) ?? "No Data"), offenderName: caseDataResponse.fields?.perpetratorName?[0] ?? "No Data")
                         .padding(.vertical, 8)
                 })
             }
@@ -104,7 +104,7 @@ struct listCasesView: View{
         }else if selected == 1{
             List{
                 ForEach((viewModel.closedCases), content: { caseDataResponse in
-                    CaseCard(status: caseDataResponse.fields!.status, caseID: "CA\(String(caseDataResponse.fields!.caseID))", incidentDate: String(caseDataResponse.fields!.incidentTime.prefix(10)), offenderName: caseDataResponse.fields!.perpetratorName[0])
+                    CaseCard(status: caseDataResponse.fields?.status ?? "No Data", caseID: "CA\(String(caseDataResponse.fields?.caseID ?? 000))", incidentDate: String(caseDataResponse.fields?.incidentTime?.prefix(10) ?? "No Data"), offenderName: caseDataResponse.fields?.perpetratorName?[0] ?? "No Data")
                         .padding(.vertical, 8)
                 })
             }

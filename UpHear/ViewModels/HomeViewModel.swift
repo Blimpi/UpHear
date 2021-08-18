@@ -19,7 +19,7 @@ class HomeViewModel: ObservableObject {
                 loadCases()
             }
             else {
-                loadUserCases(userName: currentUser.name)
+                loadUserCases(userName: currentUser.name ?? "")
             }
         }
     }
