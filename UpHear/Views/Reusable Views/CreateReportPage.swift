@@ -28,6 +28,8 @@ struct CreateReportPage:View{
     
     let lsNext : LocalizedStringKey = "Next"
     let lsDone : LocalizedStringKey = "Done"
+    let lsOffender : LocalizedStringKey = "Offender"
+    
     //pg1 Localized Strings
     let lsPg1Header : LocalizedStringKey = "Reporting as"
     let lsPg1Desc : LocalizedStringKey = "Do you consider yourself as a victim or witness in this discrimination?"
@@ -40,7 +42,7 @@ struct CreateReportPage:View{
     let lsPg2Header : LocalizedStringKey = "Select Identity"
     let lsPg2Desc : LocalizedStringKey = "Do you want to disclose your identitiy or want to stay anonymous?"
     let lsAnonymous : LocalizedStringKey = "Anonymous"
-    let lsAnonymousDesc : LocalizedStringKey = "Your personal identity will stay as anonymous" = "Identitas diri anda akan dirahasiakan"
+    let lsAnonymousDesc : LocalizedStringKey = "Your personal identity will stay as anonymous"
     
     let lsIdentified : LocalizedStringKey = "Identified"
     let lsIdentifiedDesc : LocalizedStringKey = "Your personal identity will be reaveled in the report"

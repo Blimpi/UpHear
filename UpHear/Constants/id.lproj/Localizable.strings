@@ -7,35 +7,27 @@
 "Offender" = "Pelaku";
 "Next" = "Berikutnya";
 "Done" = "Selesai";
-
 // Create Report #1
 "Reporting as" = "Melaporkan Sebagai";
 "Do you consider yourself as a victim or witness in this discrimination?" = "Apakah kamu korban atau saksi pada kasus ini?";
 "Victim" = "Korban";
 "Someone who experienced discrimination" = "Orang yang mengalami diskriminasi";
-
 "Witness" = "Saksi";
 "Reporting someone else's discrimination case" = "Melaporkan kejadian diskriminasi yang dialami orang lain";
 // Create Report #2
 "Select Identity" = "Pilih Identitas";
 "Do you want to disclose your identitiy or want to stay anonymous?" = "Apakah anda ingin menunjukkan identitas anda?";
-
 "Anonymous" = "Anonim";
 "Your personal identity will stay as anonymous" = "Identitas diri anda akan dirahasiakan";
-
 "Identified" = "Teridentifikasi";
 "Your personal identity will be reaveled in the report" = "Identitas diri anda akan diungkap ke HRD";
-
 // Create Report #3
 "Date and time of Incident" = "Tanggal dan Waktu Kejadian";
 "Enter Date and time of Incident" = "Masukkan tanggal dan waktu kejadian";
-
 "Place of Incident" = "Tempat Kejadian";
 "Enter place of Incident" = "Masukkan tempat kejadian";
-
 "Victim Name" = "Nama Korban";
 "Select victim name" = "Pilih nama korban";
-
 "Offender Name" = "Nama Pelaku";
 "Select offender name" = "Pilih nama pelaku";
 // Create Report #4

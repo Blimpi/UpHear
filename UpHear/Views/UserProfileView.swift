@@ -201,7 +201,6 @@ struct userInfoHeaderStyle: ViewModifier{
     }
 }
 
-struct
 struct UserProfileView_Previews: PreviewProvider {
     static var previews: some View {
         UserProfileView()

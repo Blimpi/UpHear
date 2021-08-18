@@ -7,7 +7,6 @@
 "Offender" = "Offender";
 "Next" = "Next";
 "Done" = "Done";
-
 "Reporting as" = "Reporting as";
 "Do you consider yourself as a victim or witness in this discrimination?" = "Do you consider yourself as a victim or witness in this discrimination?";
 "Victim" = "Victim";
@@ -22,8 +21,7 @@
 "Identified" = "Identified";
 // Create Report #3
 "Date and time of Incident" = "Date and time of Incident";
-"Enter Date and time of Incident" = "Enter Date and time of Incident
-"
+"Enter Date and time of Incident" = "Enter Date and time of Incident";
 "Place of Incident" = "Place of Incident";
 "Enter place of Incident" = "Enter place of Incident";
 
