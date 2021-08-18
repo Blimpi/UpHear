@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -55,6 +55,7 @@
 		B818805C26BC5763004F3D38 /* testPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805B26BC5763004F3D38 /* testPicker.swift */; };
 		B852412626BE771C0005975B /* CreateReportPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B852412526BE771C0005975B /* CreateReportPage.swift */; };
 		B8A834F726C16F4F00D1C8B3 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A834F626C16F4F00D1C8B3 /* ImageLoader.swift */; };
+		B8DF988026CCCA4B00CE8CA1 /* OptionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DF987F26CCCA4B00CE8CA1 /* OptionCard.swift */; };
 		CB319F27AA82713B06F1C9A8 /* Pods_UpHearTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C9AB0D431C4C70049E3567 /* Pods_UpHearTests.framework */; };
 		CDC9D03E26B2B0AB00215F5D /* CaseDraftRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */; };
 		CDC9D04026B2BA5700215F5D /* CaseDrafts.json in Resources */ = {isa = PBXBuildFile; fileRef = CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */; };
@@ -150,6 +151,7 @@
 		B818805B26BC5763004F3D38 /* testPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testPicker.swift; sourceTree = "<group>"; };
 		B852412526BE771C0005975B /* CreateReportPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportPage.swift; sourceTree = "<group>"; };
 		B8A834F626C16F4F00D1C8B3 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		B8DF987F26CCCA4B00CE8CA1 /* OptionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCard.swift; sourceTree = "<group>"; };
 		CA1501CE8251F7B78A243E40 /* Pods-UpHear-UpHearUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpHear-UpHearUITests.debug.xcconfig"; path = "Target Support Files/Pods-UpHear-UpHearUITests/Pods-UpHear-UpHearUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDraftRow.swift; sourceTree = "<group>"; };
 		CDC9D03F26B2BA5700215F5D /* CaseDrafts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CaseDrafts.json; sourceTree = "<group>"; };
@@ -214,7 +216,6 @@
 				B66766BAB404B529A46461D7 /* Pods-UpHearTests.debug.xcconfig */,
 				A2DE693CD0D5FBC67200604F /* Pods-UpHearTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -274,6 +275,7 @@
 				B852412526BE771C0005975B /* CreateReportPage.swift */,
 				CDE59F9626BC3D6B009B4D8D /* HRCaseCardView.swift */,
 				CDE59F9A26BD05CF009B4D8D /* HRActionCard.swift */,
+				B8DF987F26CCCA4B00CE8CA1 /* OptionCard.swift */,
 			);
 			path = "Reusable Views";
 			sourceTree = "<group>";
@@ -695,6 +697,7 @@
 			files = (
 				CDE59F9B26BD05CF009B4D8D /* HRActionCard.swift in Sources */,
 				1C60D48C26B7ECBA0072C589 /* RequiredActionsCard.swift in Sources */,
+				B8DF988026CCCA4B00CE8CA1 /* OptionCard.swift in Sources */,
 				1C60D48126B572780072C589 /* NetworkConstants.swift in Sources */,
 				1C60D47326B3FBC40072C589 /* BaseRequest.swift in Sources */,
 				1C60D48326B5888D0072C589 /* UserAction.swift in Sources */,
