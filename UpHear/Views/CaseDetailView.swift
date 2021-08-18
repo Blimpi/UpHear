@@ -51,8 +51,6 @@ struct CaseDetailView: View {
                 Image(systemName: "chevron.left").foregroundColor(.white).font(.system(size: 24).weight(.semibold))
             }).navigationBarTitleDisplayMode(.inline)
         }
-        
-        
     }
 }
 
@@ -102,37 +100,50 @@ struct detailsCaseView: View{
             VStack(alignment: .leading){
                 VStack(alignment: .leading){
                     Spacer().frame(height: 36)
-                    Text("Report as").font(.system(size: 14).weight(.regular)).foregroundColor(Colors.primaryColor)
-                    Text("Victim").font(.system(size: 18).weight(.bold))
+                    Text("Report as")
+                        .modifier(caseInfoHeaderStyle())
+                    Text("Victim")
+                        .modifier(caseInfoDetailStyle())
                     Spacer().frame(height: 8)
                 }
                 VStack(alignment: .leading){
-                    Text("Identity").font(.system(size: 14).weight(.regular)).foregroundColor(Colors.primaryColor)
-                    Text("Anonymous").font(.system(size: 18).weight(.bold))
+                    Text("Identity")
+                        .modifier(caseInfoHeaderStyle())
+                    Text("Anonymous")
+                        .modifier(caseInfoDetailStyle())
                     Spacer().frame(height: 8)
                 }
                 VStack(alignment: .leading){
-                    Text("Date and Time of Incident").font(.system(size: 14).weight(.regular)).foregroundColor(Colors.primaryColor)
-                    Text("1 July 2020 - 8:00 PM").font(.system(size: 18).weight(.bold))
+                    Text("Date and Time of Incident")
+                        .modifier(caseInfoHeaderStyle())
+                    Text("1 July 2020 - 8:00 PM")
+                        .modifier(caseInfoDetailStyle())
                     Spacer().frame(height: 8)
                 }
                 VStack(alignment: .leading){
-                    Text("Place of Incident").font(.system(size: 14).weight(.regular)).foregroundColor(Colors.primaryColor)
-                    Text("JYP Training Room").font(.system(size: 18).weight(.bold))
+                    Text("Place of Incident")
+                        .modifier(caseInfoHeaderStyle())
+                    Text("JYP Training Room").
+                        .modifier(caseInfoDetailStyle())
                     Spacer().frame(height: 8)
                 }
                 VStack(alignment: .leading){
-                    Text("Victim Name").font(.system(size: 14).weight(.regular)).foregroundColor(Colors.primaryColor)
-                    Text("Exol").font(.system(size: 18).weight(.bold))
+                    Text("Victim Name")
+                        .modifier(caseInfoHeaderStyle())
+                    Text("Exol")
+                        .modifier(caseInfoDetailStyle())
                     Spacer().frame(height: 8)
                 }
                 VStack(alignment: .leading){
-                    Text("Perpretator Name").font(.system(size: 14).weight(.regular)).foregroundColor(Colors.primaryColor)
-                    Text("Army").font(.system(size: 18).weight(.bold))
+                    Text("Perpretator Name")
+                        .modifier(caseInfoHeaderStyle())
+                    Text("Army")
+                        .modifier(caseInfoDetailStyle())
                     Spacer().frame(height: 8)
                 }
                 VStack(alignment: .leading){
-                    Text("Description").font(.system(size: 14).weight(.regular)).foregroundColor(Colors.primaryColor)
+                    Text("Description")
+                        .modifier(caseInfoHeaderStyle())
                     
                     Rectangle().fill(Color.clear)
                     .frame(height: 219, alignment: .leading)
@@ -153,6 +164,22 @@ struct detailsCaseView: View{
         }
     }
 }
+
+struct caseInfoHeaderStyle:ViewModifier{
+    func body(content: Content) -> some View {
+        return content
+            .font(.system(size: 14).weight(.regular))
+            .foregroundColor(Colors.primaryColor)
+    }
+}
+
+struct caseInfoDetailStyle:ViewModifier{
+    func body(content: Content) -> some View {
+        return content
+            .font(.system(size: 18).weight(.bold))
+    }
+}
+
 
 struct statusCaseView: View{
     var body: some View{

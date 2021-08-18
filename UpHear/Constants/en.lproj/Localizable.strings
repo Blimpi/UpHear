@@ -1,9 +1,13 @@
-"MyCases" = "My Cases";
+"My Cases" = "My Cases";
 "Ongoing" = "Ongoing";
 "Closed" = "Closed";
 "Report a Case" = "Report a Case";
 "Close" = "Close";
 "No Cases" = "No Cases";
+"Offender" = "Offender";
+"Next" = "Next";
+"Done" = "Done";
+
 "Reporting as" = "Reporting as";
 "Do you consider yourself as a victim or witness in this discrimination?" = "Do you consider yourself as a victim or witness in this discrimination?";
 "Victim" = "Victim";
@@ -18,11 +22,16 @@
 "Identified" = "Identified";
 // Create Report #3
 "Date and time of Incident" = "Date and time of Incident";
+"Enter Date and time of Incident" = "Enter Date and time of Incident
+"
 "Place of Incident" = "Place of Incident";
+"Enter place of Incident" = "Enter place of Incident";
+
 "Victim Name" = "Victim Name";
-"Enter victim name" = "Enter victim name";
+"Select victim name" = "Select victim name";
+
 "Offender Name" = "Offender Name";
-"Enter culprit name" = "Enter culprit name";
+"Select offender name" = "Select culprit name";
 // Create Report #4
 "Please describe the incident in detail" = "Please describe the incident in detail";
 "Incident Evidence" = "Incident Evidence";
