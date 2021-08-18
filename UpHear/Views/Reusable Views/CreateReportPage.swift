@@ -24,11 +24,46 @@ struct CreateReportPage:View{
     @State var victim:String = "Select Victim Name"
     @State var perpetrator = "Select Offender Name"
     @State var description = ""
+    
+    
+    let lsNext : LocalizedStringKey = "Next"
+    let lsDone : LocalizedStringKey = "Done"
+    //pg1 Localized Strings
+    let lsPg1Header : LocalizedStringKey = "Reporting as"
+    let lsPg1Desc : LocalizedStringKey = "Do you consider yourself as a victim or witness in this discrimination?"
+    let lsVictim : LocalizedStringKey = "Victim"
+    let lsVictimDesc: LocalizedStringKey = "Someone who experienced discrimination"
+    let lsWitness : LocalizedStringKey = "Witness"
+    let lsWitnessDesc : LocalizedStringKey = "Reporting someone else's discrimination case"
+    
+    //pg2 Localized Strings
+    let lsPg2Header : LocalizedStringKey = "Select Identity"
+    let lsPg2Desc : LocalizedStringKey = "Do you want to disclose your identitiy or want to stay anonymous?"
+    let lsAnonymous : LocalizedStringKey = "Anonymous"
+    let lsAnonymousDesc : LocalizedStringKey = "Your personal identity will stay as anonymous" = "Identitas diri anda akan dirahasiakan"
+    
+    let lsIdentified : LocalizedStringKey = "Identified"
+    let lsIdentifiedDesc : LocalizedStringKey = "Your personal identity will be reaveled in the report"
+    
+    //pg3 Localized Strings
+    let lsDateTime : LocalizedStringKey = "Date and time of Incident"
+    let lsDateTimeHint : LocalizedStringKey = "Enter Date and time of Incident"
+    let lsPlace : LocalizedStringKey = "Place of Incident"
+    let lsPlaceHint : LocalizedStringKey = "Enter place of Incident"
+    let lsVictimName : LocalizedStringKey = "Victim Name"
+    let lsVictimNameHint : LocalizedStringKey = "Select victim name"
+    let lsOffenderName : LocalizedStringKey = "Offender Name"
+    let lsOffenderNameHint : LocalizedStringKey = "Select Offender name"
+    
+    //pg4 Localized Strings
+    let lsDesc : LocalizedStringKey = "Please describe the incident in detail"
+    let lsEvidence : LocalizedStringKey = "Incident Evidence"
+    
     var body: some View{
         if (page==1){
             VStack{
                 Spacer().frame(height:43)
-                Text("Select Identity Type").font(.title2.weight(.bold))
+                Text(lsPg1Header).font(.title2.weight(.bold))
                 grayText(content: "Do you consider yourself as a victim or witness in this discrimination case?", size: 17, weight: .medium)
                     .multilineTextAlignment(.center)
                     .padding(.init(top: 15, leading: 36, bottom: 0, trailing: 36))
@@ -64,14 +99,14 @@ struct CreateReportPage:View{
                         .cornerRadius(8)
                         .frame(maxWidth: .infinity, maxHeight:50, alignment: .center)
                         .padding(.horizontal, 23).overlay(
-                            Text("Next").accentColor(.white)
+                            Text(lsNext).accentColor(.white)
                         )
                 }.opacity(isButtonSelect == .nothing ? 0 : 1)
             }
         }else if(page == 2){
             VStack{
                 Spacer().frame(height:43)
-                Text("Select Publication Type").font(.title2.weight(.bold))
+                Text(lsPg2Header).font(.title2.weight(.bold))
                 grayText(content: "Do you consider yourself as a victim or witness in this discrimination case?", size: 17, weight: .medium).multilineTextAlignment(.center)
                     .padding(.init(top: 15, leading: 36, bottom: 0, trailing: 36))
                 Spacer().frame(height: 49)
@@ -107,7 +142,7 @@ struct CreateReportPage:View{
                         .cornerRadius(8)
                         .frame(maxWidth: .infinity, maxHeight:50, alignment: .center)
                         .padding(.horizontal, 23).overlay(
-                            Text("Next").accentColor(.white)
+                            Text(lsNext).accentColor(.white)
                         )
                 }.opacity(isAnonym == .nothing ? 0 : 1)
             }
@@ -118,7 +153,7 @@ struct CreateReportPage:View{
                     Button(action: {
                         showDatePicker = false
                     }, label: {
-                        Text("Done")
+                        Text(lsDone)
                     })
                 }.padding(40)
                 .opacity(showDatePicker ? 1 : 0)
@@ -129,7 +164,7 @@ struct CreateReportPage:View{
                         Button(action: {
                             showVictimPicker = false
                         }, label: {
-                            Text("Done")
+                            Text(lsDone)
                         }).padding(.trailing,32)
                     }
                     Spacer().frame(height: 32)
@@ -150,7 +185,7 @@ struct CreateReportPage:View{
                         Button(action: {
                             showPerpetratorPicker = false
                         }, label: {
-                            Text("Done")
+                            Text(lsDone)
                         }).padding(.trailing,32)
                     }
                     Spacer().frame(height: 32)
@@ -170,7 +205,7 @@ struct CreateReportPage:View{
                     Spacer().frame(height:41)
                     VStack(alignment: .leading){
                         VStack(alignment: .leading){
-                            Text("Date and time of incident").font(.system(size: 16))
+                            Text(lsDateTime).font(.system(size: 16))
                             Button(action: {
                                 showDatePicker = true
                             }, label: {
@@ -188,9 +223,9 @@ struct CreateReportPage:View{
                             .padding(.trailing,23)
                         }
                         VStack(alignment: .leading){
-                            Text("Place of incident")
+                            Text(lsPlace)
                             TextField(
-                                    "  Enter place of incident",
+                                    lsPlaceHint,
                                      text: $placeOfIncident
                             ).frame(height:45)
                             .border(Color.gray, width: 2)
@@ -198,7 +233,7 @@ struct CreateReportPage:View{
                             .padding(.trailing,23)
                         }
                         VStack(alignment: .leading){
-                            Text("Victim").font(.system(size: 16))
+                            Text(lsVictim).font(.system(size: 16))
 //                            Button(action: {
 //                                showVictimPicker = true
 //                                victimPickerInitialValue = victim
@@ -244,7 +279,7 @@ struct CreateReportPage:View{
                             
                         }
                         VStack(alignment: .leading){
-                            Text("Offender").font(.system(size: 16))
+                            Text(lsOffender).font(.system(size: 16))
 //                            Button(action: {
 //                                showPerpetratorPicker = true
 //                                perpetratorPickerInitialValue = perpetrator
@@ -290,7 +325,7 @@ struct CreateReportPage:View{
                             .cornerRadius(8)
                             .frame(maxWidth: .infinity, maxHeight:50, alignment: .center)
                             .padding(.horizontal, 23).overlay(
-                                Text("Next").accentColor(.white)
+                                Text(lsNext).accentColor(.white)
                             )
                     }
                 }.opacity(!showDatePicker && !showVictimPicker && !showPerpetratorPicker ? 1 : 0)
@@ -299,7 +334,7 @@ struct CreateReportPage:View{
             VStack(alignment: .leading){
                 Spacer().frame(height:41)
                 VStack(alignment: .leading){
-                    Text("Please describe the incident in detail").font(.system(size: 16))
+                    Text(lsDesc).font(.system(size: 16))
                     TextEditor(
                              text: $description
                     ).frame(height:255)
@@ -307,7 +342,7 @@ struct CreateReportPage:View{
                     .cornerRadius(4)
                     .padding(.trailing,23)
 
-                    Text("Incident Evidance").font(.system(size: 16)).padding(.top,22).padding(.bottom,16)
+                    Text(lsEvidence).font(.system(size: 16)).padding(.top,22).padding(.bottom,16)
                     HStack{
                         Button(action: { }) {
                             Image("Add_Incident_Button").renderingMode(.original)
@@ -328,7 +363,7 @@ struct CreateReportPage:View{
                             .cornerRadius(8)
                             .frame(maxWidth: .infinity, maxHeight:50, alignment: .center)
                             .padding(.horizontal, 23).overlay(
-                                Text("Next").accentColor(.white)
+                                Text(lsNext).accentColor(.white)
                             )
                     })
             }

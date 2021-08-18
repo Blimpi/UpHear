@@ -58,14 +58,10 @@ struct UserProfileView: View {
                     
                     //Email
                     Text(viewModel.user.email)
-                        .font(Font.system(size: 16))
-                        .foregroundColor(.subheadline)
-                        .padding(.bottom,2)
+                        .modifier(userInfoStyle())
                     //Company Name
                     Text(viewModel.user.companyName[0])
-                        .font(Font.system(size: 16))
-                        .foregroundColor(.subheadline)
-                        .padding(.bottom,2)
+                        .modifier(userInfoStyle())
                         
                     //Button edit profile
                     Button(action: {}, label: {
@@ -85,72 +81,56 @@ struct UserProfileView: View {
                         HStack{
                             VStack{
                                 Text("2")
-                                    .font(Font.system(size: 28))
-                                    .foregroundColor(.buttonColor)
+                                    .modifier(statsCardContentStyle())
                                 Text("Ongoing cases")
-                                    .font(Font.system(size: 12))
-                                    .foregroundColor(.subheadline)
-                                    .frame(width: 100)
+                                    .modifier(statsCardHeaderStyle())
                             }
                             Rectangle()
                                 .fill(Colors.customGray)
                                 .frame(width: 1, height: 60, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                             VStack{
                                 Text("3")
-                                    .font(Font.system(size: 28))
-                                    .foregroundColor(.buttonColor)
+                                    .modifier(statsCardContentStyle())
                                 Text("Solved cases")
-                                    .font(Font.system(size: 12))
-                                    .foregroundColor(.subheadline)
-                                    .frame(width: 100)
+                                    .modifier(statsCardHeaderStyle())
                             }
                             Rectangle()
                                 .fill(Colors.customGray)
                                 .frame(width: 1, height: 60, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                             VStack{
                                 Text("5")
-                                    .font(Font.system(size: 28))
-                                    .foregroundColor(.buttonColor)
+                                    .modifier(statsCardContentStyle())
                                 Text("Total cases")
-                                    .font(Font.system(size: 12))
-                                    .foregroundColor(.subheadline)
-                                    .frame(width: 100)
+                                    .modifier(statsCardHeaderStyle())
                             }
                         }
                     }.frame(width: 324, height: 101)
                     
                     VStack(alignment: .leading){
                         Text("Full Name")
-                            .fontWeight(.semibold)
-                            .foregroundColor(.buttonColor)
+                            .modifier(userInfoHeaderStyle())
                         
                         TextField(
                                 "  Enter Full Name",
                             text: $viewModel.name
-                        ).frame(width: 335, height:45)
-                        .border(Color.gray, width: 2)
-                        .cornerRadius(4)
+                        )
+                        .modifier(userInfoDetailStyle())
                         
                         Text("Position")
-                            .fontWeight(.semibold)
-                            .foregroundColor(.buttonColor)
+                            .modifier(userInfoHeaderStyle())
                         
                         TextField(
                                 "  Enter Current Position",
                             text: $viewModel.position
-                        ).frame(width: 335, height:45)
-                        .border(Color.gray, width: 2)
-                        .cornerRadius(4)
+                        )
+                        .modifier(userInfoDetailStyle())
                         
                         Text("Division")
-                            .fontWeight(.semibold)
-                            .foregroundColor(.buttonColor)
+                            .modifier(userInfoHeaderStyle())
                         TextField(
                                 "  Enter Current Division",
                             text: $viewModel.division
-                        ).frame(width: 335, height:45)
-                        .border(Color.gray, width: 2)
-                        .cornerRadius(4)
+                        ).modifier(userInfoDetailStyle())
                         
                     }.padding()
                     
@@ -177,7 +157,51 @@ struct UserProfileView: View {
         .navigationBarHidden(true)
     }
 }
-    
+
+struct statsCardHeaderStyle: ViewModifier{
+    func body(content: Content) -> some View {
+        return content
+            .font(Font.system(size: 12))
+            .foregroundColor(.subheadline)
+            .frame(width: 100)
+    }
+}
+
+struct statsCardContentStyle: ViewModifier{
+    func body(content: Content) -> some View{
+        return content
+            .font(Font.system(size: 28))
+            .foregroundColor(.buttonColor)
+    }
+}
+
+struct userInfoStyle: ViewModifier{
+    func body (content: Content) -> some View{
+        return content
+            .font(Font.system(size: 16))
+            .foregroundColor(.subheadline)
+            .padding(.bottom,2)
+    }
+}
+
+struct userInfoDetailStyle: ViewModifier{
+    func body(content: Content) -> some View {
+        return content
+            .frame(width: 335, height:45)
+            .border(Color.gray, width: 2)
+            .cornerRadius(4)
+    }
+}
+
+struct userInfoHeaderStyle: ViewModifier{
+    func body(content: Content) -> some View {
+        return content
+            .font(Font.system(size: 16).weight(.semibold))
+            .foregroundColor(.buttonColor)
+    }
+}
+
+struct
 struct UserProfileView_Previews: PreviewProvider {
     static var previews: some View {
         UserProfileView()

@@ -67,7 +67,6 @@ struct HomeView: View {
                 }
                 .navigationTitle(pageTitle)
                 .navigationBarHidden(true)
-                
             }
         }
     }
@@ -128,8 +127,7 @@ struct Topbar : View {
             }) {
                 VStack{
                     Text(segment1)
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                        .font(Font.system(size: 17))
+                        .modifier(segmentHeader())
                         
                     RoundedRectangle(cornerRadius: 3)
                         .fill(self.selected == 0 ? Color.yellow : Color.clear)
@@ -143,8 +141,7 @@ struct Topbar : View {
             }) {
                 VStack{
                     Text(segment2)
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                        .font(Font.system(size: 17))
+                        .modifier(segmentHeader())
                         
                     RoundedRectangle(cornerRadius: 3)
                         .fill(self.selected == 1 ? Color.yellow : Color.clear)
@@ -161,7 +158,7 @@ struct Topbar : View {
 struct segmentHeader: ViewModifier{
     func body(content: Content) -> some View {
         return content
-            .font(Font.system(size: 17))
+            .font(Font.system(size: 17).weight(.bold))
     }
 }
 
