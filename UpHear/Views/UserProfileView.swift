@@ -57,10 +57,10 @@ struct UserProfileView: View {
                     }
                     
                     //Email
-                    Text(viewModel.user.email)
+                    Text(viewModel.user.email ?? "No Data")
                         .modifier(userInfoStyle())
                     //Company Name
-                    Text(viewModel.user.companyName[0])
+                    Text(viewModel.user.companyName?[0] ?? "No Data")
                         .modifier(userInfoStyle())
                         
                     //Button edit profile
@@ -201,7 +201,6 @@ struct userInfoHeaderStyle: ViewModifier{
     }
 }
 
-struct
 struct UserProfileView_Previews: PreviewProvider {
     static var previews: some View {
         UserProfileView()

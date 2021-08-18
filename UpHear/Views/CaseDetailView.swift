@@ -123,7 +123,7 @@ struct detailsCaseView: View{
                 VStack(alignment: .leading){
                     Text("Place of Incident")
                         .modifier(caseInfoHeaderStyle())
-                    Text("JYP Training Room").
+                    Text("JYP Training Room")
                         .modifier(caseInfoDetailStyle())
                     Spacer().frame(height: 8)
                 }

@@ -63,7 +63,7 @@ struct onGoingCasesView: View{
     var body: some View{
         List{
             ForEach((viewModel.ongoingCases), content: { caseDataResponse in
-                CaseCard(status: caseDataResponse.fields!.status, caseID: "CA\(String(caseDataResponse.fields!.caseID))", incidentDate: String(caseDataResponse.fields!.incidentTime.prefix(10)), offenderName: caseDataResponse.fields!.perpetratorName[0])
+                CaseCard(status: caseDataResponse.fields?.status ?? "No Data", caseID: "CA\(String(caseDataResponse.fields?.caseID ?? 000))", incidentDate: String(caseDataResponse.fields?.incidentTime?.prefix(10) ?? "No Data"), offenderName: caseDataResponse.fields?.perpetratorName?[0] ?? "No Data")
                     .padding(.vertical, 8)
             })
         }
@@ -78,7 +78,7 @@ struct closedCasesView: View{
     var body: some View{
         List{
             ForEach((viewModel.closedCases), content: { caseDataResponse in
-                CaseCard(status: caseDataResponse.fields!.status, caseID: "CA\(String(caseDataResponse.fields!.caseID))", incidentDate: String(caseDataResponse.fields!.incidentTime.prefix(10)), offenderName: caseDataResponse.fields!.perpetratorName[0])
+                CaseCard(status: caseDataResponse.fields?.status ?? "No Data", caseID: "CA\(String(caseDataResponse.fields?.caseID ?? 000))", incidentDate: String(caseDataResponse.fields?.incidentTime?.prefix(10) ?? "No Data"), offenderName: caseDataResponse.fields?.perpetratorName?[0] ?? "No Data")
                     .padding(.vertical, 8)
             })
         }
@@ -92,7 +92,7 @@ struct waitingCasesView: View{
     var body: some View{
         List{
             ForEach((viewModel.caseData.records ?? [CaseDataResponse]()), content: { caseDataResponse in
-                CaseCard(status: caseDataResponse.fields!.status, caseID: String(caseDataResponse.fields!.caseID), incidentDate: caseDataResponse.fields!.incidentTime, offenderName: caseDataResponse.fields!.perpetratorName[0])
+                CaseCard(status: caseDataResponse.fields?.status ?? "No Data", caseID: "CA\(String(caseDataResponse.fields?.caseID ?? 000))", incidentDate: caseDataResponse.fields?.incidentTime ?? "No Data", offenderName: caseDataResponse.fields?.perpetratorName?[0] ?? "No Data")
                     .padding(.vertical, 8)
             })
         }.listStyle(PlainListStyle())
