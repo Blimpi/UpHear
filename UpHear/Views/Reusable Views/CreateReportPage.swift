@@ -321,7 +321,7 @@ struct CreateReportPage:View{
                     Button(action: {
                         page+=1
                         vm.caseReport?.incidentTime = "\(dateOfIncident)"
-                        vm.caseReport?.perpetratorName[0] = perpetratorPickerInitialValue
+                        vm.caseReport?.perpetratorName?[0] = perpetratorPickerInitialValue
                     }) {
                         Rectangle().fill(Colors.primaryColor)
                             .cornerRadius(8)
