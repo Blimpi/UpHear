@@ -24,51 +24,48 @@ struct HRCaseDetailView: View {
         NavigationView{
             VStack{
                 ZStack{
-                        Image("bgTnC")
-                            .resizable()
-//                            .aspectRatio(contentMode: .fit)
-                            .ignoresSafeArea()
-                    
-                            
+                    Image("bgTnC")
+                        .resizable()
+                        .ignoresSafeArea()
                     CaseDetailTopbar(selected: self.$selected)
-
+                    
                 }.frame(width: 390, height: 62)
-                .padding(.top,-8)
-                    
-                    
-                ZStack{
-                    Colors.cardBackground.ignoresSafeArea()
+                .padding(.top,-16)
+                
+                VStack{
+//                    Colors.cardBackground.ignoresSafeArea()
                     if self.selected == 0{
                         HRCaseDetailSegment()
+                            .background(Colors.cardBackground)
+                            .ignoresSafeArea()
                         Spacer()
                     }
+                    
                     else{
                         HRCaseStatusSegment()
                         Spacer()
                         
                     }
-                }
-               
-
+                }.ignoresSafeArea()
             }
             .navigationBarTitle(("Report \(420420)"),displayMode: .inline)
             .navigationBarItems(leading: Button(action: {}){
                 Image(systemName: "chevron.left")
                     .foregroundColor(.white)
             })
-            }
-            
         }
     }
-
+}
 
 struct HRCaseDetailSegment : View{
     var body : some View{
         VStack(alignment: .leading){
             //Case Details
+            
             ZStack{
                 RoundedRectangle(cornerRadius: 8)
                     .foregroundColor(.white)
+                
                 VStack(alignment: .leading){
                     Section{
                         VStack(alignment: .leading){
@@ -78,7 +75,7 @@ struct HRCaseDetailSegment : View{
                             Text("Victim")
                                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                                 .font(Font.system(size: 18))
-                        }.padding(.bottom,16)
+                        }
                         Divider()
                     }
                     
@@ -90,7 +87,7 @@ struct HRCaseDetailSegment : View{
                             Text("Anonymous")
                                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                                 .font(Font.system(size: 18))
-                        }.padding(.bottom,16)
+                        }
                         Divider()
                     }
                     
@@ -102,7 +99,7 @@ struct HRCaseDetailSegment : View{
                             Text("Anonymous")
                                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                                 .font(Font.system(size: 18))
-                        }.padding(.bottom,16)
+                        }
                         Divider()
                     }
                     
@@ -114,7 +111,7 @@ struct HRCaseDetailSegment : View{
                             Text("1 August 2020 - 8:00 PM")
                                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                                 .font(Font.system(size: 18))
-                        }.padding(.bottom,16)
+                        }
                         Divider()
                     }
                     
@@ -127,7 +124,7 @@ struct HRCaseDetailSegment : View{
                             Text("Meeting Room")
                                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                                 .font(Font.system(size: 18))
-                        }.padding(.bottom,16)
+                        }
                         Divider()
                     }
                     
@@ -142,11 +139,6 @@ struct HRCaseDetailSegment : View{
                 }.padding()
                 
             }.frame(width: 341, height: 337)
-            .padding(.top,-32)
-            .padding(.bottom,32)
-            
-            
-            
             
             ZStack{
                 RoundedRectangle(cornerRadius: 8)
@@ -156,25 +148,28 @@ struct HRCaseDetailSegment : View{
                     Text("Description")
                         .font(.custom("SF Pro Text", size: 14))
                         .foregroundColor(.subheadline)
-                    Text("Wimpi didn’t look at me as her colleague since I’m a Chinese descent. She even went as far as dismissing my work.")
+                        .padding(.leading,16)
+                    Text("Wimpi didn’t look at me as her colleague since I’m a Chinese descent. She even went as far as dismissing my work")
                         .font(Font.system(size: 18))
-                        
+                        .padding(.leading,16)
                 }
                 
             }.frame(width: 341, height: 137)
             .padding(.top,16)
             
-
-            ZStack{
+            
+            ZStack(alignment: .leading){
                 RoundedRectangle(cornerRadius: 8)
                     .foregroundColor(.white)
-
+                
                 VStack(alignment: .leading){
                     Text("Incident Evidence")
                         .font(.custom("SF Pro Text", size: 14))
                         .foregroundColor(.subheadline)
+                        .padding(.leading,16)
+                    
                     Text("THUMBNAIL EVIDENCE NYA DISINI")
-
+                        .padding(.leading,16)
                 }
             }.frame(width: 341)
             .padding(.top,16)
@@ -182,12 +177,28 @@ struct HRCaseDetailSegment : View{
             
             
         }.padding()
+        
     }
+    
 }
 
 struct HRCaseStatusSegment : View{
     var body : some View{
         VStack(alignment: .leading){
+            
+            VStack(alignment: .leading){
+                Text("Submitted Action")
+                    .fontWeight(.bold)
+                    .font(Font.system(size: 20))
+                    .foregroundColor(.primaryColor)
+                    .padding(.bottom, 8)
+                
+                HRActionCard()
+                Spacer()
+            }.padding(.bottom,10)
+            
+            .frame(height: 230)
+            
             VStack(alignment: .leading){
                 Text("Status Details")
                     .fontWeight(.bold)
@@ -202,17 +213,7 @@ struct HRCaseStatusSegment : View{
             .frame(height: 230)
             
             
-            VStack(alignment: .leading){
-                Text("Submitted Action")
-                    .fontWeight(.bold)
-                    .font(Font.system(size: 20))
-                    .foregroundColor(.primaryColor)
-                    .padding(.bottom, 8)
-                
-                HRActionCard()
-                Spacer()
-            }.padding(.bottom,10)
-            .frame(height: 230)
+            
             
             Button(action: {}, label: {
                 Text("Add Action").font(.body)
@@ -220,6 +221,9 @@ struct HRCaseStatusSegment : View{
             .background(Color.buttonColor)
             .cornerRadius(10)
             .foregroundColor(.white)
+            .offset(x: 0, y: 123)
+            
+            
         }.padding(.top, 16)
     }
 }
@@ -238,6 +242,7 @@ struct CaseDetailTopbar : View {
                     Text("Details")
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                         .font(Font.system(size: 17))
+                        .padding(.bottom,-2)
                     RoundedRectangle(cornerRadius: 3)
                         .fill(self.selected == 0 ? Color.yellow : Color.clear)
                         .frame(width: 97, height: 6, alignment: .center)
@@ -252,6 +257,7 @@ struct CaseDetailTopbar : View {
                     Text("Status")
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                         .font(Font.system(size: 17))
+                        .padding(.bottom,-2)
                     RoundedRectangle(cornerRadius: 3)
                         .fill(self.selected == 1 ? Color.yellow : Color.clear)
                         .frame(width: 97, height: 6, alignment: .center)
