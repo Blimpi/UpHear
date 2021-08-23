@@ -29,7 +29,7 @@ struct HRHomeView: View {
                         Text("Cases")
                             .foregroundColor(.white)
                             .font(.title).bold()
-                            //.padding(.bottom, 25)
+                            .padding(.bottom, 25)
                             .font(Font.system(size: 28))
                         SearchBar(text: .constant(""))
                         HRTopbar(selected: self.$selected).padding(.top)
@@ -168,8 +168,7 @@ struct SearchBar: View {
     var body: some View {
         HStack {
             TextField("Search by status, date or perpetrator", text: $text)
-                
-                .foregroundColor(.buttonColor)
+                .foregroundColor(.primaryColor)
                 .padding(8)
                 .padding(.horizontal, 25)
                 .background(Color(.systemGray6))
