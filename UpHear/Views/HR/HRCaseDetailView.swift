@@ -20,6 +20,7 @@ struct HRCaseDetailView: View {
     @State var selected = 0
     @State var isPresent:Bool = false
     
+    
     var body: some View {
         NavigationView{
             VStack{
@@ -58,6 +59,16 @@ struct HRCaseDetailView: View {
 }
 
 struct HRCaseDetailSegment : View{
+    
+    
+    
+    @State var reportAs: String = "Victim"
+    @State var identity: String = "Anonymous"
+    @State var dateTime: String = "6 June 2021 - 04:20"
+    @State var place: String = "Meeting Room"
+    @State var offenderName: String = "Wimpi"
+    @State var desc: String = "Wimpi didn’t look at me as her colleague since I’m a Chinese descent. She even went as far as dismissing my work"
+    
     var body : some View{
         VStack(alignment: .leading){
             //Case Details
@@ -72,7 +83,7 @@ struct HRCaseDetailSegment : View{
                             Text("Report as")
                                 .font(.custom("SF Pro Text", size: 14))
                                 .foregroundColor(.subheadline)
-                            Text("Victim")
+                            Text(reportAs)
                                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                                 .font(Font.system(size: 18))
                         }
@@ -84,7 +95,7 @@ struct HRCaseDetailSegment : View{
                             Text("Identity")
                                 .font(.custom("SF Pro Text", size: 14))
                                 .foregroundColor(.subheadline)
-                            Text("Anonymous")
+                            Text(identity)
                                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                                 .font(Font.system(size: 18))
                         }
@@ -108,7 +119,7 @@ struct HRCaseDetailSegment : View{
                             Text("Date and time of Incident")
                                 .font(.custom("SF Pro Text", size: 14))
                                 .foregroundColor(.subheadline)
-                            Text("1 August 2020 - 8:00 PM")
+                            Text(dateTime)
                                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                                 .font(Font.system(size: 18))
                         }
@@ -121,7 +132,7 @@ struct HRCaseDetailSegment : View{
                             Text("Place of Incident")
                                 .font(.custom("SF Pro Text", size: 14))
                                 .foregroundColor(.subheadline)
-                            Text("Meeting Room")
+                            Text(place)
                                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                                 .font(Font.system(size: 18))
                         }
@@ -132,7 +143,7 @@ struct HRCaseDetailSegment : View{
                         Text("Offender Name")
                             .font(.custom("SF Pro Text", size: 14))
                             .foregroundColor(.subheadline)
-                        Text("Wimpi")
+                        Text(offenderName)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .font(Font.system(size: 18))
                     }
@@ -149,7 +160,7 @@ struct HRCaseDetailSegment : View{
                         .font(.custom("SF Pro Text", size: 14))
                         .foregroundColor(.subheadline)
                         .padding(.leading,16)
-                    Text("Wimpi didn’t look at me as her colleague since I’m a Chinese descent. She even went as far as dismissing my work")
+                    Text(desc)
                         .font(Font.system(size: 18))
                         .padding(.leading,16)
                 }
@@ -177,9 +188,7 @@ struct HRCaseDetailSegment : View{
             
             
         }.padding()
-        
     }
-    
 }
 
 struct HRCaseStatusSegment : View{
