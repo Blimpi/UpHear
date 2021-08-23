@@ -72,10 +72,6 @@ struct HomeView: View {
     }
 }
 
-
-
-
-
 struct primaryButtonStyle: ButtonStyle{
     public func makeBody(configuration: primaryButtonStyle.Configuration) -> some View {
         configuration.label

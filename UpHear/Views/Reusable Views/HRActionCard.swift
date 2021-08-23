@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct HRActionCard: View {
+    
+    @State var actionTitle: String = "Ask For More Evidence"
+    @State var date: String = "12/11/2021"
+    
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 10, style: .continuous)
@@ -15,14 +19,14 @@ struct HRActionCard: View {
             HStack{
                 VStack(alignment: .leading){
                     //Text("Case \(kasus.id)").font(.largeTitle)
-                    Text("Ask For More Evidence")
+                    Text(actionTitle)
                         .foregroundColor(.black)
                         .padding(.bottom, 5)
                         .font(Font.system(size: 17))
                     
                     HStack{
                         Text("Due Date: ")
-                        Text("12/11/2021")
+                        Text(date)
                     }.foregroundColor(.subheadline)
                     .font(Font.system(size: 12))
 
@@ -30,9 +34,9 @@ struct HRActionCard: View {
                 }
                 Spacer()
 
-                Image(systemName: "paperplane.circle.fill")
+                Image(systemName: "exclamationmark.circle.fill")
                     .font(.system(size: 35).bold())
-                    .foregroundColor(Colors.primaryColor)
+                    .foregroundColor(Color.yellow)
                 
             }.padding()
 

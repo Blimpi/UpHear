@@ -20,6 +20,7 @@ struct HRAddActionView: View {
     @State private var actionTitle: String = ""
     @State private var details: String = "Describe the action"
     @State private var isRequiredResponse: Bool = true
+    @State private var isRequiredSubmitFile: Bool = true
     
     var body: some View {
         NavigationView{
@@ -100,7 +101,7 @@ struct HRAddActionView: View {
                                 Text("Required submit file")
                                     .padding()
                                 Spacer()
-                                Toggle("Sound", isOn: $isRequiredResponse)
+                                Toggle("Sound", isOn: $isRequiredSubmitFile)
                                     .labelsHidden()
                                     .padding()
                             }
