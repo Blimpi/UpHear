@@ -36,6 +36,7 @@
 		1C95624726B289ED00D3A18E /* CreateReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624626B289ED00D3A18E /* CreateReportView.swift */; };
 		1C95624926B28E1700D3A18E /* ReportSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624826B28E1700D3A18E /* ReportSummaryView.swift */; };
 		1C95624E26B29D3000D3A18E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624D26B29D3000D3A18E /* Colors.swift */; };
+		1CBEAF6026D4E3D00035CFB1 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEAF5F26D4E3D00035CFB1 /* UserAuth.swift */; };
 		1CF6483726B1A28600299951 /* UpHearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6483626B1A28600299951 /* UpHearApp.swift */; };
 		1CF6483926B1A28600299951 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6483826B1A28600299951 /* ContentView.swift */; };
 		1CF6483B26B1A28700299951 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CF6483A26B1A28700299951 /* Assets.xcassets */; };
@@ -120,6 +121,7 @@
 		1C95624626B289ED00D3A18E /* CreateReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportView.swift; sourceTree = "<group>"; };
 		1C95624826B28E1700D3A18E /* ReportSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportSummaryView.swift; sourceTree = "<group>"; };
 		1C95624D26B29D3000D3A18E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		1CBEAF5F26D4E3D00035CFB1 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
 		1CF6483326B1A28600299951 /* UpHear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpHear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CF6483626B1A28600299951 /* UpHearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpHearApp.swift; sourceTree = "<group>"; };
 		1CF6483826B1A28600299951 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 			children = (
 				1C60D49526B940D80072C589 /* UserDefaultsManager.swift */,
 				B8A834F626C16F4F00D1C8B3 /* ImageLoader.swift */,
+				1CBEAF5F26D4E3D00035CFB1 /* UserAuth.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -700,6 +703,7 @@
 				1C60D48126B572780072C589 /* NetworkConstants.swift in Sources */,
 				1C60D47326B3FBC40072C589 /* BaseRequest.swift in Sources */,
 				1C60D48326B5888D0072C589 /* UserAction.swift in Sources */,
+				1CBEAF6026D4E3D00035CFB1 /* UserAuth.swift in Sources */,
 				1C95624126B2882500D3A18E /* HomeView.swift in Sources */,
 				1C60D49C26BD128D0072C589 /* HomeViewModel.swift in Sources */,
 				1C60D48F26B7F5B40072C589 /* AuthViewModel.swift in Sources */,

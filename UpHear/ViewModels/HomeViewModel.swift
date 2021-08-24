@@ -8,12 +8,17 @@
 import Foundation
 
 class HomeViewModel: ObservableObject {
+    
+    var mainView: UpHearApp
+    
     var caseData: CaseData = CaseData(records: [])
     
     @Published var ongoingCases: [CaseDataResponse] = []
     @Published var closedCases: [CaseDataResponse] = []
     
-    init() {
+    init(mainView: UpHearApp) {
+        self.mainView = mainView
+        
         if let currentUser = UserProfileCache.get() {
             if currentUser.role == userRole.hr.rawValue {
                 loadCases()

@@ -70,7 +70,9 @@ struct signInForm: View {
                 .cornerRadius(4)
                 .padding(.bottom, 40)
                 
-                Button(action: { viewModel.authButtonPressed(mode: mode, email: email, password: password) }) {
+                Button(action: {
+                        viewModel.authButtonPressed(mode: mode, email: email, password: password)
+                }) {
                     Rectangle().fill(Colors.primaryColor)
                         .cornerRadius(8)
                         .frame(maxWidth: .infinity, maxHeight:50, alignment: .center)

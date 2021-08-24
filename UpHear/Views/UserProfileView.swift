@@ -7,11 +7,14 @@
 import SwiftUI
 
 struct UserProfileView: View {
-    @ObservedObject var viewModel: UserProfileViewModel = UserProfileViewModel()
+    @ObservedObject var viewModel: UserProfileViewModel
+    
     @ObservedObject var imageLoader:ImageLoader
     @State var profilePic: UIImage = UIImage()
     
-    init(){
+    init(viewModel: UserProfileViewModel){
+        self.viewModel = viewModel
+        
         imageLoader = ImageLoader(urlString: "https://asset.kompas.com/crops/Rk0Fy5EsGu0Y8QYND1-E8sxYAM4=/0x0:900x600/750x500/data/photo/2019/12/29/5e0887489f3e2.jpeg")
         UINavigationBar.appearance().backgroundColor = .clear
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(.white)]
@@ -134,7 +137,9 @@ struct UserProfileView: View {
                         
                     }.padding()
                     
-                    Button(action: {}, label: {
+                    Button(action: {
+                        viewModel.logout()
+                    }, label: {
                         Text("Sign Out")
                             .fontWeight(.bold)
                         
@@ -203,7 +208,7 @@ struct userInfoHeaderStyle: ViewModifier{
 
 struct UserProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        UserProfileView()
+        UserProfileView(viewModel: UserProfileViewModel(mainView: UpHearApp()))
     }
 }
 

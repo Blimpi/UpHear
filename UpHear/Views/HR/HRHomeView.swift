@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HRHomeView: View {
     
-    @ObservedObject var viewModel: HomeViewModel = HomeViewModel()
+    @ObservedObject var viewModel: HomeViewModel
     
     @State var selected = 0
     @State var isPresent:Bool = false
@@ -219,6 +219,6 @@ struct SearchBar: View {
 
 struct HRHomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HRHomeView()
+        HRHomeView(viewModel: HomeViewModel(mainView: UpHearApp()))
     }
 }
