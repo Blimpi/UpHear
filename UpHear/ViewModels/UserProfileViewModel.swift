@@ -8,16 +8,20 @@
 import Foundation
 
 class UserProfileViewModel: ObservableObject {
+    
+    var mainView: UpHearApp
+    
     @Published var user: User = User()
     
     @Published var name = ""
     @Published var position = ""
     @Published var division = ""
     
-    init() {
-        loginUser()
+    init(mainView: UpHearApp) {
+        self.mainView = mainView
+//        loginUser()
         
-        //getUserData()
+        getUserData()
         
         
         setupFields()
@@ -57,5 +61,8 @@ class UserProfileViewModel: ObservableObject {
     
     func logout() {
         UserProfileCache.remove()
+        SignInCache.remove()
+        
+        self.mainView.isSignedIn = false
     }
 }

@@ -7,6 +7,22 @@
 
 import Foundation
 
+struct SignInCache {
+    static let key = "signInCache"
+    
+    static func save(_ value: Bool) {
+        UserDefaults.standard.set(value, forKey: key)
+    }
+    
+    static func get() -> Bool {
+        return UserDefaults.standard.bool(forKey: key)
+    }
+    
+    static func remove() {
+        UserDefaults.standard.removeObject(forKey: key)
+    }
+}
+
 struct UserProfileCache {
     static let key = "userProfileCache"
     static let idKey = "userIdCache"

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @ObservedObject var viewModel: HomeViewModel = HomeViewModel()
+    @ObservedObject var viewModel: HomeViewModel
     
     @State var selected = 0
     @State var isPresent:Bool = false
@@ -17,8 +17,10 @@ struct HomeView: View {
     let button : LocalizedStringKey = "Report a Case"
     let pageTitle:LocalizedStringKey = "My Cases"
     
-    init() {
-           UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+    init(viewModel: HomeViewModel) {
+        self.viewModel = viewModel
+        
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
        }
     
     var body: some View {
@@ -35,7 +37,7 @@ struct HomeView: View {
                     }
                     VStack{
                         VStack{
-                            HomePageHeader().padding()
+                            HomePageHeader(viewModel: viewModel).padding()
                             Topbar(selected: self.$selected)
                         }
                         
@@ -188,13 +190,15 @@ struct noCases : View{
 
 
 struct HomePageHeader :View{
+    @ObservedObject var viewModel: HomeViewModel
+    
     let pageHeader:LocalizedStringKey="MyCases"
     var body: some View{
         HStack{
             Spacer()
             
             NavigationLink(
-                destination: UserProfileView(),
+                destination: UserProfileView(viewModel: UserProfileViewModel(mainView: viewModel.mainView)),
                 label: {
                     Image(systemName: "person.crop.circle.fill").accentColor(.white).font(.system(size: 30))
                 })
@@ -216,6 +220,6 @@ struct HomePageHeader :View{
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(viewModel: HomeViewModel(mainView: UpHearApp()))
     }
 }

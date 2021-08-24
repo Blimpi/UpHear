@@ -46,6 +46,7 @@ class AuthViewModel: ObservableObject {
                     if let user = records[0].fields {
                         UserProfileCache.save(user, id: records[0].id!)
                     }
+                    SignInCache.save(true)
                     self.mainView.isSignedIn = true
                 }
             }
