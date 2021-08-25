@@ -37,6 +37,7 @@
 		1C95624926B28E1700D3A18E /* ReportSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624826B28E1700D3A18E /* ReportSummaryView.swift */; };
 		1C95624E26B29D3000D3A18E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624D26B29D3000D3A18E /* Colors.swift */; };
 		1CBEAF6026D4E3D00035CFB1 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEAF5F26D4E3D00035CFB1 /* UserAuth.swift */; };
+		1CD82A4926D619F800506763 /* Case+EvidenceArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD82A4826D619F800506763 /* Case+EvidenceArray.swift */; };
 		1CF6483726B1A28600299951 /* UpHearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6483626B1A28600299951 /* UpHearApp.swift */; };
 		1CF6483926B1A28600299951 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6483826B1A28600299951 /* ContentView.swift */; };
 		1CF6483B26B1A28700299951 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CF6483A26B1A28700299951 /* Assets.xcassets */; };
@@ -122,6 +123,7 @@
 		1C95624826B28E1700D3A18E /* ReportSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportSummaryView.swift; sourceTree = "<group>"; };
 		1C95624D26B29D3000D3A18E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		1CBEAF5F26D4E3D00035CFB1 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
+		1CD82A4826D619F800506763 /* Case+EvidenceArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Case+EvidenceArray.swift"; sourceTree = "<group>"; };
 		1CF6483326B1A28600299951 /* UpHear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpHear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CF6483626B1A28600299951 /* UpHearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpHearApp.swift; sourceTree = "<group>"; };
 		1CF6483826B1A28600299951 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 				1C60D47826B4C52F0072C589 /* Case.swift */,
 				1C60D47A26B5145E0072C589 /* HRAction.swift */,
 				1C60D48226B5888D0072C589 /* UserAction.swift */,
+				1CD82A4826D619F800506763 /* Case+EvidenceArray.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -712,6 +715,7 @@
 				B8A834F726C16F4F00D1C8B3 /* ImageLoader.swift in Sources */,
 				1C60D49A26BA40890072C589 /* CaseRequest.swift in Sources */,
 				1CF6484326B1A28700299951 /* UpHear.xcdatamodeld in Sources */,
+				1CD82A4926D619F800506763 /* Case+EvidenceArray.swift in Sources */,
 				1C95624326B2888300D3A18E /* DraftsView.swift in Sources */,
 				CDFEB2EC26B51B8600DED9C0 /* CaseCard.swift in Sources */,
 				1CF6487126B1A3F600299951 /* APIService.swift in Sources */,

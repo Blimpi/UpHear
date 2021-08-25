@@ -8,5 +8,9 @@
 import Foundation
 
 class CreateReportViewModel: ObservableObject {
-    @Published var caseReport: Case?
+    @Published var caseReport: Case
+    
+    init() {
+        caseReport = Case()
+    }
 }
