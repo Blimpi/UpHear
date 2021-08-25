@@ -114,7 +114,7 @@ struct CreateReportPage:View{
                 Spacer().frame(height: 49)
                 Button(action: {
                     isAnonym = .identified
-                    vm.caseReport?.isAnonymous = "false"
+                    vm.caseReport.isAnonymous = "false"
                     page+=1
                 }) {
                     if(isAnonym != .identified){
@@ -126,7 +126,7 @@ struct CreateReportPage:View{
                 }
                 Button(action: {
                     isAnonym = .anonymous
-                    vm.caseReport?.isAnonymous = "true"
+                    vm.caseReport.isAnonymous = "true"
                     page+=1
                 }) {
                     if(isAnonym != .anonymous){
@@ -320,8 +320,8 @@ struct CreateReportPage:View{
                     
                     Button(action: {
                         page+=1
-                        vm.caseReport?.incidentTime = "\(dateOfIncident)"
-                        vm.caseReport?.perpetratorName?[0] = perpetratorPickerInitialValue
+                        vm.caseReport.incidentTime = "\(dateOfIncident)"
+                        vm.caseReport.perpetratorName?[0] = perpetratorPickerInitialValue
                     }) {
                         Rectangle().fill(Colors.primaryColor)
                             .cornerRadius(8)
