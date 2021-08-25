@@ -33,4 +33,5 @@ class CreateReportViewModel: ObservableObject {
         if(currentIndex < 1){
             currentIndex = 1
         }
+    }
 }
