@@ -12,7 +12,7 @@ import Firebase
 struct UpHearApp: App {
     let persistenceController = PersistenceController.shared
     @State var isSignedIn: Bool = SignInCache.get()
-
+  
     init() {
         FirebaseApp.configure()
         
