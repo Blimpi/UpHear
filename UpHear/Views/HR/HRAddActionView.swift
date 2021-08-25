@@ -21,6 +21,7 @@ struct HRAddActionView: View {
     @State private var details: String = "Describe the action"
     @State private var isRequiredResponse: Bool = true
     @State private var isRequiredSubmitFile: Bool = true
+    @State private var date: String = ""
     
     var body: some View {
         NavigationView{
@@ -75,12 +76,13 @@ struct HRAddActionView: View {
                                     .font(Font.system(size: 16))
                                 
                                 
-                                TextField("Enter Date", text: $actionTitle)
+                                TextField("Enter Date", text: $date)
                                     .padding(.leading,16)
                                     .frame(width: 342, height: 44, alignment: .center)
                                     .border(Colors.primaryColor, width: 2)
                                     .cornerRadius(4)
                             }.padding(.top,16)
+                            
                             
                             HStack{
                                 Text("Required response")

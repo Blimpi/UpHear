@@ -12,7 +12,7 @@ struct HRReviewAction: View {
     @State private var status: String = "Ask for more evidence"
     @State private var details: String = "Please upload more evidence"
     @State private var description: String = "I’ve attached several additional evidence for this case."
-    @State private var alertIsPresented = false
+    @State private var alertIsPresented = true
     
     init(){
         UINavigationBar.appearance().backgroundColor = .clear
@@ -101,7 +101,7 @@ struct HRReviewAction: View {
                     .padding(.top,89)
                     
                     .alert(isPresented: $alertIsPresented, content: {
-                        Alert(title: Text("Accept Action"),message: Text("Please make sure submitted action is correct and no information is missing."), primaryButton:.default(Text("Accept")), secondaryButton:.cancel())
+                        Alert(title: Text("Accept Action"),message: Text("Please make sure submitted action is correct and no information is missing."), primaryButton:.default(Text("Accept").fontWeight(.bold)), secondaryButton:.cancel())
                     })
                     
                     Button(action: {rejectAlertView()}, label: {
@@ -119,8 +119,6 @@ struct HRReviewAction: View {
             })
             }
         }
-        
-        
     }
     
     func rejectAlertView(){
@@ -134,8 +132,9 @@ struct HRReviewAction: View {
             reason in
             reason.placeholder = "Insert reason here"
         }
-        alert.addAction(rejectAction)
         alert.addAction(cancelAction)
+        alert.addAction(rejectAction)
+        
         
         UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true, completion: {
             //blablabla
