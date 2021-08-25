@@ -7,29 +7,43 @@
 "Offender" = "Offender";
 "Next" = "Next";
 "Done" = "Done";
+"Back" = "Back";
+"Save" = "Save";
+
+"out of 5" = "out of 5";
+
 "Reporting as" = "Reporting as";
+"Who are you reporting as" = "Anda melapor sebagai siapa?";
+
 "Do you consider yourself as a victim or witness in this discrimination?" = "Do you consider yourself as a victim or witness in this discrimination?";
 "Victim" = "Victim";
 "Someone who experienced discrimination" = "Someone who experienced discrimination";
 // Create Report #1
 "Witness" = "Witness";
 "Reporting someone else's discrimination case" = "Reporting someone else's discrimination case";
+
 // Create Report #2
 "Select Identity" = "Select Identity";
+"How do you want to report?" = "How do you want to report?";
+
 "Do you want to disclose your identitiy or want to stay anonymous?" = "Do you want to disclose your identitiy or want to stay anonymous?";
 "Anonymous" = "Anonymous";
 "Identified" = "Identified";
+
 // Create Report #3
+"Discrimination Detail" = "Discrimination Detail";
+
 "Date and time of Incident" = "Date and time of Incident";
 "Enter Date and time of Incident" = "Enter Date and time of Incident";
 "Place of Incident" = "Place of Incident";
 "Enter place of Incident" = "Enter place of Incident";
 
 "Victim Name" = "Victim Name";
-"Select victim name" = "Select victim name";
+"Enter victim name" = "Enter victim name";
 
 "Offender Name" = "Offender Name";
-"Select offender name" = "Select culprit name";
+"Enter offender name" = "Enter offender name";
+
 // Create Report #4
 "Please describe the incident in detail" = "Please describe the incident in detail";
 "Incident Evidence" = "Incident Evidence";

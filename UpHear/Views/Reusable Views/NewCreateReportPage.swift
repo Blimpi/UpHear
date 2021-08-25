@@ -24,6 +24,14 @@ struct NewCreateReportPage: View {
 }
 
 struct firstPage: View{
+    //Localized Strings
+    let lsPg1Header : LocalizedStringKey = "Who are you reporting as?"
+    let lsPg1Desc : LocalizedStringKey = "Do you consider yourself as a victim or witness in this discrimination?"
+    let lsVictim = NSLocalizedString("Victim", comment: "Korban")
+    let lsVictimDesc = NSLocalizedString("Someone who experienced discrimination", comment: "Orang yang mengalami diskriminasi")
+    let lsWitness = NSLocalizedString("Witness", comment: "Saksi")
+    let lsWitnessDesc = NSLocalizedString("Reporting someone else's discrimination case", comment: "Melaporkan kejadian diskriminasi yang dialami orang lain")
+        
     @EnvironmentObject var vm: CreateReportViewModel
     var body: some View{
         ZStack{
@@ -34,11 +42,11 @@ struct firstPage: View{
             VStack{
                 modalTopBar(topBarStyle: .white)
                 VStack(alignment:.leading){
-                    Text("Who are you reporting as?")
+                    Text(lsPg1Header)
                         .font(.title.bold())
                         .foregroundColor(.white)
                     Spacer().frame(height:16)
-                    Text("Do you consider your self as a victim or witness in this discrimination case?")
+                    Text(lsPg1Desc)
                         .font(.headline)
                         .foregroundColor(.white)
                 }
@@ -47,9 +55,9 @@ struct firstPage: View{
                 Spacer()
             }
             VStack{
-                OptionCard(title: "Witness", subtitle: "Reporting someone else's discrimination case", icon: "witnessIconBlue", backgroundColor: .white)
+                OptionCard(title: lsWitness, subtitle: lsWitnessDesc, icon: "witnessIconBlue", backgroundColor: .white)
                 Spacer().frame(height: 27)
-                OptionCard(title: "Victim", subtitle: "Someone who experienced discrimination", icon: "victimIconBlue", backgroundColor: .white)        
+                OptionCard(title: lsVictim, subtitle: lsVictimDesc, icon: "victimIconBlue", backgroundColor: .white)
             }
             VStack{
                 Spacer()
@@ -62,6 +70,15 @@ struct firstPage: View{
 
 struct secondPage: View{
     @ObservedObject var vm:CreateReportViewModel
+    
+    //Localized Strings
+    let lsPg2Desc : LocalizedStringKey = "Do you want to disclose your identitiy or want to stay anonymous?"
+    let lsPg2Header : LocalizedStringKey = "How do you want to report?"
+    let lsAnonymous = NSLocalizedString("Anonymous", comment: "Anonim")
+    let lsAnonymousDesc = NSLocalizedString("Your personal identity will stay as anonymous", comment: "Identitas diri anda akan dirahasiakan")
+    let lsIdentified = NSLocalizedString("Identified", comment: "Teridentifikasi")
+    let lsIdentifiedDesc = NSLocalizedString("Your personal identity will be reaveled in the report", comment: "Identitas diri anda akan diungkap ke HRD")
+    
     var body: some View{
         ZStack{
             VStack{
@@ -71,11 +88,11 @@ struct secondPage: View{
             VStack{
                 modalTopBar(topBarStyle: .white)
                 VStack(alignment:.leading){
-                    Text("How do you want to report?")
+                    Text(lsPg2Header)
                         .font(.title.bold())
                         .foregroundColor(.white)
                     Spacer().frame(height:16)
-                    Text("Do you want to disclose your identity or want to stay anonymous?")
+                    Text(lsPg2Desc)
                         .font(.headline)
                         .foregroundColor(.white)
                 }
@@ -85,11 +102,11 @@ struct secondPage: View{
             }
             VStack{
                 Button(action: {}, label: {
-                    OptionCard(title: "Anonymous", subtitle: "Your personal identity will stay as anonymous", icon: "anonymousIconWhite", backgroundColor: .white)
+                    OptionCard(title: lsAnonymous, subtitle: lsAnonymousDesc, icon: "anonymousIconWhite", backgroundColor: .white)
                 })
                 Spacer().frame(height: 27)
                 Button(action: {}, label: {
-                    OptionCard(title: "Identified", subtitle: "Your personal identity will be revealed in the report", icon: "identifiedIconWhite", backgroundColor: .white)
+                    OptionCard(title: lsIdentified, subtitle: lsIdentifiedDesc, icon: "identifiedIconWhite", backgroundColor: .white)
                 })
             }
             VStack{
@@ -106,6 +123,18 @@ struct thirdPage: View{
     @State var showVictimPicker = false
     @State var showPerpetratorPicker = false
  
+    //Localized Strings
+    let lsPg3Header:LocalizedStringKey = "Discrimination Detail"
+    let lsDateTime : LocalizedStringKey = "Date and time of Incident"
+    let lsDateTimeHint : LocalizedStringKey = "Enter Date and time of Incident"
+    let lsPlace : LocalizedStringKey = "Place of Incident"
+    let lsPlaceHint : LocalizedStringKey = "Enter place of Incident"
+    let lsVictimName : LocalizedStringKey = "Victim Name"
+    let lsVictimNameHint : LocalizedStringKey = "Select victim name"
+    let lsOffenderName : LocalizedStringKey = "Offender Name"
+    let lsOffenderNameHint : LocalizedStringKey = "Select Offender name"
+    let lsDone : LocalizedStringKey = "Done"
+    
     var body: some View{
         ZStack{
             VStack{
@@ -117,7 +146,7 @@ struct thirdPage: View{
                 Button(action: {
                     showDatePicker = false
                 }, label: {
-                    Text("Done")
+                    Text(lsDone)
                 })
             }
             .padding(40)
@@ -125,14 +154,14 @@ struct thirdPage: View{
             
             
             VStack(alignment: .leading){
-                Text("Discrimination Detail")
+                Text(lsPg3Header)
                     .font(.title)
                     .bold()
                     .foregroundColor(Colors.primaryColor)
                     .padding(.bottom,36)
                     .padding(.top, 66)
                 VStack(alignment: .leading){
-                    Text("Date and time of incident")
+                    Text(lsDateTime)
                     Button(action: {
                         showDatePicker = true
                     }, label: {
@@ -150,8 +179,8 @@ struct thirdPage: View{
                     Spacer().frame(height: 24)
                 }
                 VStack(alignment: .leading){
-                    Text("Place of Incident")
-                    TextField("Enter place of incident", text: $vm.IncidentPlace)
+                    Text(lsPlace)
+                    TextField(lsPlaceHint, text: $vm.IncidentPlace)
                         .padding(.leading,15)
                         .frame(maxWidth: .infinity, maxHeight: 45)
                         .background(Color.white)
@@ -161,8 +190,8 @@ struct thirdPage: View{
                     Spacer().frame(height: 24)
                 }
                 VStack(alignment: .leading){
-                    Text("Victim name")
-                    TextField("Enter victim name", text: $vm.victim)
+                    Text(lsVictimName)
+                    TextField(lsVictimNameHint, text: $vm.victim)
                         .padding(.leading,15)
                         .frame(maxWidth: .infinity, maxHeight: 45)
                         .background(Color.white)
@@ -171,8 +200,8 @@ struct thirdPage: View{
                     Spacer().frame(height: 24)
                 }
                 VStack(alignment: .leading){
-                    Text("Offender name")
-                    TextField("Enter Offender name", text: $vm.offender)
+                    Text(lsOffenderName)
+                    TextField(lsOffenderNameHint, text: $vm.offender)
                         .padding(.leading,15)
                         .frame(maxWidth: .infinity, maxHeight: 45)
                         .background(Color.white)
@@ -196,22 +225,27 @@ enum TopBarStyle{
 
 // reuseable
 struct modalTopBar: View{
+    //Localized Strings
+    let lsClose : LocalizedStringKey = "Close"
+    let lsReportCase : LocalizedStringKey = "Report a Case"
+    let lsSave : LocalizedStringKey = "Save"
+    
     @State var topBarStyle:TopBarStyle
     var body: some View{
         HStack{
             Button(action: {}, label: {
-                Text("Close")
+                Text(lsClose)
             })
             .padding()
             
             Spacer()
             
-            Text("Report a Case")
+            Text(lsReportCase)
             
             Spacer()
             
             Button(action: {}, label: {
-                Text("Save")
+                Text(lsSave)
             })
             .padding()
         }
@@ -220,7 +254,13 @@ struct modalTopBar: View{
 }
 
 struct BackNextButton:View{
+    //Localized Strings
+    let lsNext : LocalizedStringKey = "Next"
+    let lsBack : LocalizedStringKey = "Back"
+    let pageNumber : LocalizedStringKey = "out of 5"
+    
     @ObservedObject var vm: CreateReportViewModel
+    
     var body: some View{
         VStack{
             Text("\(vm.currentIndex) out of 5")
@@ -233,7 +273,7 @@ struct BackNextButton:View{
                         RoundedRectangle(cornerRadius: 25.0)
                             .stroke(Colors.primaryColor,lineWidth: 1)
                             .frame(width: 153, height: 50)
-                        Text("Back")
+                        Text(lsBack)
                             .foregroundColor(Colors.primaryColor)
                     }
                 })
@@ -245,7 +285,7 @@ struct BackNextButton:View{
                         RoundedRectangle(cornerRadius: 25.0)
                             .fill(Colors.primaryColor)
                             .frame(width: 153, height: 50)
-                        Text("Next")
+                        Text(lsNext)
                             .foregroundColor(.white)
                     }
                 })
