@@ -16,6 +16,7 @@ struct HRActionCard: View {
         ZStack{
             RoundedRectangle(cornerRadius: 10, style: .continuous)
                 .fill(Color.cardBgColor)
+                .shadow(radius: 7)
             HStack{
                 VStack(alignment: .leading){
                     //Text("Case \(kasus.id)").font(.largeTitle)
@@ -29,19 +30,16 @@ struct HRActionCard: View {
                         Text(date)
                     }.foregroundColor(.subheadline)
                     .font(Font.system(size: 12))
-
-                    
                 }
                 Spacer()
-
+                
                 Image(systemName: "exclamationmark.circle.fill")
                     .font(.system(size: 35).bold())
                     .foregroundColor(Color.yellow)
-                
             }.padding()
-
+            
         }.frame(width: 326, height:69)
-        .shadow(radius: 7)
+        
         
     }
     
