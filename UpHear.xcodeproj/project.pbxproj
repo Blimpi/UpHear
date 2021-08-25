@@ -36,6 +36,8 @@
 		1C95624726B289ED00D3A18E /* CreateReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624626B289ED00D3A18E /* CreateReportView.swift */; };
 		1C95624926B28E1700D3A18E /* ReportSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624826B28E1700D3A18E /* ReportSummaryView.swift */; };
 		1C95624E26B29D3000D3A18E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95624D26B29D3000D3A18E /* Colors.swift */; };
+		1CBEAF6026D4E3D00035CFB1 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBEAF5F26D4E3D00035CFB1 /* UserAuth.swift */; };
+		1CD82A4926D619F800506763 /* Case+EvidenceArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD82A4826D619F800506763 /* Case+EvidenceArray.swift */; };
 		1CF6483726B1A28600299951 /* UpHearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6483626B1A28600299951 /* UpHearApp.swift */; };
 		1CF6483926B1A28600299951 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF6483826B1A28600299951 /* ContentView.swift */; };
 		1CF6483B26B1A28700299951 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CF6483A26B1A28700299951 /* Assets.xcassets */; };
@@ -60,6 +62,8 @@
 		B8DF988026CCCA4B00CE8CA1 /* OptionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DF987F26CCCA4B00CE8CA1 /* OptionCard.swift */; };
 		CB319F27AA82713B06F1C9A8 /* Pods_UpHearTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C9AB0D431C4C70049E3567 /* Pods_UpHearTests.framework */; };
 		CDC9D03E26B2B0AB00215F5D /* CaseDraftRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */; };
+		CDDF246926CF98F3008DD267 /* HRCloseCaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF246826CF98F3008DD267 /* HRCloseCaseView.swift */; };
+		CDDF246B26CFA259008DD267 /* HRReviewAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF246A26CFA259008DD267 /* HRReviewAction.swift */; };
 		CDE59F8A26B6B3B0009B4D8D /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE59F8926B6B3B0009B4D8D /* LandingView.swift */; };
 		CDE59F8C26B7E722009B4D8D /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE59F8B26B7E722009B4D8D /* UserProfileView.swift */; };
 		CDE59F9526BBCF29009B4D8D /* HRHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE59F9426BBCF29009B4D8D /* HRHomeView.swift */; };
@@ -120,6 +124,8 @@
 		1C95624626B289ED00D3A18E /* CreateReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportView.swift; sourceTree = "<group>"; };
 		1C95624826B28E1700D3A18E /* ReportSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportSummaryView.swift; sourceTree = "<group>"; };
 		1C95624D26B29D3000D3A18E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		1CBEAF5F26D4E3D00035CFB1 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
+		1CD82A4826D619F800506763 /* Case+EvidenceArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Case+EvidenceArray.swift"; sourceTree = "<group>"; };
 		1CF6483326B1A28600299951 /* UpHear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpHear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CF6483626B1A28600299951 /* UpHearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpHearApp.swift; sourceTree = "<group>"; };
 		1CF6483826B1A28600299951 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -156,6 +162,8 @@
 		B8DF987F26CCCA4B00CE8CA1 /* OptionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCard.swift; sourceTree = "<group>"; };
 		CA1501CE8251F7B78A243E40 /* Pods-UpHear-UpHearUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpHear-UpHearUITests.debug.xcconfig"; path = "Target Support Files/Pods-UpHear-UpHearUITests/Pods-UpHear-UpHearUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDraftRow.swift; sourceTree = "<group>"; };
+		CDDF246826CF98F3008DD267 /* HRCloseCaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRCloseCaseView.swift; sourceTree = "<group>"; };
+		CDDF246A26CFA259008DD267 /* HRReviewAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRReviewAction.swift; sourceTree = "<group>"; };
 		CDE59F8926B6B3B0009B4D8D /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		CDE59F8B26B7E722009B4D8D /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		CDE59F9426BBCF29009B4D8D /* HRHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRHomeView.swift; sourceTree = "<group>"; };
@@ -259,6 +267,7 @@
 			children = (
 				1C60D49526B940D80072C589 /* UserDefaultsManager.swift */,
 				B8A834F626C16F4F00D1C8B3 /* ImageLoader.swift */,
+				1CBEAF5F26D4E3D00035CFB1 /* UserAuth.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -372,6 +381,7 @@
 				1C60D47826B4C52F0072C589 /* Case.swift */,
 				1C60D47A26B5145E0072C589 /* HRAction.swift */,
 				1C60D48226B5888D0072C589 /* UserAction.swift */,
+				1CD82A4826D619F800506763 /* Case+EvidenceArray.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -449,6 +459,8 @@
 				CDE59F9426BBCF29009B4D8D /* HRHomeView.swift */,
 				CDE59F9826BC459C009B4D8D /* HRCaseDetailView.swift */,
 				CDE59F9E26BD0E13009B4D8D /* HRAddActionView.swift */,
+				CDDF246826CF98F3008DD267 /* HRCloseCaseView.swift */,
+				CDDF246A26CFA259008DD267 /* HRReviewAction.swift */,
 			);
 			path = HR;
 			sourceTree = "<group>";
@@ -700,6 +712,7 @@
 				1C60D48126B572780072C589 /* NetworkConstants.swift in Sources */,
 				1C60D47326B3FBC40072C589 /* BaseRequest.swift in Sources */,
 				1C60D48326B5888D0072C589 /* UserAction.swift in Sources */,
+				1CBEAF6026D4E3D00035CFB1 /* UserAuth.swift in Sources */,
 				1C95624126B2882500D3A18E /* HomeView.swift in Sources */,
 				1C60D49C26BD128D0072C589 /* HomeViewModel.swift in Sources */,
 				1C60D48F26B7F5B40072C589 /* AuthViewModel.swift in Sources */,
@@ -708,6 +721,7 @@
 				B8A834F726C16F4F00D1C8B3 /* ImageLoader.swift in Sources */,
 				1C60D49A26BA40890072C589 /* CaseRequest.swift in Sources */,
 				1CF6484326B1A28700299951 /* UpHear.xcdatamodeld in Sources */,
+				1CD82A4926D619F800506763 /* Case+EvidenceArray.swift in Sources */,
 				1C95624326B2888300D3A18E /* DraftsView.swift in Sources */,
 				CDFEB2EC26B51B8600DED9C0 /* CaseCard.swift in Sources */,
 				1CF6487126B1A3F600299951 /* APIService.swift in Sources */,
@@ -729,6 +743,7 @@
 				B803ED9B26D43114000CBE81 /* NewCreateReportPage.swift in Sources */,
 				1C95624526B2890D00D3A18E /* TermsConditionView.swift in Sources */,
 				1C60D47726B4C1A10072C589 /* Company.swift in Sources */,
+				CDDF246B26CFA259008DD267 /* HRReviewAction.swift in Sources */,
 				CDE59F8A26B6B3B0009B4D8D /* LandingView.swift in Sources */,
 				1C60D47B26B5145E0072C589 /* HRAction.swift in Sources */,
 				1CF6483726B1A28600299951 /* UpHearApp.swift in Sources */,
@@ -747,6 +762,7 @@
 				1CF6486D26B1A39600299951 /* ContentViewModel.swift in Sources */,
 				1CF6486F26B1A3C600299951 /* Constants.swift in Sources */,
 				CDC9D03E26B2B0AB00215F5D /* CaseDraftRow.swift in Sources */,
+				CDDF246926CF98F3008DD267 /* HRCloseCaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

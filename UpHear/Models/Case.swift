@@ -28,6 +28,7 @@ class Case: Codable {
     var incidentTime: String?
     var incidentPlace: String?
     var incidentDetail: String?
+    var evidences: String?
     var status: String?
     
     enum CodingKeys: String, CodingKey {
@@ -42,6 +43,7 @@ class Case: Codable {
         case incidentTime = "IncidentTime"
         case incidentPlace = "IncidentPlace"
         case incidentDetail = "IncidentDetail"
+        case evidences = "Evidences"
         case status = "Status"
     }
     

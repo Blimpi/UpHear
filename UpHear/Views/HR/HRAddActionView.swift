@@ -18,124 +18,133 @@ struct HRAddActionView: View {
     }
     
     @State private var actionTitle: String = ""
-    @State private var details: String = "ak;sjda;skjdaslkdjaslkdj asd asd asd asd asd asd as"
+    @State private var details: String = "Describe the action"
     @State private var isRequiredResponse: Bool = true
+    @State private var isRequiredSubmitFile: Bool = true
+    @State private var date: String = ""
     
     var body: some View {
         NavigationView{
             ZStack{
-                VStack{
-                    Image("bgTnC")
-                        .resizable()
-                        .ignoresSafeArea()
-                        .frame(width: 390, height: 20)
-                    Spacer()
-                }
-                
-                VStack{
-                    VStack(alignment: .leading){
-                        Text("Action Title")
-                            .fontWeight(.semibold)
-                            .foregroundColor(.primaryColor)
-                            .font(Font.system(size: 16))
-                            .padding(.bottom,-2)
+                VStack {
+                    VStack{
+                        Image("bgTnC")
+                            .resizable()
+                            .ignoresSafeArea()
+                            .frame(width: 390, height: 40)
+                        Spacer()
+                        
+                        VStack{
+                            VStack(alignment: .leading){
+                                Text("Action Title")
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.primaryColor)
+                                    .font(Font.system(size: 16))
+                                
+                                TextField("Enter title of action", text: $actionTitle)
+                                    .padding(.leading,16)
+                                    .frame(width: 342, height: 44, alignment: .center)
+                                    .border(Colors.primaryColor, width: 2)
+                                    .cornerRadius(4)
+                            }.padding(.top,16)
                             
-                        
-                        TextField("Enter title of action", text: $actionTitle)
-                            .padding()
-    //                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .frame(width: 342, height: 44, alignment: .center)
-                            .border(Colors.primaryColor, width: 1)
-                            .cornerRadius(4)
-                    }.padding(.bottom, 24)
-                    .padding(.top,-80)
-                    
-                    VStack(alignment: .leading){
-                        Text("Details")
-                            .fontWeight(.semibold)
-                            .foregroundColor(.primaryColor)
-                            .font(Font.system(size: 16))
-                            .padding(.bottom, -2)
-                        
-//                            TextField("Enter title of action", text: $details)
-//                                .textFieldStyle(RoundedBorderTextFieldStyle())
-//                                .frame(width: 342, height: 44, alignment: .center)
-                        
-                        TextField(
-                                " ",
-                            text: $details
-                        ).frame(width: 335, height: 171)
-                        .border(Color.primaryColor, width: 1)
-                        .cornerRadius(4)
-                        
-                        
-                    }.padding(.bottom, 24)
-                    
-                    VStack(alignment: .leading){
-                        Text("Action Estimation Deadline")
-                            .fontWeight(.semibold)
-                            .foregroundColor(.primaryColor)
-                            .font(Font.system(size: 16))
-                            .padding(.bottom,-2)
-                        
-                        TextField("Enter Date", text: $actionTitle)
-                            .padding()
-    //                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .frame(width: 342, height: 44, alignment: .center)
-                            .border(Colors.primaryColor, width: 1)
-                            .cornerRadius(4)
-                    }.padding(.bottom, 33)
-                    
-                    HStack{
-                        Text("Required response")
-                            .padding()
-                        Spacer()
-                        Toggle("Sound", isOn: $isRequiredResponse)
-                            .labelsHidden()
-                            .padding()
-                    }.frame(width: 342, height: 44, alignment: .center)
-                    .overlay(
+                            VStack(alignment: .leading){
+                                Text("Details")
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.primaryColor)
+                                    .font(Font.system(size: 16))
+                                    .padding(.bottom, -2)
+                                
+                                //                            TextField("Enter title of action", text: $details)
+                                //                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                                //                                .frame(width: 342, height: 44, alignment: .center)
+                                
+                                TextField(
+                                    " ",
+                                    text: $details
+                                    
+                                ).padding(.leading,16)
+                                .frame(width: 342, height: 171, alignment: .leading)
+                                .border(Color.primaryColor, width: 2)
+                                .cornerRadius(4)
+                            }.padding(.top,16)
+                            
+                            VStack(alignment: .leading){
+                                Text("Action Estimation Deadline")
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.primaryColor)
+                                    .font(Font.system(size: 16))
+                                
+                                
+                                TextField("Enter Date", text: $date)
+                                    .padding(.leading,16)
+                                    .frame(width: 342, height: 44, alignment: .center)
+                                    .border(Colors.primaryColor, width: 2)
+                                    .cornerRadius(4)
+                            }.padding(.top,16)
+                            
+                            
+                            HStack{
+                                Text("Required response")
+                                    .padding(.leading,16)
+                                Spacer()
+                                Toggle("Sound", isOn: $isRequiredResponse)
+                                    .labelsHidden()
+                                    .padding()
+                            }.frame(width: 342, height: 44, alignment: .center)
+                            .overlay(
                                 RoundedRectangle(cornerRadius: 4)
-                                    .stroke(lineWidth: 1)
+                                    .stroke(lineWidth: 2)
+                                    .foregroundColor(.primaryColor)
+                            ).padding(.top,40)
+                            
+                            
+                            HStack{
+                                Text("Required submit file")
+                                    .padding()
+                                Spacer()
+                                Toggle("Sound", isOn: $isRequiredSubmitFile)
+                                    .labelsHidden()
+                                    .padding()
+                            }
+                            .frame(width: 342, height: 44, alignment: .center)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 4)
+                                    .stroke(lineWidth: 2)
                                     .foregroundColor(.primaryColor)
                             )
-                    .padding(.bottom,16)
-                    
-                    HStack{
-                        Text("Required submit file")
-                            .padding()
-                        Spacer()
-                        Toggle("Sound", isOn: $isRequiredResponse)
-                            .labelsHidden()
-                            .padding()
+                            .padding(.top,16)
+                            //                    .padding(.bottom,102)
+                            
+                            
+                            Button(action: { }) {
+                                Rectangle().fill(Colors.primaryColor)
+                                    .cornerRadius(8)
+                                    .frame(width: 342, height:50)
+                                    .padding(.horizontal, 31).overlay(
+                                        Text("Add Action")
+                                            .accentColor(.white)
+                                    )
+                            }.padding(.top,60)
+                            Spacer()
+                        }
+                        
                     }
-                    .frame(width: 342, height: 44, alignment: .center)
-                    .overlay(
-                                RoundedRectangle(cornerRadius: 4)
-                                    .stroke(lineWidth: 1)
-                                    .foregroundColor(.primaryColor)
-                            )
                     
                     
-                    Button(action: { }) {
-                        Rectangle().fill(Colors.primaryColor)
-                            .cornerRadius(8)
-                            .frame(width: 334, height:50)
-                            .padding(.horizontal, 31).overlay(
-                                Text("Add Action")
-                                    .accentColor(.white)
-                            )
-                    }
+                    .navigationTitle("TITLE")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationBarItems(leading: Button(action: { }) {
+                        Image(systemName: "chevron.left").foregroundColor(.white).font(.system(size: 24).weight(.semibold))
+                    })
+                    
                 }
             }
             
             
-            .navigationTitle("TITLE")
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(leading: Button(action: { }) {
-                Image(systemName: "chevron.left").foregroundColor(.white).font(.system(size: 24).weight(.semibold))
-            })
         }
+        
+        
     }
 }
 

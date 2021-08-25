@@ -13,4 +13,6 @@ struct Colors{
     static let customGray = Color("customGray")
     static let lightBlue = Color("lightBlue")
     static let cardBackground = Color("cardBgColor")
+    static let lightBlue2 = Color("lightBlue2")
+    static let destructive = Color("destructive")
 }

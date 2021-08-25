@@ -21,7 +21,7 @@ struct SubmitMoreEvidence: View {
     
     var body: some View {
         NavigationView{
-            ZStack(){
+            ZStack{
                 VStack{
                     Image("bgTnC")
                         .ignoresSafeArea()

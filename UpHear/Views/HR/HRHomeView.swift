@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HRHomeView: View {
     
-    @ObservedObject var viewModel: HomeViewModel = HomeViewModel()
+    @ObservedObject var viewModel: HomeViewModel
     
     @State var selected = 0
     @State var isPresent:Bool = false
@@ -29,9 +29,9 @@ struct HRHomeView: View {
                         Text("Cases")
                             .foregroundColor(.white)
                             .font(.title).bold()
-                            //.padding(.bottom, 25)
+                            .padding(.bottom, 25)
                             .font(Font.system(size: 28))
-                        SearchBar(text: .constant(""))
+                        SearchBar(keyword: .constant(""))
                         HRTopbar(selected: self.$selected).padding(.top)
                     }
                     
@@ -158,7 +158,7 @@ struct HRTopbar : View {
 
 
 struct SearchBar: View {
-    @Binding var text: String
+    @Binding var keyword: String
     
     @State var selected = 0
     @State var isPresent:Bool = false
@@ -167,9 +167,8 @@ struct SearchBar: View {
     
     var body: some View {
         HStack {
-            TextField("Search by status, date or perpetrator", text: $text)
-                
-                .foregroundColor(.buttonColor)
+            TextField("Search by status, date or perpetrator", text: $keyword)
+                .foregroundColor(.primaryColor)
                 .padding(8)
                 .padding(.horizontal, 25)
                 .background(Color(.systemGray6))
@@ -182,7 +181,7 @@ struct SearchBar: View {
                  
                         if isEditing {
                             Button(action: {
-                                self.text = ""
+                                self.keyword = ""
                             }) {
                                 Image(systemName: "multiply.circle.fill")
                                     .foregroundColor(.gray)
@@ -198,7 +197,7 @@ struct SearchBar: View {
             if isEditing {
                 Button(action: {
                     self.isEditing = false
-                    self.text = ""
+                    self.keyword = ""
  
                 }) {
                     Text("Cancel")
@@ -212,14 +211,14 @@ struct SearchBar: View {
     }
 }
 
-struct SearchBar_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchBar(text: .constant(""))
-    }
-}
+//struct SearchBar_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SearchBar(text: .constant(""))
+//    }
+//}
 
 struct HRHomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HRHomeView()
+        HRHomeView(viewModel: HomeViewModel(mainView: UpHearApp()))
     }
 }
