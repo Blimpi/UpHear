@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseStorage
 
 struct CreateReportPage:View{
     @Binding var page:Int
@@ -24,7 +25,8 @@ struct CreateReportPage:View{
     @State var victim:String = "Select Victim Name"
     @State var perpetrator = "Select Offender Name"
     @State var description = ""
-    
+    let storage = Storage.storage().reference()
+    let companyFolder = "Blimpi/Evidance/"
     
     let lsNext : LocalizedStringKey = "Next"
     let lsDone : LocalizedStringKey = "Done"
@@ -114,7 +116,7 @@ struct CreateReportPage:View{
                 Spacer().frame(height: 49)
                 Button(action: {
                     isAnonym = .identified
-                    vm.caseReport?.isAnonymous = "false"
+                    vm.caseReport.isAnonymous = "false"
                     page+=1
                 }) {
                     if(isAnonym != .identified){
@@ -126,7 +128,7 @@ struct CreateReportPage:View{
                 }
                 Button(action: {
                     isAnonym = .anonymous
-                    vm.caseReport?.isAnonymous = "true"
+                    vm.caseReport.isAnonymous = "true"
                     page+=1
                 }) {
                     if(isAnonym != .anonymous){
@@ -320,8 +322,8 @@ struct CreateReportPage:View{
                     
                     Button(action: {
                         page+=1
-                        vm.caseReport?.incidentTime = "\(dateOfIncident)"
-                        vm.caseReport?.perpetratorName?[0] = perpetratorPickerInitialValue
+                        vm.caseReport.incidentTime = "\(dateOfIncident)"
+                        vm.caseReport.perpetratorName?[0] = perpetratorPickerInitialValue
                     }) {
                         Rectangle().fill(Colors.primaryColor)
                             .cornerRadius(8)
@@ -346,7 +348,9 @@ struct CreateReportPage:View{
 
                     Text(lsEvidence).font(.system(size: 16)).padding(.top,22).padding(.bottom,16)
                     HStack{
-                        Button(action: { }) {
+                        Button(action: {
+                            
+                        }) {
                             Image("Add_Incident_Button").renderingMode(.original)
                         }
                         // collection view
@@ -370,6 +374,10 @@ struct CreateReportPage:View{
                     })
             }
         }
+        
+    }
+    func uploadPhoto(_data: Data){
+        //storage.child(companyFolder).putData(<#T##uploadData: Data##Data#>)
     }
 }
 

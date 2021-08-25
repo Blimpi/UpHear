@@ -13,16 +13,16 @@ struct UpHearApp: App {
     let persistenceController = PersistenceController.shared
     @State var isSignedIn: Bool = false
 
-    init() {
-        FirebaseApp.configure()
-        
-        if UserProfileCache.getId() != nil {
-            isSignedIn = true
-        }
-        else {
-            isSignedIn = false
-        }
-    }
+//    init() {
+//        FirebaseApp.configure()
+//        
+//        if UserProfileCache.getId() != nil {
+//            isSignedIn = true
+//        }
+//        else {
+//            isSignedIn = false
+//        }
+//    }
 
     var body: some Scene {
         WindowGroup {
@@ -33,7 +33,7 @@ struct UpHearApp: App {
 //            else {
 //                HomeView()
 //            }
-            UserProfileView()
+            NewCreateReportView()
         }
     }
 }

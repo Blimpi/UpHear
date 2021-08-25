@@ -58,8 +58,11 @@ struct HomeView: View {
                                         
                                 })
                                 .buttonStyle(primaryButtonStyle())
-                                .fullScreenCover(isPresented: $isPresent, content: {
-                                    CreateReportView()
+//                                .fullScreenCover(isPresented: $isPresent, content: {
+//                                    CreateReportView()
+//                                })
+                                .sheet(isPresented: $isPresent, content: {
+                                    NewCreateReportView()
                                 })
                             }
                         }
