@@ -464,7 +464,7 @@
 			isa = PBXGroup;
 			children = (
 				B8BC3C2A26D7660D00524490 /* FirstPage.swift */,
-				B8BC3C2D26D7663900524490 /* SecondPage.swift */,
+				B8BC3C2D26D7663900524490 /* secondPage.swift */,
 				B8BC3C2F26D7666F00524490 /* ThirdPage.swift */,
 				B8BC3C3126D7669100524490 /* ForthPage.swift */,
 				B8BC3C3326D766AE00524490 /* FifthPage.swift */,
@@ -763,7 +763,7 @@
 				1C95624526B2890D00D3A18E /* TermsConditionView.swift in Sources */,
 				1C60D47726B4C1A10072C589 /* Company.swift in Sources */,
 				CDE59F8A26B6B3B0009B4D8D /* LandingView.swift in Sources */,
-				B8BC3C2E26D7663900524490 /* SecondPage.swift in Sources */,
+				B8BC3C2E26D7663900524490 /* secondPage.swift in Sources */,
 				1C60D47B26B5145E0072C589 /* HRAction.swift in Sources */,
 				1CF6483726B1A28600299951 /* UpHearApp.swift in Sources */,
 				1C95624E26B29D3000D3A18E /* Colors.swift in Sources */,

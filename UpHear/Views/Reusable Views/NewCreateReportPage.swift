@@ -14,7 +14,7 @@ struct NewCreateReportPage: View {
         case 1:
             firstPage(vm: vms)
         case 2:
-            SecondPage(vm: vms)
+            secondPage(vm: vms)
         case 3:
             thirdPage(vm: vms)
         case 4:
