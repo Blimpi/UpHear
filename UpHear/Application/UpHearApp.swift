@@ -11,9 +11,12 @@ import Firebase
 @main
 struct UpHearApp: App {
     let persistenceController = PersistenceController.shared
-    @State var isSignedIn: Bool = false
-    init(){
+    @State var isSignedIn: Bool = SignInCache.get()
+  
+    init() {
         FirebaseApp.configure()
+        
+        isSignedIn = SignInCache.get()
     }
 //    init() {
 //        FirebaseApp.configure()
@@ -28,14 +31,13 @@ struct UpHearApp: App {
 
     var body: some Scene {
         WindowGroup {
-//            if (isSignedIn == false) {
-//                AuthView(viewModel: AuthViewModel(mainView: self), mode: .signIn)
-////                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
-//            }
-//            else {
-//                HomeView()
-//            }
-            NewCreateReportView()
+            if (isSignedIn == false) {
+                AuthView(viewModel: AuthViewModel(mainView: self), mode: .signIn)
+//                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            }
+            else {
+                HomeView(viewModel: HomeViewModel(mainView: self))
+            }
         }
     }
 }
