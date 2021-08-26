@@ -11,6 +11,7 @@ struct UserProfileView: View {
     
     @ObservedObject var imageLoader:ImageLoader
     @State var profilePic: UIImage = UIImage()
+    @Environment(\.presentationMode) var presentationMode
     
     init(viewModel: UserProfileViewModel){
         self.viewModel = viewModel
@@ -152,8 +153,11 @@ struct UserProfileView: View {
                     .font(Font.system(size: 17))
                 }
             }
+            .navigationBarBackButtonHidden(true)
             .navigationBarTitle(("Profile"),displayMode: .inline)
-            .navigationBarItems(leading: Button(action: {}) {
+            .navigationBarItems(leading: Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
                     Image(systemName: "chevron.left")
             }.accentColor(.white), trailing: Button(action: {}){
                 Text("Done")
