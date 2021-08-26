@@ -59,16 +59,7 @@ struct CreateReportView: View {
         }
     }
 }
-enum identityCondition: Int {
-    case victim = 1
-    case witness = 2
-    case nothing = 0
-}
-enum publicationType{
-    case anonymous
-    case identified
-    case nothing
-}
+
 
 
 

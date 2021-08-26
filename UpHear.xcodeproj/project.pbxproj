@@ -56,7 +56,14 @@
 		B818805A26BA8412004F3D38 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805926BA8412004F3D38 /* CustomPageControl.swift */; };
 		B818805C26BC5763004F3D38 /* testPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805B26BC5763004F3D38 /* testPicker.swift */; };
 		B852412626BE771C0005975B /* CreateReportPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B852412526BE771C0005975B /* CreateReportPage.swift */; };
+		B86D695A26D6BFD000E1B511 /* EvidanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86D695926D6BFD000E1B511 /* EvidanceCell.swift */; };
+		B86D695C26D6C33B00E1B511 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86D695B26D6C33B00E1B511 /* ImagePicker.swift */; };
 		B8A834F726C16F4F00D1C8B3 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A834F626C16F4F00D1C8B3 /* ImageLoader.swift */; };
+		B8BC3C2B26D7660E00524490 /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC3C2A26D7660D00524490 /* FirstPage.swift */; };
+		B8BC3C2E26D7663900524490 /* SecondPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC3C2D26D7663900524490 /* SecondPage.swift */; };
+		B8BC3C3026D7666F00524490 /* ThirdPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC3C2F26D7666F00524490 /* ThirdPage.swift */; };
+		B8BC3C3226D7669100524490 /* ForthPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC3C3126D7669100524490 /* ForthPage.swift */; };
+		B8BC3C3426D766AE00524490 /* FifthPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC3C3326D766AE00524490 /* FifthPage.swift */; };
 		B8DF988026CCCA4B00CE8CA1 /* OptionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DF987F26CCCA4B00CE8CA1 /* OptionCard.swift */; };
 		CB319F27AA82713B06F1C9A8 /* Pods_UpHearTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C9AB0D431C4C70049E3567 /* Pods_UpHearTests.framework */; };
 		CDC9D03E26B2B0AB00215F5D /* CaseDraftRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */; };
@@ -152,7 +159,14 @@
 		B818805926BA8412004F3D38 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
 		B818805B26BC5763004F3D38 /* testPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testPicker.swift; sourceTree = "<group>"; };
 		B852412526BE771C0005975B /* CreateReportPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportPage.swift; sourceTree = "<group>"; };
+		B86D695926D6BFD000E1B511 /* EvidanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvidanceCell.swift; sourceTree = "<group>"; };
+		B86D695B26D6C33B00E1B511 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		B8A834F626C16F4F00D1C8B3 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		B8BC3C2A26D7660D00524490 /* FirstPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPage.swift; sourceTree = "<group>"; };
+		B8BC3C2D26D7663900524490 /* SecondPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPage.swift; sourceTree = "<group>"; };
+		B8BC3C2F26D7666F00524490 /* ThirdPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPage.swift; sourceTree = "<group>"; };
+		B8BC3C3126D7669100524490 /* ForthPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForthPage.swift; sourceTree = "<group>"; };
+		B8BC3C3326D766AE00524490 /* FifthPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthPage.swift; sourceTree = "<group>"; };
 		B8DF987F26CCCA4B00CE8CA1 /* OptionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCard.swift; sourceTree = "<group>"; };
 		CA1501CE8251F7B78A243E40 /* Pods-UpHear-UpHearUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpHear-UpHearUITests.debug.xcconfig"; path = "Target Support Files/Pods-UpHear-UpHearUITests/Pods-UpHear-UpHearUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDraftRow.swift; sourceTree = "<group>"; };
@@ -259,6 +273,7 @@
 			children = (
 				1C60D49526B940D80072C589 /* UserDefaultsManager.swift */,
 				B8A834F626C16F4F00D1C8B3 /* ImageLoader.swift */,
+				B86D695B26D6C33B00E1B511 /* ImagePicker.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -266,6 +281,7 @@
 		1C95623D26B2869200D3A18E /* Reusable Views */ = {
 			isa = PBXGroup;
 			children = (
+				B8BC3C2926D765DF00524490 /* CreateReport */,
 				1C60D48B26B7ECBA0072C589 /* RequiredActionsCard.swift */,
 				1C95623E26B286B600D3A18E /* HomeListView.swift */,
 				B818805126B6BC83004F3D38 /* TextStyle.swift */,
@@ -277,6 +293,7 @@
 				CDE59F9626BC3D6B009B4D8D /* HRCaseCardView.swift */,
 				CDE59F9A26BD05CF009B4D8D /* HRActionCard.swift */,
 				B8DF987F26CCCA4B00CE8CA1 /* OptionCard.swift */,
+				B86D695926D6BFD000E1B511 /* EvidanceCell.swift */,
 			);
 			path = "Reusable Views";
 			sourceTree = "<group>";
@@ -441,6 +458,18 @@
 				1C60D46F26B3D25C0072C589 /* Network Services */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		B8BC3C2926D765DF00524490 /* CreateReport */ = {
+			isa = PBXGroup;
+			children = (
+				B8BC3C2A26D7660D00524490 /* FirstPage.swift */,
+				B8BC3C2D26D7663900524490 /* SecondPage.swift */,
+				B8BC3C2F26D7666F00524490 /* ThirdPage.swift */,
+				B8BC3C3126D7669100524490 /* ForthPage.swift */,
+				B8BC3C3326D766AE00524490 /* FifthPage.swift */,
+			);
+			path = CreateReport;
 			sourceTree = "<group>";
 		};
 		CDE59F9126BBCE6B009B4D8D /* HR */ = {
@@ -698,8 +727,10 @@
 				1C60D48C26B7ECBA0072C589 /* RequiredActionsCard.swift in Sources */,
 				B8DF988026CCCA4B00CE8CA1 /* OptionCard.swift in Sources */,
 				1C60D48126B572780072C589 /* NetworkConstants.swift in Sources */,
+				B86D695A26D6BFD000E1B511 /* EvidanceCell.swift in Sources */,
 				1C60D47326B3FBC40072C589 /* BaseRequest.swift in Sources */,
 				1C60D48326B5888D0072C589 /* UserAction.swift in Sources */,
+				B86D695C26D6C33B00E1B511 /* ImagePicker.swift in Sources */,
 				1C95624126B2882500D3A18E /* HomeView.swift in Sources */,
 				1C60D49C26BD128D0072C589 /* HomeViewModel.swift in Sources */,
 				1C60D48F26B7F5B40072C589 /* AuthViewModel.swift in Sources */,
@@ -716,6 +747,7 @@
 				CDE59F9726BC3D6B009B4D8D /* HRCaseCardView.swift in Sources */,
 				1C60D47126B3E9370072C589 /* AuthRequest.swift in Sources */,
 				B818805426B6FE63004F3D38 /* CaseDetailView.swift in Sources */,
+				B8BC3C3426D766AE00524490 /* FifthPage.swift in Sources */,
 				1C60D47526B43AF50072C589 /* User.swift in Sources */,
 				1C60D49826B9A8900072C589 /* UserProfileViewModel.swift in Sources */,
 				1CF6484026B1A28700299951 /* Persistence.swift in Sources */,
@@ -723,6 +755,7 @@
 				B818805826B7B36B004F3D38 /* SubmitMoreEvidence.swift in Sources */,
 				B818805226B6BC83004F3D38 /* TextStyle.swift in Sources */,
 				CDE59F8C26B7E722009B4D8D /* UserProfileView.swift in Sources */,
+				B8BC3C2B26D7660E00524490 /* FirstPage.swift in Sources */,
 				1C60D47E26B515330072C589 /* DataManager.swift in Sources */,
 				1CF6483926B1A28600299951 /* ContentView.swift in Sources */,
 				1C60D49326B92A710072C589 /* Extensions.swift in Sources */,
@@ -730,6 +763,7 @@
 				1C95624526B2890D00D3A18E /* TermsConditionView.swift in Sources */,
 				1C60D47726B4C1A10072C589 /* Company.swift in Sources */,
 				CDE59F8A26B6B3B0009B4D8D /* LandingView.swift in Sources */,
+				B8BC3C2E26D7663900524490 /* SecondPage.swift in Sources */,
 				1C60D47B26B5145E0072C589 /* HRAction.swift in Sources */,
 				1CF6483726B1A28600299951 /* UpHearApp.swift in Sources */,
 				1C95624E26B29D3000D3A18E /* Colors.swift in Sources */,
@@ -742,8 +776,10 @@
 				1C95623F26B286B600D3A18E /* HomeListView.swift in Sources */,
 				1C60D49126B82DE90072C589 /* CreateReportViewModel.swift in Sources */,
 				1C95624926B28E1700D3A18E /* ReportSummaryView.swift in Sources */,
+				B8BC3C3226D7669100524490 /* ForthPage.swift in Sources */,
 				B818805C26BC5763004F3D38 /* testPicker.swift in Sources */,
 				1C60D49626B940D80072C589 /* UserDefaultsManager.swift in Sources */,
+				B8BC3C3026D7666F00524490 /* ThirdPage.swift in Sources */,
 				1CF6486D26B1A39600299951 /* ContentViewModel.swift in Sources */,
 				1CF6486F26B1A3C600299951 /* Constants.swift in Sources */,
 				CDC9D03E26B2B0AB00215F5D /* CaseDraftRow.swift in Sources */,
