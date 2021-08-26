@@ -17,6 +17,7 @@ struct CaseDataResponse: Codable, Identifiable {
 }
 
 class Case: Codable {
+    
     var caseID: Int?
     var reporterID: [String]?
     var reporterName: [String]?
@@ -60,6 +61,37 @@ class Case: Codable {
         incidentPlace = ""
         incidentDetail = ""
         status = caseStatus.waiting.rawValue
+    }
+    
+    
+    init(reporterID: String, isAnonymous: Bool, victimID: String, perpetratorID: String, incidentTime: Date, incidentPlace: String, incidentDetail: String, evidences: [String]) {
+        self.caseID = 0
+        self.reporterID = [reporterID]
+        self.reporterName = [""]
+        self.isAnonymous = String(isAnonymous)
+        self.victimID = [victimID]
+        self.victimName = [""]
+        self.perpetratorID = [perpetratorID]
+        self.perpetratorName = [""]
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = DateFormatter.Style.long
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        var dateStr = dateFormatter.string(from: incidentTime)
+        dateStr += "T02:40:00.000Z"
+        self.incidentTime = dateStr
+        
+        self.incidentPlace = incidentPlace
+        self.incidentDetail = incidentDetail
+        
+        var evidenceStr = ""
+        for evidence in evidences {
+            evidenceStr += evidence
+            evidenceStr += " "
+        }
+        self.evidences = evidenceStr
+        
+        self.status = caseStatus.waiting.rawValue
     }
 }
 

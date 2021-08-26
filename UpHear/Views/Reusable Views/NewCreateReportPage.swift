@@ -36,22 +36,27 @@ enum TopBarStyle{
 
 // reuseable
 struct modalTopBar: View{
+    //Localized Strings
+    let lsClose : LocalizedStringKey = "Close"
+    let lsReportCase : LocalizedStringKey = "Report a Case"
+    let lsSave : LocalizedStringKey = "Save"
+    
     @State var topBarStyle:TopBarStyle
     var body: some View{
         HStack{
             Button(action: {}, label: {
-                Text("Close")
+                Text(lsClose)
             })
             .padding()
             
             Spacer()
             
-            Text("Report a Case")
+            Text(lsReportCase)
             
             Spacer()
             
             Button(action: {}, label: {
-                Text("Save")
+                Text(lsSave)
             })
             .padding()
         }
@@ -92,7 +97,13 @@ struct addFileButton: View {
 }
 
 struct BackNextButton:View{
+    //Localized Strings
+    let lsNext : LocalizedStringKey = "Next"
+    let lsBack : LocalizedStringKey = "Back"
+    let pageNumber : LocalizedStringKey = "out of 5"
+    
     @ObservedObject var vm: CreateReportViewModel
+    
     var body: some View{
         VStack{
             Text("\(vm.currentIndex) out of 5")
@@ -105,7 +116,7 @@ struct BackNextButton:View{
                         RoundedRectangle(cornerRadius: 25.0)
                             .stroke(Colors.primaryColor,lineWidth: 1)
                             .frame(width: 153, height: 50)
-                        Text("Back")
+                        Text(lsBack)
                             .foregroundColor(Colors.primaryColor)
                     }
                 })
@@ -117,7 +128,7 @@ struct BackNextButton:View{
                         RoundedRectangle(cornerRadius: 25.0)
                             .fill(Colors.primaryColor)
                             .frame(width: 153, height: 50)
-                        Text("Next")
+                        Text(lsNext)
                             .foregroundColor(.white)
                     }
                 })

@@ -23,6 +23,7 @@ extension Case {
         
         for evidence in evidenceArr {
             evidenceStr += evidence
+            evidenceStr += " "
         }
         
         self.evidences = evidenceStr

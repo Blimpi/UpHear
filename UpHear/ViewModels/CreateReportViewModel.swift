@@ -36,6 +36,7 @@ class CreateReportViewModel: ObservableObject {
             currentIndex = 1
         }
     }
+  
     func addPict(Img: UIImage){
         arrayOfEvidenceImage.append(Img)
     }
