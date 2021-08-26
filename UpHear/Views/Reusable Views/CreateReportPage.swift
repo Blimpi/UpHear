@@ -362,16 +362,16 @@ struct CreateReportPage:View{
                 Text("").frame(maxWidth: .infinity)
                 Spacer()
                 
-                NavigationLink(
-                    destination: ReportSummaryView().navigationBarBackButtonHidden(true),
-                    label: {
-                        Rectangle().fill(Colors.primaryColor)
-                            .cornerRadius(8)
-                            .frame(maxWidth: .infinity, maxHeight:50, alignment: .center)
-                            .padding(.horizontal, 23).overlay(
-                                Text(lsNext).accentColor(.white)
-                            )
-                    })
+//                NavigationLink(
+//                    destination: ReportSummaryView().navigationBarBackButtonHidden(true),
+//                    label: {
+//                        Rectangle().fill(Colors.primaryColor)
+//                            .cornerRadius(8)
+//                            .frame(maxWidth: .infinity, maxHeight:50, alignment: .center)
+//                            .padding(.horizontal, 23).overlay(
+//                                Text(lsNext).accentColor(.white)
+//                            )
+//                    })
             }
         }
         

@@ -10,7 +10,7 @@ import SwiftUI
 struct NewCreateReportView: View {
     @StateObject var viewModel: CreateReportViewModel = CreateReportViewModel()
     var body: some View {
-        NewCreateReportPage().environmentObject(viewModel)
+        NewCreateReportPage(vms: viewModel)
     }
 }
 

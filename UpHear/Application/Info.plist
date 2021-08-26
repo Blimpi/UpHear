@@ -52,5 +52,7 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Please Allow to Upload Evidance</string>
 </dict>
 </plist>
