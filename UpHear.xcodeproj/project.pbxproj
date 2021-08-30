@@ -68,6 +68,7 @@
 		B8BC3C3426D766AE00524490 /* FifthPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC3C3326D766AE00524490 /* FifthPage.swift */; };
 		B8DF988026CCCA4B00CE8CA1 /* OptionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DF987F26CCCA4B00CE8CA1 /* OptionCard.swift */; };
 		CB319F27AA82713B06F1C9A8 /* Pods_UpHearTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C9AB0D431C4C70049E3567 /* Pods_UpHearTests.framework */; };
+		CDA1B4E026DCCB8B00F35488 /* DraftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1B4DF26DCCB8B00F35488 /* DraftViewModel.swift */; };
 		CDC9D03E26B2B0AB00215F5D /* CaseDraftRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */; };
 		CDE59F8A26B6B3B0009B4D8D /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE59F8926B6B3B0009B4D8D /* LandingView.swift */; };
 		CDE59F8C26B7E722009B4D8D /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE59F8B26B7E722009B4D8D /* UserProfileView.swift */; };
@@ -171,6 +172,7 @@
 		B8BC3C3326D766AE00524490 /* FifthPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthPage.swift; sourceTree = "<group>"; };
 		B8DF987F26CCCA4B00CE8CA1 /* OptionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCard.swift; sourceTree = "<group>"; };
 		CA1501CE8251F7B78A243E40 /* Pods-UpHear-UpHearUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpHear-UpHearUITests.debug.xcconfig"; path = "Target Support Files/Pods-UpHear-UpHearUITests/Pods-UpHear-UpHearUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CDA1B4DF26DCCB8B00F35488 /* DraftViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftViewModel.swift; sourceTree = "<group>"; };
 		CDC9D03D26B2B0AB00215F5D /* CaseDraftRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDraftRow.swift; sourceTree = "<group>"; };
 		CDE59F8926B6B3B0009B4D8D /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		CDE59F8B26B7E722009B4D8D /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 				1C60D49026B82DE90072C589 /* CreateReportViewModel.swift */,
 				1C60D49726B9A8900072C589 /* UserProfileViewModel.swift */,
 				1C60D49B26BD128D0072C589 /* HomeViewModel.swift */,
+				CDA1B4DF26DCCB8B00F35488 /* DraftViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -762,6 +765,7 @@
 				B8BC3C2B26D7660E00524490 /* FirstPage.swift in Sources */,
 				1C60D47E26B515330072C589 /* DataManager.swift in Sources */,
 				1CF6483926B1A28600299951 /* ContentView.swift in Sources */,
+				CDA1B4E026DCCB8B00F35488 /* DraftViewModel.swift in Sources */,
 				1C60D49326B92A710072C589 /* Extensions.swift in Sources */,
 				B803ED9B26D43114000CBE81 /* NewCreateReportPage.swift in Sources */,
 				1C95624526B2890D00D3A18E /* TermsConditionView.swift in Sources */,
@@ -959,7 +963,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"UpHear/Preview Content\"";
-				DEVELOPMENT_TEAM = V8U6HJ6HPQ;
+				DEVELOPMENT_TEAM = 243N3AKJB3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = UpHear/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -984,7 +988,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"UpHear/Preview Content\"";
-				DEVELOPMENT_TEAM = V8U6HJ6HPQ;
+				DEVELOPMENT_TEAM = 243N3AKJB3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = UpHear/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
