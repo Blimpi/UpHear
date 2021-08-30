@@ -49,6 +49,18 @@ class CreateReportViewModel: ObservableObject {
         publication = publicity
     }
     
+    func getDateString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = DateFormatter.Style.long
+        dateFormatter.dateFormat = "d MMMM y"
+        let dateStr = dateFormatter.string(from: incidentDate)
+        return dateStr
+    }
+    
+    func getUserName() -> String {
+        return UserProfileCache.get().name ?? ""
+    }
+    
     func uploadImageToDatabase(){
         for index in 0..<arrayOfEvidenceImage.count {
             let uiImage = arrayOfEvidenceImage[index]

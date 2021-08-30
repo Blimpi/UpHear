@@ -40,9 +40,10 @@ struct thirdPage: View{
                     Text("Date and time of incident")
                     Button(action: {
                         showDatePicker = true
+                        
                     }, label: {
                         HStack{
-                            Text("\(vm.incidentDate)")
+                            Text("\(vm.getDateString())")
                                 .foregroundColor(Colors.customGray)
                                 .multilineTextAlignment(.leading)
                                 .padding()
@@ -91,7 +92,7 @@ struct thirdPage: View{
         }
         VStack{
             Spacer()
-            BackNextButton(vm: vm)
+            BackNextButton(vm: vm).opacity(showDatePicker ? 0 : 1)
             Spacer().frame(height: 20)
         }
     }
