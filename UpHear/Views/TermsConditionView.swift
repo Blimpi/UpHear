@@ -46,23 +46,25 @@ struct TermsConditionView: View {
                                     VStack{
                                         HStack{
                                             Image("tnc1")
-                                            Text("Reporters are responsible for all submitted reports")
+                                                
+                                            Text("All submitted reports shall be filed under reporter's consent and based on true facts")
+                                                .padding(.leading,12)
                                         }.padding(.bottom,30)
                                         
                                         HStack{
                                             Image("tnc2")
-                                            Text("All submitted reports shall be filed based on true facts and only the truth. There will be consequences shall it be filed falsely")
-                                        }.padding(.bottom,30)
-                                        
-                                        HStack{
-                                            Image("tnc3")
-                                            Text("HR holds the authority to process the reports. UpHear does not have the authority to make decisions or to take any actions regarding the submitted")
+                                                
+                                            Text("UpHear is a safe place to make a report. Therefore we ensure to protect the confidentiality and anonymity of the reporter's identity")
+                                                .padding(.leading,12)
                                         }.padding(.bottom,30)
                                         
                                         HStack{
                                             Image("tnc4")
-                                            Text("UpHear ensures to protect the confidentiality of reporter's identity, and is not responsible if HR may need to disclose reporter's identity if necessary.")
-                                        }
+                                                
+                                            Text("UpHear will not disclose any kind of infomration regarding the submitted reports to any parties unrelated to the report")
+                                                .padding(.leading,12)
+                                        }.padding(.bottom,30)
+                                        
                                     }.font(Font.system(size:13))
                                     .padding(.horizontal,43)
                                     .padding(.vertical,37)
