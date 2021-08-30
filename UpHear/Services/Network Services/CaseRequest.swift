@@ -38,7 +38,7 @@ class CaseRequest: NSObject {
                         failCompletion: @escaping (String) -> Void) {
         
         let jsonString = """
-            {"records":[{"fields": {"CaseID": "\(caseItem.caseID ?? 0)","Reporter": ["\(caseItem.reporterID?[0] ?? "")"],"Evidences": "\(caseItem.evidences ?? "")",isAnonymous": "\(caseItem.isAnonymous ?? APIbool.f.rawValue)","Victim": ["\(caseItem.victimID?[0] ?? "")"],"Perpetrator": ["\(caseItem.perpetratorID?[0] ?? "")"],"IncidentTime": "\(caseItem.incidentTime ?? "")","IncidentPlace": "\(caseItem.incidentPlace ?? "")","IncidentDetail": "\(caseItem.incidentDetail ?? "")","Status": "\(caseItem.status ?? caseStatus.waiting.rawValue)"}}]}
+            {"records":[{"fields": {"Reporter": ["\(caseItem.reporterID?[0] ?? "")"],"Evidences": "\(caseItem.evidences ?? "")","isAnonymous": "\(caseItem.isAnonymous ?? APIbool.f.rawValue)","Victim": ["\(caseItem.victimID?[0] ?? "")"],"Perpetrator": ["\(caseItem.perpetratorID?[0] ?? "")"],"IncidentTime": "\(caseItem.incidentTime ?? "")","IncidentPlace": "\(caseItem.incidentPlace ?? "")","IncidentDetail": "\(caseItem.incidentDetail ?? "")","Status": "\(caseItem.status ?? caseStatus.waiting.rawValue)"}}]}
         """
         
         BaseRequest.POST(url: url, header: header, jsonString: jsonString, showLoader: showLoader) { response in
