@@ -91,7 +91,7 @@ struct waitingCasesView: View{
     
     var body: some View{
         List{
-            ForEach((viewModel.caseData.records ?? [CaseDataResponse]()), content: { caseDataResponse in
+            ForEach((viewModel.waitingCases), content: { caseDataResponse in
                 CaseCard(status: caseDataResponse.fields?.status ?? "No Data", caseID: "CA\(String(caseDataResponse.fields?.caseID ?? 000))", incidentDate: caseDataResponse.fields?.incidentTime ?? "No Data", offenderName: caseDataResponse.fields?.perpetratorName?[0] ?? "No Data")
                     .padding(.vertical, 8)
             })
