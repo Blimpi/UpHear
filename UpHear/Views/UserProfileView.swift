@@ -159,9 +159,10 @@ struct UserProfileView: View {
                 self.presentationMode.wrappedValue.dismiss()
             }) {
                     Image(systemName: "chevron.left")
-            }.accentColor(.white), trailing: Button(action: {}){
-                Text("Done")
-            })
+            }.accentColor(.white)//, trailing: Button(action: {}){
+//                Text("Done")
+//            }
+            )
         }
         .navigationBarHidden(true)
     }

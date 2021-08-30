@@ -13,7 +13,7 @@ struct ReportSummaryView: View {
     var body: some View{
         ZStack{
             VStack{
-                modalTopBar(topBarStyle: .normal)
+                modalTopBar(vm: vm,topBarStyle: .normal)
                 ScrollView{
                     VStack{
                         reportDetail(title: "Reporting as", subtitle: vm.victim)
