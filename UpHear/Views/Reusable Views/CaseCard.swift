@@ -27,9 +27,10 @@ struct CaseCard: View {
     }
     
     var body: some View {
-        Button {
-            
-        } label: {
+//        Button {
+//
+//        } label: {
+            NavigationLink(destination: CaseDetailView(cases: caseDatas)) {
                 ZStack{
                     VStack(alignment: .leading){
                         HStack{
@@ -55,6 +56,7 @@ struct CaseCard: View {
                         Text(incidentDate)
                             .padding(.bottom, 5)
                             .font(Font.system(size: 18))
+                            .foregroundColor(.black)
                             
                         Text(offenderHeader)
                             .font(Font.system(size: 12))
@@ -62,9 +64,10 @@ struct CaseCard: View {
                         
                         Text(offenderName)
                             .font(Font.system(size: 18))
+                            .foregroundColor(.black)
                         Spacer()
                         
-                    }.padding()
+                    }.padding(16)
                     HStack{
                         Spacer()
                         Image("chevron").padding(.trailing,14)
@@ -72,11 +75,12 @@ struct CaseCard: View {
                 }.background(
                     RoundedRectangle(cornerRadius: 25.0)
                         .fill(Color.cardBgColor)
-                        .frame(width: 323, height:193)
                         .shadow(color: .black.opacity(0.5), radius:4, x: 0, y: 2)
                 )
+            }
+                
             
-        }
+        //}
     }
 }
 

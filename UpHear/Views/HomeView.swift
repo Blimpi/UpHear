@@ -102,7 +102,7 @@ struct listCasesView: View{
                     ForEach(viewModel.ongoingCases, content: { caseDataResponse in
                         CaseCard(caseData: caseDataResponse)
                             .padding(.vertical, 8)
-                            .padding(.horizontal)
+                            .padding(.horizontal,32)
                     })
                 }
             }
@@ -115,7 +115,7 @@ struct listCasesView: View{
                     ForEach((viewModel.closedCases), content: { caseDataResponse in
                         CaseCard(caseData: caseDataResponse)
                             .padding(.vertical, 8)
-                            .padding(.horizontal)
+                            .padding(.horizontal,32)
                     })
                 }
             }.clipped()
