@@ -26,7 +26,12 @@ struct UpHearApp: App {
 //                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
             }
             else {
-                HomeView(viewModel: HomeViewModel(mainView: self))
+                if UserProfileCache.get().role == userRole.user.rawValue {
+                    HomeView(viewModel: HomeViewModel(mainView: self))
+                }
+                else {
+                    HRHomeView(viewModel: HomeViewModel(mainView: self))
+                }
             }
         }
     }
