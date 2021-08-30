@@ -82,7 +82,7 @@ class CreateReportViewModel: ObservableObject {
                     print(url.absoluteString)
                                                                              
                     if(self.arrayOfEvidence.count == self.arrayOfEvidenceImage.count){
-                        let caseItem = Case(reporterID: "", isAnonymous: self.isAnonymous, victimID: "", perpetratorID: "", incidentTime: self.incidentDate, incidentPlace: self.IncidentPlace, incidentDetail: self.description, evidences: self.arrayOfEvidence)
+                        let caseItem = Case(reporterID: "recrJH5XnOZv690lW", isAnonymous: self.isAnonymous, victimID: "recrJH5XnOZv690lW", perpetratorID: "recrJH5XnOZv690lW", incidentTime: self.incidentDate, incidentPlace: self.IncidentPlace, incidentDetail: self.description, evidences: self.arrayOfEvidence)
                         
                         CaseRequest.addCase(url: NetworkConstants.CASE_URL, header: NetworkConstants.POST_HEADER, caseItem: caseItem, showLoader: false) { responseData in
                             if responseData.records?.count != 0 {

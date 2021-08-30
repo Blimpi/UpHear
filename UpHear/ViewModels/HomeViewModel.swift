@@ -13,6 +13,7 @@ class HomeViewModel: ObservableObject {
     
     var caseData: CaseData = CaseData(records: [])
     
+    @Published var waitingCases: [CaseDataResponse] = []
     @Published var ongoingCases: [CaseDataResponse] = []
     @Published var closedCases: [CaseDataResponse] = []
     
@@ -35,7 +36,7 @@ class HomeViewModel: ObservableObject {
             
             DispatchQueue.main.async {
                 self.caseData = response
-                self.filterCases()
+                self.filterAllCases()
             }
         } failCompletion: { message in
             print(message)
@@ -50,21 +51,49 @@ class HomeViewModel: ObservableObject {
             
             DispatchQueue.main.async {
                 self.caseData = response
-                self.filterCases()
+                self.filterUserCases()
             }
         } failCompletion: { message in
             print(message)
         }
     }
     
-    func filterCases() {
+    func filterAllCases() {
         if let records = caseData.records {
+            fillWaitingCases(records: records)
             fillOngoingCases(records: records)
             fillClosedCases(records: records)
         }
     }
     
+    func filterUserCases() {
+        if let records = caseData.records {
+            fillUserOngoingCases(records: records)
+            fillClosedCases(records: records)
+        }
+    }
+    
+    func fillWaitingCases(records: [CaseDataResponse]) {
+        ongoingCases = []
+        
+        for caseItem in records {
+            if caseItem.fields?.status == caseStatus.waiting.rawValue {
+                waitingCases.append(caseItem)
+            }
+        }
+    }
+    
     func fillOngoingCases(records: [CaseDataResponse]) {
+        ongoingCases = []
+        
+        for caseItem in records {
+            if caseItem.fields?.status == caseStatus.ongoing.rawValue {
+                ongoingCases.append(caseItem)
+            }
+        }
+    }
+    
+    func fillUserOngoingCases(records: [CaseDataResponse]) {
         ongoingCases = []
         
         for caseItem in records {
