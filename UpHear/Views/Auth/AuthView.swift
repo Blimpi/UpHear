@@ -56,19 +56,23 @@ struct signInForm: View {
                     .foregroundColor(.primaryColor)
                     .padding(.bottom, -2)
                 TextField(
-                        "  Enter email",
+                        "Enter email",
                          text: $email
-                ).frame(height:45)
+                )
+                .padding(8)
+                .frame(height:45)
                 .border(Color.gray, width: 2)
                 .cornerRadius(4)
                 .padding(.bottom, 24)
                 
                 Text("Password").font(.body).foregroundColor(.primaryColor)
                     .padding(.bottom, -2)
-                SecureField("  Enter a password", text: $password).frame(height:45)
-                .border(Color.gray, width: 2)
-                .cornerRadius(4)
-                .padding(.bottom, 40)
+                SecureField("Enter a password", text: $password)
+                    .padding(8)
+                    .frame(height:45)
+                    .border(Color.gray, width: 2)
+                    .cornerRadius(4)
+                    .padding(.bottom, 40)
                 
                 Button(action: {
                         viewModel.authButtonPressed(mode: mode, email: email, password: password)
@@ -116,19 +120,23 @@ struct signUpForm: View {
                     .foregroundColor(.primaryColor)
                     .padding(.bottom, -2)
                 TextField(
-                        "  Enter email",
+                        "Enter email",
                          text: $email
-                ).frame(height:45)
+                )
+                .padding(8)
+                .frame(height:45)
                 .border(Color.gray, width: 2)
                 .cornerRadius(4)
                 .padding(.bottom, 24)
                 
                 Text("Password").font(.body).foregroundColor(.primaryColor)
                     .padding(.bottom, -2)
-                SecureField("  Enter a password", text: $password).frame(height:45)
-                .border(Color.gray, width: 2)
-                .cornerRadius(4)
-                .padding(.bottom, 40)
+                SecureField("Enter a password", text: $password)
+                    .padding(8)
+                    .frame(height:45)
+                    .border(Color.gray, width: 2)
+                    .cornerRadius(4)
+                    .padding(.bottom, 40)
                 
                 Button(action: { viewModel.authButtonPressed(mode: mode, email: email, password: password) }) {
                     Rectangle().fill(Colors.primaryColor)
