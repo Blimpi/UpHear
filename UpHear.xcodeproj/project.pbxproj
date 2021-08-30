@@ -57,6 +57,7 @@
 		B818805826B7B36B004F3D38 /* SubmitMoreEvidence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805726B7B36B004F3D38 /* SubmitMoreEvidence.swift */; };
 		B818805A26BA8412004F3D38 /* CustomPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805926BA8412004F3D38 /* CustomPageControl.swift */; };
 		B818805C26BC5763004F3D38 /* testPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B818805B26BC5763004F3D38 /* testPicker.swift */; };
+		B8332CFE26DCEB6400A4EF3D /* CaseCardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8332CFD26DCEB6400A4EF3D /* CaseCardHelper.swift */; };
 		B852412626BE771C0005975B /* CreateReportPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B852412526BE771C0005975B /* CreateReportPage.swift */; };
 		B86D695A26D6BFD000E1B511 /* EvidanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86D695926D6BFD000E1B511 /* EvidanceCell.swift */; };
 		B86D695C26D6C33B00E1B511 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86D695B26D6C33B00E1B511 /* ImagePicker.swift */; };
@@ -160,6 +161,7 @@
 		B818805726B7B36B004F3D38 /* SubmitMoreEvidence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitMoreEvidence.swift; sourceTree = "<group>"; };
 		B818805926BA8412004F3D38 /* CustomPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageControl.swift; sourceTree = "<group>"; };
 		B818805B26BC5763004F3D38 /* testPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testPicker.swift; sourceTree = "<group>"; };
+		B8332CFD26DCEB6400A4EF3D /* CaseCardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseCardHelper.swift; sourceTree = "<group>"; };
 		B852412526BE771C0005975B /* CreateReportPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReportPage.swift; sourceTree = "<group>"; };
 		B86D695926D6BFD000E1B511 /* EvidanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvidanceCell.swift; sourceTree = "<group>"; };
 		B86D695B26D6C33B00E1B511 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				1C60D49526B940D80072C589 /* UserDefaultsManager.swift */,
 				B8A834F626C16F4F00D1C8B3 /* ImageLoader.swift */,
 				B86D695B26D6C33B00E1B511 /* ImagePicker.swift */,
+				B8332CFD26DCEB6400A4EF3D /* CaseCardHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -786,6 +789,7 @@
 				B8BC3C3026D7666F00524490 /* ThirdPage.swift in Sources */,
 				1CF6486D26B1A39600299951 /* ContentViewModel.swift in Sources */,
 				1CF6486F26B1A3C600299951 /* Constants.swift in Sources */,
+				B8332CFE26DCEB6400A4EF3D /* CaseCardHelper.swift in Sources */,
 				CDC9D03E26B2B0AB00215F5D /* CaseDraftRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

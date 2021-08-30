@@ -55,6 +55,7 @@ class BaseRequest: NSObject {
         let request = NSMutableURLRequest(url: NSURL(string: url)! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
         
         let jsonSessionData = jsonString.data(using: .utf8)!
+        print(jsonString)
         let jsonSession = try! JSONSerialization.jsonObject(with: jsonSessionData, options: .allowFragments)
         let jsonData = try? JSONSerialization.data(withJSONObject: jsonSession)
         
