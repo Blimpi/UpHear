@@ -97,22 +97,28 @@ struct listCasesView: View{
     
     var body: some View{
         if selected == 0{
-            List{
-                ForEach((viewModel.ongoingCases), content: { caseDataResponse in
-                    CaseCard(status: caseDataResponse.fields?.status ?? "No Data", caseID: "CA\(String(caseDataResponse.fields?.caseID ?? 000))", incidentDate: String(caseDataResponse.fields?.incidentTime?.prefix(10) ?? "No Data"), offenderName: caseDataResponse.fields?.perpetratorName?[0] ?? "No Data")
-                        .padding(.vertical, 8)
-                })
+            ScrollView{
+                VStack{
+                    ForEach(viewModel.ongoingCases, content: { caseDataResponse in
+                        CaseCard(caseData: caseDataResponse)
+                            .padding(.vertical, 8)
+                            .padding(.horizontal)
+                    })
+                }
             }
-            .listStyle(PlainListStyle())
+            .clipped()
+            
             
         }else if selected == 1{
-            List{
-                ForEach((viewModel.closedCases), content: { caseDataResponse in
-                    CaseCard(status: caseDataResponse.fields?.status ?? "No Data", caseID: "CA\(String(caseDataResponse.fields?.caseID ?? 000))", incidentDate: String(caseDataResponse.fields?.incidentTime?.prefix(10) ?? "No Data"), offenderName: caseDataResponse.fields?.perpetratorName?[0] ?? "No Data")
-                        .padding(.vertical, 8)
-                })
-            }
-            .listStyle(PlainListStyle())
+            ScrollView{
+                VStack{
+                    ForEach((viewModel.closedCases), content: { caseDataResponse in
+                        CaseCard(caseData: caseDataResponse)
+                            .padding(.vertical, 8)
+                            .padding(.horizontal)
+                    })
+                }
+            }.clipped()
         }
     }
 }
@@ -170,7 +176,7 @@ struct selectedHighlight: ViewModifier{
     func body(content: Content) -> some View {
         return content
             .frame(width: 97, height: 6, alignment: .center)
-            .padding(.top,-3)
+            //.padding(.top,-3)
     }
 }
 
