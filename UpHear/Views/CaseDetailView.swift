@@ -10,8 +10,9 @@ import SwiftUI
 
 
 struct CaseDetailView: View {
-    @State var selected = 1
-    init() {
+    @State var selected = 0
+    @State var detailCase: CaseDataResponse
+    init(cases: CaseDataResponse) {
            //Use this if NavigationBarTitle is with Large Font
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         UINavigationBar.appearance().backgroundColor = .clear
@@ -19,38 +20,39 @@ struct CaseDetailView: View {
         UINavigationBar.appearance().isTranslucent = true
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().tintColor = UIColor.white
+        detailCase = cases
        }
     
     var body: some View {
-        NavigationView{
-            ZStack{
+        ZStack{
+            VStack{
+                Image("bgTnC")
+                Spacer()
+            }.ignoresSafeArea()
+            VStack{
                 VStack{
-                    Image("bgTnC")
-                    Spacer()
-                }.ignoresSafeArea()
-                VStack{
-                    VStack{
-                        DetailTopbar(selected: self.$selected)
-                    }
+                    DetailTopbar(selected: self.$selected)
+                }
 
-                    ZStack{
-                        Rectangle()
-                            .fill(Color.white)
-                            .ignoresSafeArea()
-                        VStack{
-                            if self.selected == 0{
-                                detailsCaseView()
-                            }
-                            else{
-                                statusCaseView()
-                            }
+                ZStack{
+                    Rectangle()
+                        .fill(Color.white)
+                        .ignoresSafeArea()
+                    VStack{
+                        if self.selected == 0{
+                            detailsCaseView(cases: $detailCase)
+                        }
+                        else{
+                            statusCaseView()
                         }
                     }
                 }
-            }.navigationBarItems(leading: Button(action: { }) {
-                Image(systemName: "chevron.left").foregroundColor(.white).font(.system(size: 24).weight(.semibold))
-            }).navigationBarTitleDisplayMode(.inline)
+            }
         }
+        .navigationBarTitleDisplayMode(.inline)
+        
+        
     }
 }
 
@@ -94,7 +96,7 @@ struct DetailTopbar : View {
 }
 
 struct detailsCaseView: View{
-    @State var desc: String = "asdadasd asdasda dasdas dasdasdas dasdasdasda sdasda sdas dsa sda sdasda sda sd asdadasd asdasda dasdas dasdasdas dasdasdasda sdasda sdas dsa sda sdasda sda sd asdadasd asdasda dasdas dasdasdas dasdasdasda sdasda sdas dsa sda sdasda sda sd asdadasd asdasda dasdas dasdasdas dasdasdasda sdasda sdas dsa sda sdasda sda sd asdadasd asdasda dasdas dasdasdas dasdasdasda sdasda sdas dsa sda sdasda sda sd "
+    @Binding var cases: CaseDataResponse
     var body: some View{
         ScrollView(.vertical){
             VStack(alignment: .leading){
@@ -102,42 +104,42 @@ struct detailsCaseView: View{
                     Spacer().frame(height: 36)
                     Text("Report as")
                         .modifier(caseInfoHeaderStyle())
-                    Text("Victim")
+                    Text(cases.fields?.reporterName == cases.fields?.victimName ? "Victim" : "Witness")
                         .modifier(caseInfoDetailStyle())
                     Spacer().frame(height: 8)
                 }
                 VStack(alignment: .leading){
                     Text("Identity")
                         .modifier(caseInfoHeaderStyle())
-                    Text("Anonymous")
+                    Text(cases.fields?.isAnonymous == "true" ? "Anonymous" : "Identified")
                         .modifier(caseInfoDetailStyle())
                     Spacer().frame(height: 8)
                 }
                 VStack(alignment: .leading){
                     Text("Date and Time of Incident")
                         .modifier(caseInfoHeaderStyle())
-                    Text("1 July 2020 - 8:00 PM")
+                    Text(cases.fields?.incidentTime ?? "")
                         .modifier(caseInfoDetailStyle())
                     Spacer().frame(height: 8)
                 }
                 VStack(alignment: .leading){
                     Text("Place of Incident")
                         .modifier(caseInfoHeaderStyle())
-                    Text("JYP Training Room")
+                    Text(cases.fields?.incidentPlace ?? "")
                         .modifier(caseInfoDetailStyle())
                     Spacer().frame(height: 8)
                 }
                 VStack(alignment: .leading){
                     Text("Victim Name")
                         .modifier(caseInfoHeaderStyle())
-                    Text("Exol")
+                    Text(cases.fields?.victimName?.first ?? "")
                         .modifier(caseInfoDetailStyle())
                     Spacer().frame(height: 8)
                 }
                 VStack(alignment: .leading){
                     Text("Perpretator Name")
                         .modifier(caseInfoHeaderStyle())
-                    Text("Army")
+                    Text(cases.fields?.perpetratorName?.first ?? "")
                         .modifier(caseInfoDetailStyle())
                     Spacer().frame(height: 8)
                 }
@@ -151,7 +153,8 @@ struct detailsCaseView: View{
                     .cornerRadius(8)
                     .overlay(
                         ScrollView{
-                            Text(desc)
+                            Text(cases.fields?.incidentDetail ?? "")
+                                .multilineTextAlignment(.leading)
                         }.padding(.horizontal, 18).padding(.vertical,21)
                     )
                 }
@@ -291,10 +294,10 @@ struct statusTimeline: View{
 //       }
 //    }
 
-    struct CaseDetailView_Previews: PreviewProvider {
-       static var previews: some View {
-           CaseDetailView()
-       }
-    }
+//    struct CaseDetailView_Previews: PreviewProvider {
+//       static var previews: some View {
+//           CaseDetailView()
+//       }
+//    }
 
 }
