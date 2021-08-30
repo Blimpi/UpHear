@@ -37,14 +37,18 @@ enum TopBarStyle{
 // reuseable
 struct modalTopBar: View{
     //Localized Strings
+    @Environment(\.presentationMode) var presentationMode
     let lsClose : LocalizedStringKey = "Close"
     let lsReportCase : LocalizedStringKey = "Report a Case"
     let lsSave : LocalizedStringKey = "Save"
-    
+    @ObservedObject var vm: CreateReportViewModel
     @State var topBarStyle:TopBarStyle
+    @State var isSaved: Bool = false
     var body: some View{
         HStack{
-            Button(action: {}, label: {
+            Button(action: {
+                vm.willDismiss.toggle()
+            }, label: {
                 Text(lsClose)
             })
             .padding()
@@ -55,12 +59,32 @@ struct modalTopBar: View{
             
             Spacer()
             
-            Button(action: {}, label: {
+            Button(action: {
+                isSaved.toggle()
+            }, label: {
                 Text(lsSave)
             })
             .padding()
         }
         .foregroundColor(topBarStyle == .normal ? .none : .white)
+        .actionSheet(isPresented: $vm.willDismiss, content: {
+            .init(title: Text("Unsaved report"), message: Text("Are you sure want to discard this report? Your information will be lost."), buttons: [
+                    .default(Text("Save to draft"), action: {
+                        isSaved.toggle()
+                    }),
+                .destructive(Text("Discard"),action: {
+                    presentationMode.wrappedValue.dismiss()
+                }),
+                .cancel()
+            ])
+        })
+        .alert(isPresented: $isSaved, content: {
+            Alert(title: Text("Saved to draft"), message: Text("Successfully save report to draft"), dismissButton: .default(Text("Done"), action: {
+                    presentationMode.wrappedValue.dismiss()
+            }))
+            
+        })
+        
     }
 }
 struct addFileButton: View {

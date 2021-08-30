@@ -17,7 +17,7 @@ struct firstPage: View{
                 Spacer()
             }
             VStack{
-                modalTopBar(topBarStyle: .white)
+                modalTopBar(vm: vm,topBarStyle: .white)
                 VStack(alignment:.leading){
                     Text("Who are you reporting as?")
                         .font(.title.bold())

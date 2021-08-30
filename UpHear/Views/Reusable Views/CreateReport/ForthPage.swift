@@ -12,7 +12,7 @@ struct forthPage: View {
     var body: some View{
         ZStack{
             VStack{
-                modalTopBar(topBarStyle: .normal)
+                modalTopBar(vm: vm,topBarStyle: .normal)
                 Spacer()
             }
             VStack(alignment: .leading){
