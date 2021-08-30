@@ -13,6 +13,7 @@ class CreateReportViewModel: ObservableObject {
     @Published var caseReport: Case = Case()
     @Published var willDismiss: Bool = false
     @Published var currentIndex: Int = 1
+    @Published var isAnonymous: Bool = false
     @Published var incidentDate: Date = Date()
     @Published var IncidentPlace: String = ""
     @Published var victim: String = ""
@@ -67,8 +68,17 @@ class CreateReportViewModel: ObservableObject {
                     }
                     self.arrayOfEvidence.append(url.absoluteString)
                     print(url.absoluteString)
+                                                                             
                     if(self.arrayOfEvidence.count == self.arrayOfEvidenceImage.count){
-                        // upload to airtable
+                        let caseItem = Case(reporterID: "", isAnonymous: self.isAnonymous, victimID: "", perpetratorID: "", incidentTime: self.incidentDate, incidentPlace: self.IncidentPlace, incidentDetail: self.description, evidences: self.arrayOfEvidence)
+                        
+                        CaseRequest.addCase(url: NetworkConstants.CASE_URL, header: NetworkConstants.POST_HEADER, caseItem: caseItem, showLoader: false) { responseData in
+                            if responseData.records?.count != 0 {
+                                print(responseData)
+                            }
+                        } failCompletion: { message in
+                            print("POST data to server fail with reason: \(message)")
+                        }
                     }
                 }
             }

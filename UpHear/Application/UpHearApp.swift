@@ -18,16 +18,6 @@ struct UpHearApp: App {
         
         isSignedIn = SignInCache.get()
     }
-//    init() {
-//        FirebaseApp.configure()
-//        
-//        if UserProfileCache.getId() != nil {
-//            isSignedIn = true
-//        }
-//        else {
-//            isSignedIn = false
-//        }
-//    }
 
     var body: some Scene {
         WindowGroup {
