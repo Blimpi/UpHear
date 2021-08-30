@@ -66,6 +66,8 @@ struct HomeView: View {
                                 .sheet(isPresented: $isPresent, content: {
                                     NewCreateReportView()
                                 })
+
+                                
                             }
                         }
                     }
@@ -75,6 +77,7 @@ struct HomeView: View {
             }
         }
     }
+    
 }
 
 struct primaryButtonStyle: ButtonStyle{
