@@ -27,8 +27,8 @@ enum identityCondition: Int {
     case nothing = 0
 }
 enum publicationType: String{
-    case anonymous = "Anonymous"
-    case identified = "Identified"
+    case anonymous = "true"
+    case identified = "false"
     case nothing = "nil"
 }
 enum optionCardCondition{

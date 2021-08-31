@@ -64,11 +64,11 @@ class Case: Codable {
     }
     
     
-    init(reporterID: String, isAnonymous: Bool, victimID: String, perpetratorID: String, incidentTime: Date, incidentPlace: String, incidentDetail: String, evidences: [String]) {
+    init(reporterID: String, isAnonymous: String, victimID: String, perpetratorID: String, incidentTime: Date, incidentPlace: String, incidentDetail: String, evidences: [String]) {
         self.caseID = 0
         self.reporterID = [reporterID]
         self.reporterName = [""]
-        self.isAnonymous = String(isAnonymous)
+        self.isAnonymous = isAnonymous
         self.victimID = [victimID]
         self.victimName = [""]
         self.perpetratorID = [perpetratorID]

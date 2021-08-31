@@ -12,7 +12,6 @@ class APITestViewModel: ObservableObject {
     
     init() {
         loadData()
-//        print(userData!)
         
 //        testPost()
     }
