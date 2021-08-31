@@ -67,22 +67,48 @@ struct thirdPage: View{
                 }
                 VStack(alignment: .leading){
                     Text("Victim name")
-                    TextField("Enter victim name", text: $vm.victim)
+                    Picker(selection: $vm.victim, label: Text(vm.victim)
+                            .foregroundColor(Color.black)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .multilineTextAlignment(.leading),
+                           content: {
+                            ForEach(vm.userDataResponses ?? [UserDataResponse](), content: {
+                                userDataResponse in
+                                Text(userDataResponse.fields?.name ?? "").tag(userDataResponse.fields?.name ?? "")
+                            })
+                           })
                         .padding()
                         .frame(maxWidth: .infinity, maxHeight: 45)
                         .background(Color.white)
                         .border(Color.gray, width: 2)
                         .cornerRadius(4)
+                        .pickerStyle(MenuPickerStyle())
+                        .onChange(of: vm.victim, perform: { value in
+                            vm.setVictimID(name: value)
+                        })
                     Spacer().frame(height: 24)
                 }
                 VStack(alignment: .leading){
                     Text("Offender name")
-                    TextField("Enter Offender name", text: $vm.offender)
+                    Picker(selection: $vm.offender, label: Text(vm.offender)
+                            .foregroundColor(Color.black)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .multilineTextAlignment(.leading),
+                           content: {
+                            ForEach(vm.userDataResponses ?? [UserDataResponse](), content: {
+                                userDataResponse in
+                                Text(userDataResponse.fields?.name ?? "").tag(userDataResponse.fields?.name ?? "")
+                            })
+                           })
                         .padding()
                         .frame(maxWidth: .infinity, maxHeight: 45)
                         .background(Color.white)
                         .border(Color.gray, width: 2)
                         .cornerRadius(4)
+                        .pickerStyle(MenuPickerStyle())
+                        .onChange(of: vm.offender, perform: { value in
+                            vm.setOffenderID(name: value)
+                        })
                 }
                 
             }

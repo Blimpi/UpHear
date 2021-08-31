@@ -16,14 +16,21 @@ class CreateReportViewModel: ObservableObject {
     @Published var isAnonymous: Bool = false
     @Published var incidentDate: Date = Date()
     @Published var IncidentPlace: String = ""
-    @Published var victim: String = ""
+    @Published var victim: String = "Enter victim name"
+    var victimID: String = ""
     @Published var publication: publicationType = .nothing
     @Published var identity: identityCondition = .nothing
-    @Published var offender: String = ""
+    @Published var offender: String = "Enter offender name"
+    var offenderID: String = ""
     var arrayOfEvidence : [String] = []
     @Published var arrayOfEvidenceImage: [UIImage] = []
     @Published var description: String = ""
     let storage = Storage.storage().reference()
+    @Published var userDataResponses: [UserDataResponse]?
+    
+    init() {
+        getUserDataResponse()
+    }
     
     func addIndex(){
         currentIndex+=1
@@ -63,6 +70,28 @@ class CreateReportViewModel: ObservableObject {
         return UserProfileCache.get().name ?? ""
     }
     
+    func getUserDataResponse() {
+            AuthRequest.fetchUserData(url: NetworkConstants.USER_URL, header: NetworkConstants.GET_HEADER, showLoader: false) { response in
+                print(response)
+                
+                DispatchQueue.main.async {
+                    self.userDataResponses = response.records
+                }
+            } failCompletion: { message in
+                print(message)
+            }
+    }
+    
+    func setVictimID(name: String) {
+        let userDataResponse = userDataResponses?.first(where: {$0.fields?.name == name})
+        victimID = userDataResponse?.id ?? ""
+    }
+    
+    func setOffenderID(name: String) {
+        let userDataResponse = userDataResponses?.first(where: {$0.fields?.name == name})
+        offenderID = userDataResponse?.id ?? ""
+    }
+    
     func uploadImageToDatabase(){
         for index in 0..<arrayOfEvidenceImage.count {
             let uiImage = arrayOfEvidenceImage[index]
@@ -82,7 +111,7 @@ class CreateReportViewModel: ObservableObject {
                     print(url.absoluteString)
                                                                              
                     if(self.arrayOfEvidence.count == self.arrayOfEvidenceImage.count){
-                        let caseItem = Case(reporterID: "recrJH5XnOZv690lW", isAnonymous: self.isAnonymous, victimID: "recrJH5XnOZv690lW", perpetratorID: "recrJH5XnOZv690lW", incidentTime: self.incidentDate, incidentPlace: self.IncidentPlace, incidentDetail: self.description, evidences: self.arrayOfEvidence)
+                        let caseItem = Case(reporterID: UserProfileCache.getId(), isAnonymous: self.publication.rawValue, victimID: self.victimID, perpetratorID: self.offenderID, incidentTime: self.incidentDate, incidentPlace: self.IncidentPlace, incidentDetail: self.description, evidences: self.arrayOfEvidence)
                         
                         CaseRequest.addCase(url: NetworkConstants.CASE_URL, header: NetworkConstants.POST_HEADER, caseItem: caseItem, showLoader: false) { responseData in
                             if responseData.records?.count != 0 {

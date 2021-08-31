@@ -118,6 +118,7 @@ struct UserProfileView: View {
                                 "  Enter Full Name",
                             text: $viewModel.name
                         )
+                        .padding(8)
                         .modifier(userInfoDetailStyle())
                         
                         Text("Position")
@@ -127,6 +128,7 @@ struct UserProfileView: View {
                                 "  Enter Current Position",
                             text: $viewModel.position
                         )
+                        .padding(8)
                         .modifier(userInfoDetailStyle())
                         
                         Text("Division")
@@ -134,7 +136,9 @@ struct UserProfileView: View {
                         TextField(
                                 "  Enter Current Division",
                             text: $viewModel.division
-                        ).modifier(userInfoDetailStyle())
+                        )
+                        .padding(8)
+                        .modifier(userInfoDetailStyle())
                         
                     }.padding()
                     
